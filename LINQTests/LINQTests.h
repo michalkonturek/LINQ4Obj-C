@@ -1,0 +1,13 @@
+//
+//  LINQTests.h
+//  LINQTests
+//
+//  Created by Michal Konturek on 22/06/2013.
+//  Copyright (c) 2013 Michal Konturek. All rights reserved.
+//
+
+#import <SenTestingKit/SenTestingKit.h>
+
+@interface LINQTests : SenTestCase
+
+@end

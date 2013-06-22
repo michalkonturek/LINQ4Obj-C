@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */; };
+		908990011775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
+		908990031775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
+		908990051775E1C100AA935C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990041775E1C100AA935C /* CoreGraphics.framework */; };
+		9089900B1775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990091775E1C100AA935C /* InfoPlist.strings */; };
+		9089900D1775E1C100AA935C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089900C1775E1C100AA935C /* main.m */; };
+		908990111775E1C100AA935C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908990101775E1C100AA935C /* AppDelegate.m */; };
+		908990131775E1C100AA935C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990121775E1C100AA935C /* Default.png */; };
+		908990151775E1C100AA935C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990141775E1C100AA935C /* Default@2x.png */; };
+		908990171775E1C100AA935C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990161775E1C100AA935C /* Default-568h@2x.png */; };
+		9089901F1775E1C100AA935C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9089901E1775E1C100AA935C /* SenTestingKit.framework */; };
+		908990201775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
+		908990211775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
+		908990291775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990271775E1C100AA935C /* InfoPlist.strings */; };
+		9089902C1775E1C100AA935C /* LINQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089902B1775E1C100AA935C /* LINQTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		908990221775E1C100AA935C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90898FF51775E1C100AA935C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90898FFC1775E1C100AA935C;
+			remoteInfo = LINQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.xcconfig"; path = "Pods/Pods-LINQTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LINQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90898FFD1775E1C100AA935C /* LINQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LINQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		908990001775E1C100AA935C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		908990021775E1C100AA935C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		908990041775E1C100AA935C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		908990081775E1C100AA935C /* LINQ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQ-Info.plist"; sourceTree = "<group>"; };
+		9089900A1775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9089900C1775E1C100AA935C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9089900E1775E1C100AA935C /* LINQ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LINQ-Prefix.pch"; sourceTree = "<group>"; };
+		9089900F1775E1C100AA935C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		908990101775E1C100AA935C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		908990121775E1C100AA935C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		908990141775E1C100AA935C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		908990161775E1C100AA935C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9089901D1775E1C100AA935C /* LINQTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LINQTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9089901E1775E1C100AA935C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		908990261775E1C100AA935C /* LINQTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQTests-Info.plist"; sourceTree = "<group>"; };
+		908990281775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9089902A1775E1C100AA935C /* LINQTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LINQTests.h; sourceTree = "<group>"; };
+		9089902B1775E1C100AA935C /* LINQTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LINQTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90898FFA1775E1C100AA935C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908990011775E1C100AA935C /* UIKit.framework in Frameworks */,
+				908990031775E1C100AA935C /* Foundation.framework in Frameworks */,
+				908990051775E1C100AA935C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		908990191775E1C100AA935C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089901F1775E1C100AA935C /* SenTestingKit.framework in Frameworks */,
+				908990201775E1C100AA935C /* UIKit.framework in Frameworks */,
+				908990211775E1C100AA935C /* Foundation.framework in Frameworks */,
+				006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90898FF41775E1C100AA935C = {
+			isa = PBXGroup;
+			children = (
+				908990061775E1C100AA935C /* LINQ */,
+				908990241775E1C100AA935C /* LINQTests */,
+				90898FFF1775E1C100AA935C /* Frameworks */,
+				90898FFE1775E1C100AA935C /* Products */,
+				6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		90898FFE1775E1C100AA935C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90898FFD1775E1C100AA935C /* LINQ.app */,
+				9089901D1775E1C100AA935C /* LINQTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90898FFF1775E1C100AA935C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				908990001775E1C100AA935C /* UIKit.framework */,
+				908990021775E1C100AA935C /* Foundation.framework */,
+				908990041775E1C100AA935C /* CoreGraphics.framework */,
+				9089901E1775E1C100AA935C /* SenTestingKit.framework */,
+				8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		908990061775E1C100AA935C /* LINQ */ = {
+			isa = PBXGroup;
+			children = (
+				9089900F1775E1C100AA935C /* AppDelegate.h */,
+				908990101775E1C100AA935C /* AppDelegate.m */,
+				908990071775E1C100AA935C /* Supporting Files */,
+			);
+			path = LINQ;
+			sourceTree = "<group>";
+		};
+		908990071775E1C100AA935C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				908990081775E1C100AA935C /* LINQ-Info.plist */,
+				908990091775E1C100AA935C /* InfoPlist.strings */,
+				9089900C1775E1C100AA935C /* main.m */,
+				9089900E1775E1C100AA935C /* LINQ-Prefix.pch */,
+				908990121775E1C100AA935C /* Default.png */,
+				908990141775E1C100AA935C /* Default@2x.png */,
+				908990161775E1C100AA935C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		908990241775E1C100AA935C /* LINQTests */ = {
+			isa = PBXGroup;
+			children = (
+				9089902A1775E1C100AA935C /* LINQTests.h */,
+				9089902B1775E1C100AA935C /* LINQTests.m */,
+				908990251775E1C100AA935C /* Supporting Files */,
+			);
+			path = LINQTests;
+			sourceTree = "<group>";
+		};
+		908990251775E1C100AA935C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				908990261775E1C100AA935C /* LINQTests-Info.plist */,
+				908990271775E1C100AA935C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90898FFC1775E1C100AA935C /* LINQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9089902F1775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQ" */;
+			buildPhases = (
+				90898FF91775E1C100AA935C /* Sources */,
+				90898FFA1775E1C100AA935C /* Frameworks */,
+				90898FFB1775E1C100AA935C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LINQ;
+			productName = LINQ;
+			productReference = 90898FFD1775E1C100AA935C /* LINQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9089901C1775E1C100AA935C /* LINQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 908990321775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQTests" */;
+			buildPhases = (
+				502139E3FDC7430BBC3A7857 /* Check Pods Manifest.lock */,
+				908990181775E1C100AA935C /* Sources */,
+				908990191775E1C100AA935C /* Frameworks */,
+				9089901A1775E1C100AA935C /* Resources */,
+				9089901B1775E1C100AA935C /* ShellScript */,
+				684949FAD0434EC5932260C3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				908990231775E1C100AA935C /* PBXTargetDependency */,
+			);
+			name = LINQTests;
+			productName = LINQTests;
+			productReference = 9089901D1775E1C100AA935C /* LINQTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90898FF51775E1C100AA935C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Michal Konturek";
+			};
+			buildConfigurationList = 90898FF81775E1C100AA935C /* Build configuration list for PBXProject "LINQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90898FF41775E1C100AA935C;
+			productRefGroup = 90898FFE1775E1C100AA935C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90898FFC1775E1C100AA935C /* LINQ */,
+				9089901C1775E1C100AA935C /* LINQTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90898FFB1775E1C100AA935C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089900B1775E1C100AA935C /* InfoPlist.strings in Resources */,
+				908990131775E1C100AA935C /* Default.png in Resources */,
+				908990151775E1C100AA935C /* Default@2x.png in Resources */,
+				908990171775E1C100AA935C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089901A1775E1C100AA935C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908990291775E1C100AA935C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		502139E3FDC7430BBC3A7857 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		684949FAD0434EC5932260C3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-LINQTests-resources.sh\"\n";
+		};
+		9089901B1775E1C100AA935C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90898FF91775E1C100AA935C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089900D1775E1C100AA935C /* main.m in Sources */,
+				908990111775E1C100AA935C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		908990181775E1C100AA935C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089902C1775E1C100AA935C /* LINQTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		908990231775E1C100AA935C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90898FFC1775E1C100AA935C /* LINQ */;
+			targetProxy = 908990221775E1C100AA935C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		908990091775E1C100AA935C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9089900A1775E1C100AA935C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		908990271775E1C100AA935C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				908990281775E1C100AA935C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9089902D1775E1C100AA935C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+			};
+			name = Debug;
+		};
+		9089902E1775E1C100AA935C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		908990301775E1C100AA935C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
+				INFOPLIST_FILE = "LINQ/LINQ-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		908990311775E1C100AA935C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
+				INFOPLIST_FILE = "LINQ/LINQ-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		908990331775E1C100AA935C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
+				INFOPLIST_FILE = "LINQTests/LINQTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		908990341775E1C100AA935C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
+				INFOPLIST_FILE = "LINQTests/LINQTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90898FF81775E1C100AA935C /* Build configuration list for PBXProject "LINQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9089902D1775E1C100AA935C /* Debug */,
+				9089902E1775E1C100AA935C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9089902F1775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				908990301775E1C100AA935C /* Debug */,
+				908990311775E1C100AA935C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		908990321775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				908990331775E1C100AA935C /* Debug */,
+				908990341775E1C100AA935C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90898FF51775E1C100AA935C /* Project object */;
+}
