@@ -21,7 +21,8 @@
 		908990201775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
 		908990211775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
 		908990291775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990271775E1C100AA935C /* InfoPlist.strings */; };
-		9089902C1775E1C100AA935C /* LINQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089902B1775E1C100AA935C /* LINQTests.m */; };
+		90B422121775E995007DAF99 /* NSArray+LINQ_Generation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */; };
+		90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,17 @@
 		9089901E1775E1C100AA935C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		908990261775E1C100AA935C /* LINQTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQTests-Info.plist"; sourceTree = "<group>"; };
 		908990281775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9089902A1775E1C100AA935C /* LINQTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LINQTests.h; sourceTree = "<group>"; };
-		9089902B1775E1C100AA935C /* LINQTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LINQTests.m; sourceTree = "<group>"; };
+		90B422061775E807007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		90B422081775E807007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		90B4220A1775E817007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		90B4220C1775E817007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		90B422101775E995007DAF99 /* NSArray+LINQ_Generation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Generation.h"; sourceTree = "<group>"; };
+		90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Generation.m"; sourceTree = "<group>"; };
+		90B422131775E9FF007DAF99 /* LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ.h; sourceTree = "<group>"; };
+		90B422161775EA24007DAF99 /* NSArray+LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ.h"; sourceTree = "<group>"; };
+		90B422171775EA70007DAF99 /* NSDictionary+LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ.h"; sourceTree = "<group>"; };
+		90B4221A1775EAFE007DAF99 /* LINQ_Base_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ_Base_Tests.h; sourceTree = "<group>"; };
+		90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Generation_.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 		908990061775E1C100AA935C /* LINQ */ = {
 			isa = PBXGroup;
 			children = (
+				90B422041775E807007DAF99 /* Source */,
 				9089900F1775E1C100AA935C /* AppDelegate.h */,
 				908990101775E1C100AA935C /* AppDelegate.m */,
 				908990071775E1C100AA935C /* Supporting Files */,
@@ -142,8 +153,9 @@
 		908990241775E1C100AA935C /* LINQTests */ = {
 			isa = PBXGroup;
 			children = (
-				9089902A1775E1C100AA935C /* LINQTests.h */,
-				9089902B1775E1C100AA935C /* LINQTests.m */,
+				90B422091775E817007DAF99 /* NSArray+LINQ_Tests */,
+				90B4220B1775E817007DAF99 /* NSDictionary+LINQ_Tests */,
+				90B4221A1775EAFE007DAF99 /* LINQ_Base_Tests.h */,
 				908990251775E1C100AA935C /* Supporting Files */,
 			);
 			path = LINQTests;
@@ -156,6 +168,53 @@
 				908990271775E1C100AA935C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90B422041775E807007DAF99 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				90B422051775E807007DAF99 /* NSArray+LINQ */,
+				90B422071775E807007DAF99 /* NSDictionary+LINQ */,
+				90B422131775E9FF007DAF99 /* LINQ.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		90B422051775E807007DAF99 /* NSArray+LINQ */ = {
+			isa = PBXGroup;
+			children = (
+				90B422061775E807007DAF99 /* .gitkeep */,
+				90B422161775EA24007DAF99 /* NSArray+LINQ.h */,
+				90B422101775E995007DAF99 /* NSArray+LINQ_Generation.h */,
+				90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */,
+			);
+			path = "NSArray+LINQ";
+			sourceTree = "<group>";
+		};
+		90B422071775E807007DAF99 /* NSDictionary+LINQ */ = {
+			isa = PBXGroup;
+			children = (
+				90B422081775E807007DAF99 /* .gitkeep */,
+				90B422171775EA70007DAF99 /* NSDictionary+LINQ.h */,
+			);
+			path = "NSDictionary+LINQ";
+			sourceTree = "<group>";
+		};
+		90B422091775E817007DAF99 /* NSArray+LINQ_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */,
+				90B4220A1775E817007DAF99 /* .gitkeep */,
+			);
+			path = "NSArray+LINQ_Tests";
+			sourceTree = "<group>";
+		};
+		90B4220B1775E817007DAF99 /* NSDictionary+LINQ_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				90B4220C1775E817007DAF99 /* .gitkeep */,
+			);
+			path = "NSDictionary+LINQ_Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B422121775E995007DAF99 /* NSArray+LINQ_Generation.m in Sources */,
 				9089900D1775E1C100AA935C /* main.m in Sources */,
 				908990111775E1C100AA935C /* AppDelegate.m in Sources */,
 			);
@@ -306,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9089902C1775E1C100AA935C /* LINQTests.m in Sources */,
+				90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
