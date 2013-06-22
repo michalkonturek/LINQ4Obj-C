@@ -1,0 +1,4 @@
+[
+  "-workspace", "LINQ.xcworkspace",
+  "-scheme", "LINQ"
+]
