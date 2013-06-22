@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */; };
+		90373B4617764C60009511C4 /* NSArray+LINQ_Aggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */; };
+		90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */; };
+		90373B4B17764DC1009511C4 /* NSArray+LINQ_Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4A17764DC1009511C4 /* NSArray+LINQ_Filtering.m */; };
+		90373B4D17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */; };
+		90373B5017764EFA009511C4 /* NSArray+LINQ_Grouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4F17764EFA009511C4 /* NSArray+LINQ_Grouping.m */; };
+		90373B5317764F1B009511C4 /* NSArray+LINQ_Partitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5217764F1B009511C4 /* NSArray+LINQ_Partitioning.m */; };
+		90373B5617764F2E009511C4 /* NSArray+LINQ_Projection.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5517764F2E009511C4 /* NSArray+LINQ_Projection.m */; };
+		90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */; };
+		90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */; };
+		90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */; };
 		908990011775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
 		908990031775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
 		908990051775E1C100AA935C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990041775E1C100AA935C /* CoreGraphics.framework */; };
@@ -38,6 +48,21 @@
 /* Begin PBXFileReference section */
 		6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.xcconfig"; path = "Pods/Pods-LINQTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LINQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90373B4417764C60009511C4 /* NSArray+LINQ_Aggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Aggregation.h"; sourceTree = "<group>"; };
+		90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Aggregation.m"; sourceTree = "<group>"; };
+		90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Aggregation_Tests.m; sourceTree = "<group>"; };
+		90373B4917764DC1009511C4 /* NSArray+LINQ_Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Filtering.h"; sourceTree = "<group>"; };
+		90373B4A17764DC1009511C4 /* NSArray+LINQ_Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Filtering.m"; sourceTree = "<group>"; };
+		90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Filtering_Tests.m; sourceTree = "<group>"; };
+		90373B4E17764EFA009511C4 /* NSArray+LINQ_Grouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Grouping.h"; sourceTree = "<group>"; };
+		90373B4F17764EFA009511C4 /* NSArray+LINQ_Grouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Grouping.m"; sourceTree = "<group>"; };
+		90373B5117764F1B009511C4 /* NSArray+LINQ_Partitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Partitioning.h"; sourceTree = "<group>"; };
+		90373B5217764F1B009511C4 /* NSArray+LINQ_Partitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Partitioning.m"; sourceTree = "<group>"; };
+		90373B5417764F2E009511C4 /* NSArray+LINQ_Projection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Projection.h"; sourceTree = "<group>"; };
+		90373B5517764F2E009511C4 /* NSArray+LINQ_Projection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Projection.m"; sourceTree = "<group>"; };
+		90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Grouping_Tests.m; sourceTree = "<group>"; };
+		90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Partitioning_Tests.m; sourceTree = "<group>"; };
+		90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Projection_Tests.m; sourceTree = "<group>"; };
 		90898FFD1775E1C100AA935C /* LINQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LINQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908990001775E1C100AA935C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		908990021775E1C100AA935C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -185,8 +210,18 @@
 			children = (
 				90B422061775E807007DAF99 /* .gitkeep */,
 				90B422161775EA24007DAF99 /* NSArray+LINQ.h */,
+				90373B4417764C60009511C4 /* NSArray+LINQ_Aggregation.h */,
+				90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */,
+				90373B4917764DC1009511C4 /* NSArray+LINQ_Filtering.h */,
+				90373B4A17764DC1009511C4 /* NSArray+LINQ_Filtering.m */,
 				90B422101775E995007DAF99 /* NSArray+LINQ_Generation.h */,
 				90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */,
+				90373B4E17764EFA009511C4 /* NSArray+LINQ_Grouping.h */,
+				90373B4F17764EFA009511C4 /* NSArray+LINQ_Grouping.m */,
+				90373B5117764F1B009511C4 /* NSArray+LINQ_Partitioning.h */,
+				90373B5217764F1B009511C4 /* NSArray+LINQ_Partitioning.m */,
+				90373B5417764F2E009511C4 /* NSArray+LINQ_Projection.h */,
+				90373B5517764F2E009511C4 /* NSArray+LINQ_Projection.m */,
 			);
 			path = "NSArray+LINQ";
 			sourceTree = "<group>";
@@ -203,7 +238,12 @@
 		90B422091775E817007DAF99 /* NSArray+LINQ_Tests */ = {
 			isa = PBXGroup;
 			children = (
+				90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */,
 				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */,
+				90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */,
+				90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */,
+				90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */,
+				90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */,
 				90B4220A1775E817007DAF99 /* .gitkeep */,
 			);
 			path = "NSArray+LINQ_Tests";
@@ -356,9 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90373B5317764F1B009511C4 /* NSArray+LINQ_Partitioning.m in Sources */,
 				90B422121775E995007DAF99 /* NSArray+LINQ_Generation.m in Sources */,
 				9089900D1775E1C100AA935C /* main.m in Sources */,
 				908990111775E1C100AA935C /* AppDelegate.m in Sources */,
+				90373B4B17764DC1009511C4 /* NSArray+LINQ_Filtering.m in Sources */,
+				90373B4617764C60009511C4 /* NSArray+LINQ_Aggregation.m in Sources */,
+				90373B5017764EFA009511C4 /* NSArray+LINQ_Grouping.m in Sources */,
+				90373B5617764F2E009511C4 /* NSArray+LINQ_Projection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +411,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90373B4D17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m in Sources */,
+				90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */,
 				90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m in Sources */,
+				90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */,
+				90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */,
+				90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

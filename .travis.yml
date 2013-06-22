@@ -2,4 +2,5 @@ language: objective-c
 before_script:
     - brew update
     - brew install xctool --HEAD
-script: xctool -workspace LINQ.xcworkspace -scheme LINQ clean build test
+script: xctool clean build test
+# script: xctool -workspace LINQ.xcworkspace -scheme LINQ clean build test
