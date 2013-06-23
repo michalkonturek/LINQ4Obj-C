@@ -18,3 +18,4 @@ typedef id (^LINQSelectorBlock)(id item);
 #import "NSArray+LINQ_Grouping.h"
 #import "NSArray+LINQ_Partitioning.h"
 #import "NSArray+LINQ_Projection.h"
+#import "NSArray+LINQ_Sets.h"

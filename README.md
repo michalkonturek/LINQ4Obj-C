@@ -19,7 +19,7 @@
 - (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock;
 ```
 
-Example returns string "M, A, R, K"
+Example:
 
 ```objc
 NSArray *input = @[@"M", @"A", @"R", @"K"];
@@ -27,6 +27,9 @@ NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
     return [NSString stringWithFormat:@"%@, %@", aggregate, item];
 }];	
 
+/*
+	Result is a string "M, A, R, K".
+*/
 ```
 
 #### Avg
@@ -56,7 +59,7 @@ Example:
  
  Example: 
 
-```
+```objc
 
 ```
 
@@ -151,7 +154,7 @@ Example:
 
 ## Generation Operations
 
-#### 
+#### Empty
 
 Returns empty array.
 
