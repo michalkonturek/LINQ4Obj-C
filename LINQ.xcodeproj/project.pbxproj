@@ -266,9 +266,8 @@
 		90B422091775E817007DAF99 /* NSArray+LINQ_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */,
-				9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */,
 				90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */,
+				9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */,
 				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */,
 				90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */,
 				90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */,
@@ -276,6 +275,7 @@
 				90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */,
 				9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */,
 				9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */,
+				9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */,
 				90B4220A1775E817007DAF99 /* .gitkeep */,
 			);
 			path = "NSArray+LINQ_Tests";

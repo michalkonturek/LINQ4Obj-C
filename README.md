@@ -26,11 +26,9 @@ NSArray *input = @[@"M", @"A", @"R", @"K"];
 NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
     return [NSString stringWithFormat:@"%@, %@", aggregate, item];
 }];	
-
-/*
-	Result is a string "M, A, R, K".
-*/
 ```
+Result is a string "M, A, R, K".
+
 
 #### Avg
 
@@ -38,13 +36,23 @@ Calculates the average value of a collection of values.
 
 ```objc
 - (id)LINQ_avg;
+```
+
+Example: 
+
+```objc
+```
+
+ Calculates the average value of the attribute specified
+ by the key parameter for all objects in the collection.
+
+```objc
 - (id)LINQ_avgForKey:(NSString *)key; 
 ```
 
 Example: 
 
 ```objc
-
 ```
 
 
@@ -60,7 +68,6 @@ Example:
  Example: 
 
 ```objc
-
 ```
 
 
@@ -70,13 +77,23 @@ Example:
 
 ```objc
 - (id)LINQ_max;
+```
+
+Example: 
+
+```objc
+```
+
+ Calculates the max value of the attribute specified
+ by the key parameter for all objects in the collection.
+
+```objc
 - (id)LINQ_maxForKey:(NSString *)key;
 ```
 
 Example: 
 
 ```objc
-
 ```
 
 
@@ -87,38 +104,94 @@ Example:
 
 ```objc
 - (id)LINQ_min;
+```
+
+Example: 
+
+```objc
+```
+
+ Calculates the min value of the attribute specified
+ by the key parameter for all objects in the collection.
+
+```objc
 - (id)LINQ_minForKey:(NSString *)key;
 ```
 
 Example: 
 
 ```objc
-
 ```
 
 
 #### - (id)LINQ_sum;
 
- Calculates the sum of the values in a collection
+ Calculates the sum of values of the attribute specified
+ by the key parameter for all objects in the collection.
 
 ```objc
 - (id)LINQ_sum;
+```
+ 
+ Example: 
+
+```objc
+```
+
+ Calculates the sum of the values in a collection
+
+```objc
 - (id)LINQ_sumForKey:(NSString *)key;
 ```
  
  Example: 
 
 ```objc
-
 ```
-
 
 
 
 
 <!--## Concatenation Operations-->
 
-<!--## Converting Data Types-->
+## Converting Data Types
+
+#### ToDictionary
+
+ Puts elements into an index-key-based NSDictionary.
+
+```objc
+- (NSDictionary *)LINQ_toDictionary;
+```
+
+ Example: 
+
+```objc
+```
+
+ Puts elements into a NSDictionary based on a key selector function.
+
+```objc
+- (NSDictionary *)LINQ_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector;
+```
+
+ Example: 
+
+```objc
+```
+
+ Puts elements into a NSDictionary based on a key and value selector functions.
+
+```objc
+- (NSDictionary *)LINQ_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector
+                                     valueSelector:(LINQSelectorBlock)valueSelector;
+```
+
+ Example: 
+
+```objc
+```
+
 
 
 ## Filtering Operations
@@ -134,7 +207,6 @@ Example:
  Example: 
 
 ```objc
-
 ```
 
 #### Where
@@ -148,7 +220,6 @@ Example:
  Example: 
 
 ```objc
-
 ```
 
 
@@ -165,7 +236,6 @@ Returns empty array.
 Example: 
 
 ```objc
-
 ```
 
 
@@ -180,7 +250,6 @@ Creates array with integers from to.
 Example: 
 
 ```objc
-
 ```
 
 
@@ -195,9 +264,7 @@ Generates a collection that contains one repeated value.
 Example: 
 
 ```objc
-
 ```
-
 
 
 ## Grouping Operations
@@ -222,7 +289,6 @@ Example:
 Example: 
 
 ```objc
-
 ```
 
 #### ToLookup
@@ -239,7 +305,6 @@ Example:
 Example: 
 
 ```objc
-
 ```
 
 #### Lookup
@@ -255,10 +320,7 @@ Example:
 Example: 
 
 ```objc
-
 ```
-
-
 
 
 
@@ -286,9 +348,7 @@ Skips elements up to a specified position in a collection.
 Example: 
 
 ```objc
-
 ```
-
 
 
 #### Take
@@ -334,18 +394,134 @@ Example:
 Example: 
 
 ```objc
-
 ```
 
 
-
-<!--
 ## Quantifier Operations
+
+#### All
+
+Determines whether all the elements in a sequence satisfy a condition.
+
+```objc
+- (BOOL)LINQ_all:(LINQConditionBlock)conditionBlock;
+```
+
+Example:
+
+```objc
+```
+
+
+#### Any
+
+ Determines whether any elements in a sequence satisfy a condition.
+ 
+```objc
+- (BOOL)LINQ_any:(LINQConditionBlock)conditionBlock;
+```
+
+Example:
+
+```objc
+```
 
 
 ## Set Operations
 
+#### Distinct
+
+ Removes duplicate values from a collection.
+
+```objc
+- (instancetype)LINQ_distinct;
+```
+
+Example:
+
+```objc
+```
+
+#### Except
+
+ Returns the collection without the elements
+ that appear in a second collection.
+
+```objc
+- (instancetype)LINQ_except:(NSArray *)other;
+```
+
+Example:
+
+```objc
+```
+
+#### Intersect
+
+ Returns the set intersection, which means elements
+ that appear in each of two collections.
+
+```objc
+- (instancetype)LINQ_intersect:(NSArray *)other;
+```
+
+Example:
+
+```objc
+```
+
+#### Union
+
+ Returns the set union, which means unique elements
+ that appear in either of two collections.
+
+```objc
+- (NSArray *)LINQ_union:(NSArray *)other;
+```
+
+Example:
+
+```objc
+```
 
 ## Sorting Data
 
--->
+#### OrderBy
+
+ Sorts values in ascending order.
+
+```objc
+- (instancetype)LINQ_orderByAscending;
+```
+
+ Sorts values in descending order.
+
+```objc
+- (instancetype)LINQ_orderByDescending;
+```
+
+ Sorts elements of a collection depending on an element key.
+
+```objc
+- (instancetype)LINQ_orderByKey:(NSString *)key ascending:(BOOL)ascending;
+```
+
+Example:
+
+```objc
+```
+
+#### Reverse
+
+ Reverses the order of the elements in a collection.
+
+```objc
+- (instancetype)LINQ_reverse;
+```
+
+Example:
+
+```objc
+```
+
+
