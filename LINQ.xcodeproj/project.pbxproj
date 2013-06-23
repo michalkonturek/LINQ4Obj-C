@@ -10,6 +10,12 @@
 		006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */; };
 		9028A8091776F899004B3C97 /* NSArray+LINQ_Sets.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8081776F899004B3C97 /* NSArray+LINQ_Sets.m */; };
 		9028A80B1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */; };
+		9028A80E1776FA3F004B3C97 /* NSArray+LINQ_Converting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A80D1776FA3F004B3C97 /* NSArray+LINQ_Converting.m */; };
+		9028A8111776FA7E004B3C97 /* NSArray+LINQ_Quantifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8101776FA7E004B3C97 /* NSArray+LINQ_Quantifier.m */; };
+		9028A8141776FAC2004B3C97 /* NSArray+LINQ_Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8131776FAC2004B3C97 /* NSArray+LINQ_Sorting.m */; };
+		9028A8161776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */; };
+		9028A8181776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */; };
+		9028A81A1776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */; };
 		90373B4617764C60009511C4 /* NSArray+LINQ_Aggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */; };
 		90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */; };
 		90373B4B17764DC1009511C4 /* NSArray+LINQ_Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4A17764DC1009511C4 /* NSArray+LINQ_Filtering.m */; };
@@ -53,6 +59,15 @@
 		9028A8071776F899004B3C97 /* NSArray+LINQ_Sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Sets.h"; sourceTree = "<group>"; };
 		9028A8081776F899004B3C97 /* NSArray+LINQ_Sets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Sets.m"; sourceTree = "<group>"; };
 		9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Sets_Tests.m; sourceTree = "<group>"; };
+		9028A80C1776FA3F004B3C97 /* NSArray+LINQ_Converting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Converting.h"; sourceTree = "<group>"; };
+		9028A80D1776FA3F004B3C97 /* NSArray+LINQ_Converting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Converting.m"; sourceTree = "<group>"; };
+		9028A80F1776FA7E004B3C97 /* NSArray+LINQ_Quantifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Quantifier.h"; sourceTree = "<group>"; };
+		9028A8101776FA7E004B3C97 /* NSArray+LINQ_Quantifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Quantifier.m"; sourceTree = "<group>"; };
+		9028A8121776FAC2004B3C97 /* NSArray+LINQ_Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Sorting.h"; sourceTree = "<group>"; };
+		9028A8131776FAC2004B3C97 /* NSArray+LINQ_Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Sorting.m"; sourceTree = "<group>"; };
+		9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Quantifier_Tests.m; sourceTree = "<group>"; };
+		9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Sorting_Tests.m; sourceTree = "<group>"; };
+		9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Converting_Tests.m; sourceTree = "<group>"; };
 		90373B4417764C60009511C4 /* NSArray+LINQ_Aggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Aggregation.h"; sourceTree = "<group>"; };
 		90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Aggregation.m"; sourceTree = "<group>"; };
 		90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Aggregation_Tests.m; sourceTree = "<group>"; };
@@ -217,6 +232,8 @@
 				90B422161775EA24007DAF99 /* NSArray+LINQ.h */,
 				90373B4417764C60009511C4 /* NSArray+LINQ_Aggregation.h */,
 				90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */,
+				9028A80C1776FA3F004B3C97 /* NSArray+LINQ_Converting.h */,
+				9028A80D1776FA3F004B3C97 /* NSArray+LINQ_Converting.m */,
 				90373B4917764DC1009511C4 /* NSArray+LINQ_Filtering.h */,
 				90373B4A17764DC1009511C4 /* NSArray+LINQ_Filtering.m */,
 				90B422101775E995007DAF99 /* NSArray+LINQ_Generation.h */,
@@ -227,8 +244,12 @@
 				90373B5217764F1B009511C4 /* NSArray+LINQ_Partitioning.m */,
 				90373B5417764F2E009511C4 /* NSArray+LINQ_Projection.h */,
 				90373B5517764F2E009511C4 /* NSArray+LINQ_Projection.m */,
+				9028A80F1776FA7E004B3C97 /* NSArray+LINQ_Quantifier.h */,
+				9028A8101776FA7E004B3C97 /* NSArray+LINQ_Quantifier.m */,
 				9028A8071776F899004B3C97 /* NSArray+LINQ_Sets.h */,
 				9028A8081776F899004B3C97 /* NSArray+LINQ_Sets.m */,
+				9028A8121776FAC2004B3C97 /* NSArray+LINQ_Sorting.h */,
+				9028A8131776FAC2004B3C97 /* NSArray+LINQ_Sorting.m */,
 			);
 			path = "NSArray+LINQ";
 			sourceTree = "<group>";
@@ -245,13 +266,16 @@
 		90B422091775E817007DAF99 /* NSArray+LINQ_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */,
+				9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */,
+				9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */,
 				90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */,
 				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */,
 				90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */,
 				90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */,
 				90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */,
 				90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */,
+				9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */,
+				9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */,
 				90B4220A1775E817007DAF99 /* .gitkeep */,
 			);
 			path = "NSArray+LINQ_Tests";
@@ -405,12 +429,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9028A8091776F899004B3C97 /* NSArray+LINQ_Sets.m in Sources */,
+				9028A8141776FAC2004B3C97 /* NSArray+LINQ_Sorting.m in Sources */,
 				90373B5317764F1B009511C4 /* NSArray+LINQ_Partitioning.m in Sources */,
+				9028A8111776FA7E004B3C97 /* NSArray+LINQ_Quantifier.m in Sources */,
 				90B422121775E995007DAF99 /* NSArray+LINQ_Generation.m in Sources */,
 				9089900D1775E1C100AA935C /* main.m in Sources */,
 				908990111775E1C100AA935C /* AppDelegate.m in Sources */,
 				90373B4B17764DC1009511C4 /* NSArray+LINQ_Filtering.m in Sources */,
 				90373B4617764C60009511C4 /* NSArray+LINQ_Aggregation.m in Sources */,
+				9028A80E1776FA3F004B3C97 /* NSArray+LINQ_Converting.m in Sources */,
 				90373B5017764EFA009511C4 /* NSArray+LINQ_Grouping.m in Sources */,
 				90373B5617764F2E009511C4 /* NSArray+LINQ_Projection.m in Sources */,
 			);
@@ -420,13 +447,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9028A8181776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m in Sources */,
 				9028A80B1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m in Sources */,
 				90373B4D17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m in Sources */,
 				90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */,
 				90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m in Sources */,
 				90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */,
 				90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */,
+				9028A8161776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m in Sources */,
 				90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */,
+				9028A81A1776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
