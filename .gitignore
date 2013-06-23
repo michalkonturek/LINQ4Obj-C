@@ -11,6 +11,9 @@ build/*
 *.xcuserdatad
 xcuserdata
 
+# Xcode 5 dirt
+*.xccheckout
+
 
 # Xcode Dirt - temp nibs and swap files
 *~.nib
