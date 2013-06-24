@@ -1,9 +1,11 @@
 # LINQ for Objective-C
 
-[![Build Status](https://travis-ci.org/michalkonturek/LINQ.png)](https://travis-ci.org/michalkonturek/LINQ)
+<!-- [![Build Status](https://travis-ci.org/michalkonturek/LINQ.png)](https://travis-ci.org/michalkonturek/LINQ) -->
+[![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
 
 
 <!--[![Build Status](https://travis-ci.org/michalkonturek/LINQ.png?branch=develop)](https://travis-ci.org/michalkonturek/LINQ)-->
+<!-- [![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=develop)](https://travis-ci.org/michalkonturek/LINQ4Obj-C) -->
 
 
 ## Background
