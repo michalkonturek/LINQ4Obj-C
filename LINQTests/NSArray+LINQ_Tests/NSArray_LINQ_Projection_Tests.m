@@ -20,7 +20,6 @@
         return [NSNumber numberWithInteger:([item integerValue] + 10)];
     }];
     
-    assertThat(result, hasCountOf(5));
     assertThat(result, contains(@11, @12, @13, @14, @15, nil));
 }
 
@@ -34,8 +33,6 @@
     NSArray *result = [@[@"an apple a day", @"the quick brown fox"] LINQ_selectMany:^id(id item) {
         return [item componentsSeparatedByString:@" "];
     }];
-    
-    assertThat(result, hasCountOf(8));
     
     assertThat(result, contains(@"an",
                                 @"apple",

@@ -27,6 +27,21 @@
     self.input_words = nil;
 }
 
+- (void)test_aggregate {
+    NSArray *input = @[@"M", @"A", @"R", @"K"];
+    NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
+        return [NSString stringWithFormat:@"%@, %@", aggregate, item];
+    }];
+    
+    assertThat(result, equalTo(@"M, A, R, K"));
+}
+
+- (void)test_aggregate_returns_when_no_accumulator {
+    NSArray *input = @[@"M", @"A", @"R", @"K"];
+    id result = [input LINQ_aggregate:nil];
+    assertThat(result, equalTo(input));
+}
+
 - (void)test_avg {
     NSNumber *result = [self.input_numbers LINQ_avg];
     assertThat(result, equalToDouble(5.5));
@@ -35,6 +50,19 @@
 - (void)test_avgForKey {
     NSNumber *result = [self.input_words LINQ_avgForKey:@"length"];
     assertThat(result, equalToInteger(3));
+}
+
+- (void)test_count_returns_when_condition {
+    NSInteger result = [self.input_numbers LINQ_count:^BOOL(id item) {
+        return ([item compare:@8] != NSOrderedAscending);
+    }];
+    
+    assertThatInteger(result, equalToInteger(3));
+}
+
+- (void)test_count_returns_when_no_condition {
+    NSInteger result = [self.input_numbers LINQ_count:nil];
+    assertThatInteger(result, equalToInteger([self.input_numbers count]));
 }
 
 - (void)test_max {
@@ -57,42 +85,19 @@
     assertThat(result, equalToInteger(1));
 }
 
-- (void)test_sum {
+- (void)test_sum_integers {
     NSNumber *result = [self.input_numbers LINQ_sum];
     assertThat(result, equalToInteger(55));
+}
+
+- (void)test_sum_double {
+    NSNumber *result = [@[@1.25, @1.25, @3.3, @4.11] LINQ_sum];
+    assertThat(result, equalToDouble(9.91));
 }
 
 - (void)test_sumForKey {
     NSNumber *result = [self.input_words LINQ_sumForKey:@"length"];
     assertThat(result, equalToInteger(15));
-}
-
-- (void)test_aggregate {
-    NSArray *input = @[@"M", @"A", @"R", @"K"];
-    NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
-        return [NSString stringWithFormat:@"%@, %@", aggregate, item];
-    }];
-    
-    assertThat(result, equalTo(@"M, A, R, K"));
-}
-
-- (void)test_aggregate_returns_when_no_accumulator {
-    NSArray *input = @[@"M", @"A", @"R", @"K"];
-    id result = [input LINQ_aggregate:nil];
-    assertThat(result, equalTo(input));
-}
-
-- (void)test_count_returns_when_condition {
-    NSInteger result = [self.input_numbers LINQ_count:^BOOL(id item) {
-        return ([item compare:@8] != NSOrderedAscending);
-    }];
-    
-    assertThatInteger(result, equalToInteger(3));
-}
-
-- (void)test_count_returns_when_no_condition {
-    NSInteger result = [self.input_numbers LINQ_count:nil];
-    assertThatInteger(result, equalToInteger([self.input_numbers count]));
 }
 
 @end

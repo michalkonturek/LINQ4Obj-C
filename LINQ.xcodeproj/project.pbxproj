@@ -100,9 +100,6 @@
 		9089901E1775E1C100AA935C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		908990261775E1C100AA935C /* LINQTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQTests-Info.plist"; sourceTree = "<group>"; };
 		908990281775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		90B422061775E807007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		90B422081775E807007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		90B4220A1775E817007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		90B4220C1775E817007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		90B422101775E995007DAF99 /* NSArray+LINQ_Generation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Generation.h"; sourceTree = "<group>"; };
 		90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Generation.m"; sourceTree = "<group>"; };
@@ -228,7 +225,6 @@
 		90B422051775E807007DAF99 /* NSArray+LINQ */ = {
 			isa = PBXGroup;
 			children = (
-				90B422061775E807007DAF99 /* .gitkeep */,
 				90B422161775EA24007DAF99 /* NSArray+LINQ.h */,
 				90373B4417764C60009511C4 /* NSArray+LINQ_Aggregation.h */,
 				90373B4517764C60009511C4 /* NSArray+LINQ_Aggregation.m */,
@@ -257,7 +253,6 @@
 		90B422071775E807007DAF99 /* NSDictionary+LINQ */ = {
 			isa = PBXGroup;
 			children = (
-				90B422081775E807007DAF99 /* .gitkeep */,
 				90B422171775EA70007DAF99 /* NSDictionary+LINQ.h */,
 			);
 			path = "NSDictionary+LINQ";
@@ -276,7 +271,6 @@
 				9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */,
 				9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */,
 				9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */,
-				90B4220A1775E817007DAF99 /* .gitkeep */,
 			);
 			path = "NSArray+LINQ_Tests";
 			sourceTree = "<group>";
