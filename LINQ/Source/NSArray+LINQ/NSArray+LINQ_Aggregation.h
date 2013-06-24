@@ -11,6 +11,11 @@
 @interface NSArray (LINQ_Aggregation)
 
 /**
+ Performs a custom aggregation operation on the values of a collection.
+ */
+- (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock;
+
+/**
  Calculates the average value of a collection of values.
  */
 - (id)LINQ_avg;
@@ -20,6 +25,12 @@
  by the key parameter for all objects in the collection.
  */
 - (id)LINQ_avgForKey:(NSString *)key;
+
+/**
+ Counts the elements in a collection, optionally only
+ those elements that satisfy a predicate function.
+ */
+- (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock;
 
 /**
  Determines the maximum value in a collection.
@@ -54,15 +65,5 @@
  */
 - (id)LINQ_sumForKey:(NSString *)key;
 
-/**
- Performs a custom aggregation operation on the values of a collection.
- */
-- (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock;
-
-/**
- Counts the elements in a collection, optionally only
- those elements that satisfy a predicate function.
- */
-- (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock;
 
 @end
