@@ -16,10 +16,8 @@
 
 - (void)test_ofType {
     NSArray *input = @[@"A", @1, @"B", @2];
-    
     NSArray *result = [input LINQ_ofType:[NSString class]];
     
-    assertThat(result, hasCountOf(2));
     assertThat(result, contains(@"A", @"B", nil));
 }
 
@@ -29,7 +27,6 @@
         return (([item integerValue] % 2) == 0);
     }];
     
-    assertThat(result, hasCountOf(5));
     assertThat(result, contains(@2, @4, @6, @8, @10, nil));
 }
 
