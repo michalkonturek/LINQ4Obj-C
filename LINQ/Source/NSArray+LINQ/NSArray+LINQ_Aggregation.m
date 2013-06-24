@@ -46,7 +46,10 @@
 
 - (id)LINQ_sum {
     return [self LINQ_aggregate:^id(id item, id aggregate) {
-        return [NSNumber numberWithInt:[aggregate integerValue] + [item integerValue]];
+        NSDecimalNumber *acc = [NSDecimalNumber
+                                decimalNumberWithDecimal:[aggregate decimalValue]];
+        return [acc decimalNumberByAdding:[NSDecimalNumber
+                                    decimalNumberWithDecimal:[item decimalValue]]];
     }];
 }
 

@@ -57,9 +57,14 @@
     assertThat(result, equalToInteger(1));
 }
 
-- (void)test_sum {
+- (void)test_sum_integers {
     NSNumber *result = [self.input_numbers LINQ_sum];
     assertThat(result, equalToInteger(55));
+}
+
+- (void)test_sum_double {
+    NSNumber *result = [@[@1.25, @1.25, @3.3, @4.11] LINQ_sum];
+    assertThat(result, equalToDouble(9.91));
 }
 
 - (void)test_sumForKey {
