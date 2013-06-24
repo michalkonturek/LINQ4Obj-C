@@ -10,6 +10,17 @@
 
 @implementation NSArray (LINQ_Aggregation)
 
+- (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock {
+    if (!accumulatorBlock) return self;
+    
+    id accumulator = nil;
+    for (id item in self) {
+        if (!accumulator) accumulator = item;
+        else accumulator = accumulatorBlock(item, accumulator);
+    }
+    return accumulator;
+}
+
 - (id)LINQ_avg {
     id sum = [self LINQ_sum];
     
@@ -22,6 +33,10 @@
 
 - (id)LINQ_avgForKey:(NSString *)key {
     return [self _aux_applyOperator:@"@avg" toKey:key];
+}
+
+- (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock {
+    return [[self LINQ_where:conditionBlock] count];
 }
 
 - (id)LINQ_max {
@@ -57,24 +72,9 @@
     return [self _aux_applyOperator:@"@sum" toKey:key];
 }
 
-- (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock {
-    if (!accumulatorBlock) return self;
-    
-    id accumulator = nil;
-    for (id item in self) {
-        if (!accumulator) accumulator = item;
-        else accumulator = accumulatorBlock(item, accumulator);
-    }
-    return accumulator;
-}
-
 - (id)_aux_applyOperator:(NSString *)op toKey:(NSString *)key {
     NSString *keyPath = [NSString stringWithFormat:@"%@.%@", op, key];
     return [self valueForKeyPath:keyPath];
-}
-
-- (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock {
-    return [[self LINQ_where:conditionBlock] count];
 }
 
 

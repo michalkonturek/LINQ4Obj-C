@@ -26,8 +26,4 @@
     return NO;
 }
 
-- (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock {
-    return [[self LINQ_where:conditionBlock] count];
-}
-
 @end
