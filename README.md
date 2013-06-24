@@ -1,9 +1,11 @@
 # LINQ for Objective-C
 
-[![Build Status](https://travis-ci.org/michalkonturek/LINQ.png)](https://travis-ci.org/michalkonturek/LINQ)
+<!-- [![Build Status](https://travis-ci.org/michalkonturek/LINQ.png)](https://travis-ci.org/michalkonturek/LINQ) -->
+[![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
 
 
 <!--[![Build Status](https://travis-ci.org/michalkonturek/LINQ.png?branch=develop)](https://travis-ci.org/michalkonturek/LINQ)-->
+<!-- [![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=develop)](https://travis-ci.org/michalkonturek/LINQ4Obj-C) -->
 
 
 ## Background
@@ -19,16 +21,15 @@
 - (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock;
 ```
 
-Example:
+The following example creates a coma-separated string from an array of strings.
 
 ```objc
 NSArray *input = @[@"M", @"A", @"R", @"K"];
 NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
     return [NSString stringWithFormat:@"%@, %@", aggregate, item];
 }];	
+// Result is: @"M, A, R, K"
 ```
-Result is a string "M, A, R, K".
-
 
 #### Avg
 
@@ -38,9 +39,10 @@ Calculates the average value of a collection of values.
 - (id)LINQ_avg;
 ```
 
-Example: 
+The following example returns the average of 5.5.
 
 ```objc
+[[NSArray LINQ_from:1 to:10] LINQ_avg];
 ```
 
  Calculates the average value of the attribute specified
@@ -50,9 +52,12 @@ Example:
 - (id)LINQ_avgForKey:(NSString *)key; 
 ```
 
-Example: 
+This example returns the average length of strings in the collection.
 
 ```objc
+NSArray *words = @[@"A", @"AB", @"ABC", @"ABCD", @"ABCDE"];
+NSNumber *avg_word_length = [words LINQ_avgForKey:@"length"];
+// Result is 3.
 ```
 
 
@@ -64,10 +69,17 @@ Example:
 ```objc
 - (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock;
 ```
- 
- Example: 
+
+This example returns the number of elements 
+in the collection that are not smaller than 8.
+
 
 ```objc
+NSArray *numbers = [NSArray LINQ_from:1 to:10];
+NSInteger *count = [numbers LINQ_count:^BOOL(id item) {
+        return ([item compare:@8] != NSOrderedAscending);
+    }];
+// Count is 3.
 ```
 
 
@@ -79,21 +91,26 @@ Example:
 - (id)LINQ_max;
 ```
 
-Example: 
+This example returns 10 as the maximum number in the collection.
 
 ```objc
+[[NSArray LINQ_from:1 to:10] LINQ_max];
 ```
 
  Calculates the max value of the attribute specified
- by the key parameter for all objects in the collection.
+ by the key parameter for all objects in a collection.
 
 ```objc
-- (id)LINQ_maxForKey:(NSString *)key;
+- (id)LINQ_maxForKey:(NSString *)key;- 
 ```
 
-Example: 
+The example below returns the number of characters
+of the longest word in the collection.
 
 ```objc
+NSArray *words = @[@"A", @"AB", @"ABC", @"ABCD", @"ABCDE"];
+NSInteger result = [words LINQ_maxForKey:@"length"];
+// Result is 5
 ```
 
 
@@ -106,11 +123,6 @@ Example:
 - (id)LINQ_min;
 ```
 
-Example: 
-
-```objc
-```
-
  Calculates the min value of the attribute specified
  by the key parameter for all objects in the collection.
 
@@ -118,38 +130,21 @@ Example:
 - (id)LINQ_minForKey:(NSString *)key;
 ```
 
-Example: 
-
-```objc
-```
-
 
 #### - (id)LINQ_sum;
 
- Calculates the sum of values of the attribute specified
- by the key parameter for all objects in the collection.
+ Calculates the sum of the values in a collection.
 
 ```objc
 - (id)LINQ_sum;
 ```
- 
- Example: 
 
-```objc
-```
-
- Calculates the sum of the values in a collection
+ Calculates the sum of values of the attribute specified
+ by the key parameter for all objects in a collection.
 
 ```objc
 - (id)LINQ_sumForKey:(NSString *)key;
 ```
- 
- Example: 
-
-```objc
-```
-
-
 
 
 <!--## Concatenation Operations-->
@@ -167,6 +162,17 @@ Example:
  Example: 
 
 ```objc
+[@[@"A", @"B", @"C", @"D", @"E"] LINQ_ToDictionary];
+
+// Result is: 
+// {
+// 		{0 : @"A"},
+// 		{1 : @"B"},
+// 		{2 : @"C"},
+// 		{3 : @"D"},
+// 		{4 : @"E"},
+// }
+
 ```
 
  Puts elements into a NSDictionary based on a key selector function.
@@ -175,23 +181,12 @@ Example:
 - (NSDictionary *)LINQ_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector;
 ```
 
- Example: 
-
-```objc
-```
-
  Puts elements into a NSDictionary based on a key and value selector functions.
 
 ```objc
 - (NSDictionary *)LINQ_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector
                                      valueSelector:(LINQSelectorBlock)valueSelector;
 ```
-
- Example: 
-
-```objc
-```
-
 
 
 ## Filtering Operations
@@ -233,12 +228,6 @@ Returns empty array.
 + (instancetype)LINQ_empty;
 ```
 
-Example: 
-
-```objc
-```
-
-
 #### From:To:
 
 Creates array with integers from to.
@@ -247,23 +236,12 @@ Creates array with integers from to.
 + (instancetype)LINQ_from:(NSInteger)from to:(NSInteger)to;
 ```
 
-Example: 
-
-```objc
-```
-
-
 #### Repeat
 
 Generates a collection that contains one repeated value.
 
 ```objc
 + (instancetype)LINQ_repeat:(id)element count:(NSInteger)count;
-```
-
-Example: 
-
-```objc
 ```
 
 
@@ -289,6 +267,20 @@ Example:
 Example: 
 
 ```objc
+NSArray *words = @[@"Adam", @"Anthony",
+					@"Ben", @"Bob",
+					@"Michael", @"Max", @"Matt",
+					@"Simon"];
+NSDictionary *results = [self.input_words LINQ_groupBy:^id(id item) {
+    return [item substringToIndex:1];
+}];
+// Result is:
+// {
+// 		{"A" : @[@"Adam", @"Anthony"]},
+// 		{"B" : @[@"Ben", @"Bob"]},
+// 		{"M" : @[@"Michael", @"Max", @"Matt"]}
+//		{"S" : @[@"Simon"]}
+// }
 ```
 
 #### ToLookup
@@ -348,8 +340,9 @@ Skips elements up to a specified position in a collection.
 Example: 
 
 ```objc
+NSArray *result = [[NSArray LINQ_from:1 to:10] LINQ_skip:5];
+// result is @[@6, @7, @8, @9, @10]
 ```
-
 
 #### Take
 
@@ -363,8 +356,10 @@ Example:
 Example: 
 
 ```objc
-
+NSArray *result = [[NSArray LINQ_from:1 to:10] LINQ_take:5];
+// result is @[@1, @2, @3, @4, @5]
 ```
+
 
 ## Projection Operations
 
@@ -376,10 +371,13 @@ Example:
 - (instancetype)LINQ_select:(LINQSelectorBlock)selectorBlock;
 ```
 
-Example: 
+The example below adds 10 to each element in the collection.
 
 ```objc
-
+NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_select:^id(id item) {
+    return [NSNumber numberWithInteger:([item integerValue] + 10)];
+}];
+// result is @[@11, @12, @13, @14, @15];
 ```
 
 #### Select Many
@@ -391,9 +389,16 @@ Example:
 - (instancetype)LINQ_selectMany:(LINQSelectorBlock)selectorBlock;
 ```
 
-Example: 
+This example returns words of each string of the collection.
 
 ```objc
+NSArray *input = @[@"an apple a day", @"the quick brown fox"];
+NSArray *result = [input LINQ_selectMany:^id(id item) { 
+    return [item componentsSeparatedByString:@" "]; 
+}]; 
+// result is @[@"an", @"apple", @"a", @"day", 
+//			@"the", @"quick", @"brown", @"fox"]
+//
 ```
 
 
@@ -407,12 +412,6 @@ Determines whether all the elements in a sequence satisfy a condition.
 - (BOOL)LINQ_all:(LINQConditionBlock)conditionBlock;
 ```
 
-Example:
-
-```objc
-```
-
-
 #### Any
 
  Determines whether any elements in a sequence satisfy a condition.
@@ -420,12 +419,6 @@ Example:
 ```objc
 - (BOOL)LINQ_any:(LINQConditionBlock)conditionBlock;
 ```
-
-Example:
-
-```objc
-```
-
 
 ## Set Operations
 
@@ -437,11 +430,6 @@ Example:
 - (instancetype)LINQ_distinct;
 ```
 
-Example:
-
-```objc
-```
-
 #### Except
 
  Returns the collection without the elements
@@ -449,11 +437,6 @@ Example:
 
 ```objc
 - (instancetype)LINQ_except:(NSArray *)other;
-```
-
-Example:
-
-```objc
 ```
 
 #### Intersect
@@ -465,11 +448,6 @@ Example:
 - (instancetype)LINQ_intersect:(NSArray *)other;
 ```
 
-Example:
-
-```objc
-```
-
 #### Union
 
  Returns the set union, which means unique elements
@@ -479,10 +457,6 @@ Example:
 - (NSArray *)LINQ_union:(NSArray *)other;
 ```
 
-Example:
-
-```objc
-```
 
 ## Sorting Data
 
@@ -500,16 +474,12 @@ Example:
 - (instancetype)LINQ_orderByDescending;
 ```
 
- Sorts elements of a collection depending on an element key.
+ Sorts elements of a collection depending on an element's key.
 
 ```objc
 - (instancetype)LINQ_orderByKey:(NSString *)key ascending:(BOOL)ascending;
 ```
 
-Example:
-
-```objc
-```
 
 #### Reverse
 
@@ -517,11 +487,6 @@ Example:
 
 ```objc
 - (instancetype)LINQ_reverse;
-```
-
-Example:
-
-```objc
 ```
 
 
