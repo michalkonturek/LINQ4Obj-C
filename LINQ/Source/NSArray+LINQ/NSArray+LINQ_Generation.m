@@ -40,5 +40,16 @@
     return result;
 }
 
++ (instancetype)LINQ_with:(LINQSelectorBlock)block count:(NSInteger)count {
+    if (count < 1) return [self LINQ_empty];
+    if (!block) return [self LINQ_empty];
+    
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:count];
+    for (NSInteger i = 0; i < count; i++) {
+        [result addObject:block(@(i))];
+    }
+    return result;
+}
+
 @end
 
