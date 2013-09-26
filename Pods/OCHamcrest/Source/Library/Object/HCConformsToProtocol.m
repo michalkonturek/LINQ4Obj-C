@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCConformsToProtocol.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Todd Farrell
 //
@@ -13,12 +13,12 @@
 
 @implementation HCConformsToProtocol
 
-+ (id)conformsToProtocol:(Protocol *)protocol
++ (instancetype)conformsTo:(Protocol *)protocol
 {
     return [[self alloc] initWithProtocol:protocol];
 }
 
-- (id)initWithProtocol:(Protocol *)aProtocol
+- (instancetype)initWithProtocol:(Protocol *)aProtocol
 {
     HCRequireNonNilObject(aProtocol);
     
@@ -46,10 +46,5 @@
 
 id<HCMatcher> HC_conformsTo(Protocol *aProtocol)
 {
-    return [HCConformsToProtocol conformsToProtocol:aProtocol];
-}
-
-id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)
-{
-    return HC_conformsTo(aProtocol);
+    return [HCConformsToProtocol conformsTo:aProtocol];
 }

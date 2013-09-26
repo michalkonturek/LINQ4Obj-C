@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsCollectionContainingInOrder.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -29,7 +29,8 @@
 
 @implementation HCMatchSequence
 
-- (id)initWithMatchers:(NSArray *)itemMatchers mismatchDescription:(id<HCDescription, NSObject>)description
+- (instancetype)initWithMatchers:(NSArray *)itemMatchers
+             mismatchDescription:(id<HCDescription, NSObject>)description
 {
     self = [super init];
     if (self)
@@ -91,12 +92,12 @@
 
 @implementation HCIsCollectionContainingInOrder
 
-+ (id)isCollectionContainingInOrder:(NSArray *)itemMatchers
++ (instancetype)isCollectionContainingInOrder:(NSArray *)itemMatchers
 {
     return [[self alloc] initWithMatchers:itemMatchers];
 }
 
-- (id)initWithMatchers:(NSArray *)itemMatchers
+- (instancetype)initWithMatchers:(NSArray *)itemMatchers
 {
     self = [super init];
     if (self)

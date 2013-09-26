@@ -21,7 +21,7 @@
 
 - (void)test_from_to_returns_empty_when_equal_parameters {
     NSArray *result = [NSArray LINQ_from:5 to:5];
-    assertThat(result, empty());
+    assertThat(result, isEmpty());
 }
 
 - (void)test_from_to_returns_when_ascending_both {

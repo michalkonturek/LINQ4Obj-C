@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsIn.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -14,12 +14,12 @@
 
 @implementation HCIsIn
 
-+ (id)isInCollection:(id)aCollection
++ (instancetype)isInCollection:(id)aCollection
 {
     return [[self alloc] initWithCollection:aCollection];
 }
 
-- (id)initWithCollection:(id)aCollection
+- (instancetype)initWithCollection:(id)aCollection
 {
     if (![aCollection respondsToSelector:@selector(containsObject:)])
     {

@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsCollectionContaining.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -17,12 +17,12 @@
 
 @implementation HCIsCollectionContaining
 
-+ (id)isCollectionContaining:(id<HCMatcher>)anElementMatcher
++ (instancetype)isCollectionContaining:(id<HCMatcher>)anElementMatcher
 {
     return [[self alloc] initWithMatcher:anElementMatcher];
 }
 
-- (id)initWithMatcher:(id<HCMatcher>)anElementMatcher
+- (instancetype)initWithMatcher:(id<HCMatcher>)anElementMatcher
 {
     self = [super init];
     if (self)

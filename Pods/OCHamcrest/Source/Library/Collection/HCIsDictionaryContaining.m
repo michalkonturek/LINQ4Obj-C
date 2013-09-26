@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsDictionaryContaining.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -16,14 +16,14 @@
 
 @implementation HCIsDictionaryContaining
 
-+ (id)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
-                          value:(id<HCMatcher>)aValueMatcher
++ (instancetype)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
+                                    value:(id<HCMatcher>)aValueMatcher
 {
     return [[self alloc] initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher];
 }
 
-- (id)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
-            valueMatcher:(id<HCMatcher>)aValueMatcher
+- (instancetype)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
+                      valueMatcher:(id<HCMatcher>)aValueMatcher
 {
     self = [super init];
     if (self)
