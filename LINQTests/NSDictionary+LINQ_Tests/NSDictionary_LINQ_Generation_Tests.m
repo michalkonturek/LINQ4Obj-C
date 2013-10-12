@@ -1,26 +1,26 @@
 //
-//  NSArray_LINQ_Generation_.m
-//  LINQ4Obj-C
+//  NSDictionary_LINQ_Generation_Tests.m
+//  LINQ
 //
-//  Created by Michal Konturek on 22/06/2013.
+//  Created by Michal Konturek on 12/10/2013.
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
 //
 
 #import "LINQ_Base_Tests.h"
 
-@interface NSArray_LINQ_Generation_ : SenTestCase
+@interface NSDictionary_LINQ_Generation_Tests : SenTestCase
 
 @end
 
-@implementation NSArray_LINQ_Generation_
+@implementation NSDictionary_LINQ_Generation_Tests
 
 - (void)test_empty {
-    NSArray *result = [NSArray LINQ_empty];
+    id result = [NSDictionary LINQ_empty];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_from_to_returns_empty_when_equal_parameters {
-    NSArray *result = [NSArray LINQ_from:5 to:5];
+    id result = [NSDictionary LINQ_from:5 to:5];
     assertThat(result, isEmpty());
 }
 
@@ -61,34 +61,34 @@
 }
 
 - (void)aux_test_from_to_from:(NSInteger)from to:(NSInteger)to {
-    NSArray *result = [NSArray LINQ_from:from to:to];
+    id result = [NSDictionary LINQ_from:from to:to];
     
     NSInteger range = abs(from - to) + 1;
     assertThat(result, hasCountOf(range));
-    assertThat([result objectAtIndex:0], equalToInteger(from));
-    assertThat([result objectAtIndex:(range - 1)], equalToInteger(to));
+    assertThat([result objectForKey:@(0)], equalToInteger(from));
+    assertThat([result objectForKey:@(range - 1)], equalToInteger(to));
 }
 
 - (void)test_repeat_count_returns_empty_when_no_element {
-    NSArray *result = [NSArray LINQ_repeat:nil count:1];
+    id result = [NSDictionary LINQ_repeat:nil count:1];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_repeat_count_returns_empty_when_count_below_one {
-    NSArray *result = [NSArray LINQ_repeat:@"Element" count:0];
+    id result = [NSDictionary LINQ_repeat:@"Element" count:0];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_repeat {
     NSString *element = @"Element";
-    NSArray *result = [NSArray LINQ_repeat:element count:5];
+    NSDictionary *result = [NSDictionary LINQ_repeat:element count:5];
     assertThat(result, hasCountOf(5));
-    assertThat(result[0], equalTo(element));
-    assertThat(result[1], equalTo(element));
-    assertThat(result[2], equalTo(element));
-    assertThat(result[3], equalTo(element));
-    assertThat(result[4], equalTo(element));
+    assertThat([result objectForKey:@(0)], equalTo(element));
+    assertThat([result objectForKey:@(1)], equalTo(element));
+    assertThat([result objectForKey:@(2)], equalTo(element));
+    assertThat([result objectForKey:@(3)], equalTo(element));
+    assertThat([result objectForKey:@(4)], equalTo(element));
 }
 
-@end
 
+@end
