@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "LINQ.h"
 
 @interface NSDictionary (LINQ_Aggregation)
 

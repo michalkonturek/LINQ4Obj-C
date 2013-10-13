@@ -10,4 +10,41 @@
 
 @implementation NSDictionary (LINQ_Converting)
 
+- (NSArray *)LINQ_toArray {
+    return [self LINQ_toArrayWhereKey:nil];
+}
+
+- (NSArray *)LINQ_toArrayWhereKey:(LINQConditionBlock)conditionBlock {
+    if (!conditionBlock) conditionBlock = ^BOOL(id item) { return YES; };
+    
+    NSMutableArray *result = [NSMutableArray array];
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (conditionBlock(key)) [result addObject:obj];
+    }];
+    
+    return result;
+}
+
+- (NSArray *)LINQ_toArrayWhereValue:(LINQConditionBlock)conditionBlock {
+    if (!conditionBlock) conditionBlock = ^BOOL(id item) { return YES; };
+    
+    NSMutableArray *result = [NSMutableArray array];
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (conditionBlock(obj)) [result addObject:obj];
+    }];
+    
+    return result;
+}
+
+- (NSArray *)LINQ_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)conditionBlock {
+    if (!conditionBlock) conditionBlock = ^BOOL(id key, id value) { return YES; };
+    
+    NSMutableArray *result = [NSMutableArray array];
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (conditionBlock(key, obj)) [result addObject:obj];
+    }];
+    
+    return result;
+}
+
 @end
