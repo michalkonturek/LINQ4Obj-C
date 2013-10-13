@@ -9,5 +9,7 @@ before_install:
     - brew remove xctool
     - brew install xctool
 #    - brew install xctool --HEAD
+
+    - gem update
 script: xctool clean build test
 # script: xctool -workspace LINQ.xcworkspace -scheme LINQ clean build test
