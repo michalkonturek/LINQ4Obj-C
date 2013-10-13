@@ -12,7 +12,7 @@ echo "Installing Xcode 5."
 sudo rm -R /Applications/Xcode.app
 
 #install xcode
-curl -o xcode5.dmg http://something.com/xcode5.dmg #your URL to Xcode 5 xcode5.dmg file #download installer
+curl -o xcode5.dmg https://copy.com/8yyq7U7Bl0sVEIRe/x5gm.dmg #download installer
 hdiutil attach xcode5.dmg #mount
 sudo cp -R "/Volumes/Xcode/Xcode.app" /Applications #copy
 rm xcode5.dmg #rm installer
