@@ -10,4 +10,29 @@
 
 @interface NSDictionary (LINQ_Filtering)
 
+/**
+ Selects elements which keys, depending on their ability to be cast to a specified type.
+ */
+- (instancetype)LINQ_ofTypeKey:(Class)klass;
+
+/**
+ Selects elements which values, depending on their ability to be cast to a specified type.
+ */
+- (instancetype)LINQ_ofTypeValue:(Class)klass;
+
+/**
+ Selects values which satisify key-value condition.
+ */
+- (instancetype)LINQ_where:(LINQKeyValueConditionBlock)conditionBlock;
+
+/**
+ Selects values which keys satisify condition.
+ */
+- (instancetype)LINQ_whereKey:(LINQConditionBlock)conditionBlock;
+
+/**
+ Selects values which satisify condition.
+ */
+- (instancetype)LINQ_whereValue:(LINQConditionBlock)conditionBlock;
+
 @end
