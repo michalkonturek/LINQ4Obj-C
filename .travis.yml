@@ -1,8 +1,8 @@
 language: objective-c
 before_install:
-    #install xcode 5
-    - chmod -R +x ./scripts
-    - ./scripts/travis/xcode5.sh
+    # #install xcode 5
+    # - chmod -R +x ./scripts
+    # - ./scripts/travis/xcode5.sh
 
     # install xctool
     - brew update
