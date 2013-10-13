@@ -1,6 +1,12 @@
 language: objective-c
-before_script:
+before_install:
+    #install xcode 5
+    - chmod -R +x ./scripts
+    - ./scripts/travis/xcode5.sh
+
+	# install xctool
     - brew update
+    - brew remove xctool
     - brew install xctool
 #    - brew install xctool --HEAD
 script: xctool clean build test
