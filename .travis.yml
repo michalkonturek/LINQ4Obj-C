@@ -4,7 +4,7 @@ before_install:
     - chmod -R +x ./scripts
     - ./scripts/travis/xcode5.sh
 
-	# install xctool
+    # install xctool
     - brew update
     - brew remove xctool
     - brew install xctool
