@@ -8,7 +8,7 @@ Provides fluent interface of LINQ-style query to Objective-C.
 
 ## Intro
 
-This project ports LINQ standard query operators Objective-C. This is achieved by sets of categories for `NSArray` and `NSDictionary` collection classes.
+This project ports LINQ standard query operators to Objective-C. This is achieved by collection of categories for `NSArray` and `NSDictionary` classes.
 
 This library is available through [CocoaPods][PODS].
 
