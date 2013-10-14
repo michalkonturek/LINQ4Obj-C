@@ -11,15 +11,46 @@
 @implementation NSDictionary (LINQ_Sets)
 
 - (instancetype)LINQ_distinct {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return self;
+    
+    NSArray *values = [[self allValues] LINQ_distinct];
+    return [self _aux_dictionary_with_values:values];
 }
 
 - (instancetype)LINQ_except:(NSDictionary *)other {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return self;
+    if (!other) return self;
+    if ([other _isEmpty]) return self;
+    
+    NSArray *values = [[self allValues] LINQ_except:[other allValues]];
+    return [self _aux_dictionary_with_values:values];
 }
 
 - (instancetype)LINQ_intersect:(NSDictionary *)other {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return self;
+    if (!other) return self;
+    if ([other _isEmpty]) return self;
+    
+    NSArray *values = [[self allValues] LINQ_intersect:[other allValues]];
+    return [self _aux_dictionary_with_values:values];
+}
+
+- (NSDictionary *)_aux_dictionary_with_values:(NSArray *)values {
+    
+    NSMutableDictionary *result = [NSMutableDictionary dictionary];
+    for (id value in values) {
+        for (id key in [self allKeys]) {
+            if ([value isEqual:[self objectForKey:key]]) {
+                [result setObject:value forKey:key];
+                break;
+            }
+        }
+    }
+    return result;
+}
+
+- (BOOL)_isEmpty {
+    return ([self count] == 0);
 }
 
 @end
