@@ -11,11 +11,25 @@
 @implementation NSDictionary (LINQ_Quantifier)
 
 - (BOOL)LINQ_all:(LINQKeyValueConditionBlock)conditionBlock {
-    METHOD_NOT_IMPLEMENTED
+    if (!conditionBlock) return YES;
+    
+    __block NSInteger failedCount = 0;
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (!conditionBlock(key, obj)) failedCount++;
+    }];
+    
+    return (failedCount == 0);
 }
 
 - (BOOL)LINQ_any:(LINQKeyValueConditionBlock)conditionBlock {
-    METHOD_NOT_IMPLEMENTED
+    if (!conditionBlock) return NO;
+    
+    __block BOOL result = NO;
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (conditionBlock(key, obj)) result = YES;
+    }];
+    
+    return result;
 }
 
 @end

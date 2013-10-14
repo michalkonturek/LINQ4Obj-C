@@ -27,10 +27,4 @@
  */
 - (instancetype)LINQ_intersect:(NSDictionary *)other;
 
-///**
-// Returns the set union, which means unique elements
-// that appear in either of two collections.
-// */
-//- (NSArray *)LINQ_union:(NSDictionary *)other;
-
 @end

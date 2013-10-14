@@ -11,12 +11,12 @@
 @interface NSDictionary (LINQ_Filtering)
 
 /**
- Selects elements which keys, depending on their ability to be cast to a specified type.
+ Selects elements which keys can be cast to a specified type.
  */
 - (instancetype)LINQ_ofTypeKey:(Class)klass;
 
 /**
- Selects elements which values, depending on their ability to be cast to a specified type.
+ Selects elements which values can be cast to a specified type.
  */
 - (instancetype)LINQ_ofTypeValue:(Class)klass;
 

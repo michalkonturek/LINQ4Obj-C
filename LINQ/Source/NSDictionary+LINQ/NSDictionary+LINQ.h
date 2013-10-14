@@ -17,3 +17,5 @@ typedef id (^LINQKeyValueSelectorBlock)(id key, id value);
 #import "NSDictionary+LINQ_Filtering.h"
 #import "NSDictionary+LINQ_Generation.h"
 #import "NSDictionary+LINQ_Partitioning.h"
+#import "NSDictionary+LINQ_Quantifier.h"
+#import "NSDictionary+LINQ_Sets.h"

@@ -16,12 +16,12 @@
 + (instancetype)LINQ_empty;
 
 /**
- Creates dictionary with integers from to.
+ Creates indexed dictionary with integers between from and to.
  */
 + (instancetype)LINQ_from:(NSInteger)from to:(NSInteger)to;
 
 /**
- Generates a collection that contains one repeated value.
+ Generates indexed dictionary that contains one repeated value.
  */
 + (instancetype)LINQ_repeat:(id)element count:(NSInteger)count;
 
