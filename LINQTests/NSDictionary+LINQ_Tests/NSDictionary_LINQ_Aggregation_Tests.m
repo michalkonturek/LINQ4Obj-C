@@ -10,10 +10,22 @@
 
 @interface NSDictionary_LINQ_Aggregation_Tests : SenTestCase
 
+@property (nonatomic, strong) NSDictionary *input_numbers;
+@property (nonatomic, strong) NSDictionary *input_words;
+
 @end
 
 @implementation NSDictionary_LINQ_Aggregation_Tests
 
+- (void)setUp {
+    self.input_numbers = [NSDictionary LINQ_from:1 to:10];
+    self.input_words = @{@1: @"A", @2: @"AB", @3: @"ABC", @4: @"ABCD", @5: @"ABCDE"};
+}
+
+- (void)tearDown {
+    self.input_numbers = nil;
+    self.input_words = nil;
+}
 
 
 @end
