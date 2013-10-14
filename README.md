@@ -36,20 +36,14 @@ Calculates the average value of a collection of values.
 - (id)LINQ_avg;
 ```
 
-The following example returns the average of 5.5.
-
-```objc
-[[NSArray LINQ_from:1 to:10] LINQ_avg];
-```
-
- Calculates the average value of the attribute specified
- by the key parameter for all objects in the collection.
+Calculates the average value of the attribute specified
+by the key parameter for all objects in the collection.
 
 ```objc
 - (id)LINQ_avgForKey:(NSString *)key; 
 ```
 
-This example returns the average length of strings in the collection.
+Example: Return the average length of strings in the collection.
 
 ```objc
 NSArray *words = @[@"A", @"AB", @"ABC", @"ABCD", @"ABCDE"];
@@ -60,16 +54,15 @@ NSNumber *avg_word_length = [words LINQ_avgForKey:@"length"];
 
 #### Count
 
- Counts the elements in a collection, optionally only 
- those elements that satisfy a predicate function.
+Counts the elements in a collection, optionally only 
+those elements that satisfy a predicate function.
 
 ```objc
 - (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock;
 ```
 
-This example returns the number of elements 
+Example: Return the number of elements 
 in the collection that are not smaller than 8.
-
 
 ```objc
 NSArray *numbers = [NSArray LINQ_from:1 to:10];
@@ -82,53 +75,37 @@ NSInteger *count = [numbers LINQ_count:^BOOL(id item) {
 
 #### Max
 
- Determines the maximum value in a collection.
+Determines the maximum value in a collection.
 
 ```objc
 - (id)LINQ_max;
 ```
 
-This example returns 10 as the maximum number in the collection.
-
-```objc
-[[NSArray LINQ_from:1 to:10] LINQ_max];
-```
-
- Calculates the max value of the attribute specified
- by the key parameter for all objects in a collection.
+Calculates the max value of the attribute specified
+by the key parameter for all objects in a collection.
 
 ```objc
 - (id)LINQ_maxForKey:(NSString *)key;- 
 ```
 
-The example below returns the number of characters
-of the longest word in the collection.
-
-```objc
-NSArray *words = @[@"A", @"AB", @"ABC", @"ABCD", @"ABCDE"];
-NSInteger result = [words LINQ_maxForKey:@"length"];
-// Result is 5
-```
-
-
 
 #### Min
 
- Determines the minimum value in a collection.
+Determines the minimum value in a collection.
 
 ```objc
 - (id)LINQ_min;
 ```
 
- Calculates the min value of the attribute specified
- by the key parameter for all objects in the collection.
+Calculates the min value of the attribute specified
+by the key parameter for all objects in the collection.
 
 ```objc
 - (id)LINQ_minForKey:(NSString *)key;
 ```
 
 
-#### - (id)LINQ_sum;
+#### Sum
 
  Calculates the sum of the values in a collection.
 
@@ -145,6 +122,7 @@ NSInteger result = [words LINQ_maxForKey:@"length"];
 
 
 <!--## Concatenation Operations-->
+
 
 ## Converting Operations
 
@@ -340,46 +318,42 @@ NSDictionary *results = [self.input_words LINQ_groupBy:^id(id item) {
 
 #### ToLookup
 
- Returns array of NSDictionaries by entering each element
- into a NSDictionary whose key is a result of a selector
- and its value is an element: ` { key <- selector(element), value <- element}`
+Returns array of NSDictionaries by entering each element
+into a NSDictionary whose key is a result of a selector
+and its value is an element: ` { key <- selector(element), value <- element}`
  
-
 ```objc
 - (instancetype)LINQ_toLookup:(LINQSelectorBlock)selector;
 ```
 
+<!--
 Example: 
 
 ```objc
 ```
+-->
 
 #### Lookup
 
- Helps to filter results of toLookup: method.
- Returns array of NSDictionaries with the same key.
-
+Helps to filter results of toLookup: method.
+Returns array of NSDictionaries with the same key.
 
 ```objc
 - (instancetype)LINQ_lookup:(id)key;
 ```
 
+<!--
 Example: 
 
 ```objc
 ```
-
-
+-->
 
 <!--## Join Operations-->
 
-
 <!--## Element Operations-->
 
-
 <!--## Equality Operations-->
-
-
 
 
 ## Partitioning Data
@@ -401,6 +375,7 @@ NSArray *result = [[NSArray LINQ_from:1 to:10] LINQ_skip:5];
 // result is @[@6, @7, @8, @9, @10]
 ```
 -->
+
 #### Take
 
 Takes elements up to a specified position in a collection.
