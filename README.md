@@ -4,11 +4,36 @@
 [![Build Version](http://cocoapod-badges.herokuapp.com/v/LINQ4Obj-C/badge.png)](https://github.com/michalkonturek/LINQ4Obj-C)
 [![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=master)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
 
+Provides fluent interface of LINQ-style query to Objective-C.
 
-## Background
+## Intro
+
+This project ports LINQ standard query operators Objective-C. This is achieved by sets of categories for `NSArray` and `NSDictionary` collection classes.
+
+This library is available through [CocoaPods][PODS].
+
+## License
+
+Source code of this project is available under the standard MIT license. Please see [the license file][LICENSE].
+
+[PODS]:http://cocoapods.org/
+[LICENSE]:https://github.com/michalkonturek/LINQ4Obj-C/blob/master/LICENSE
+
+
+# API
+
+* [Aggregation Operations](#aggregation-operations)
+* [Converting Operations](#converting-operations)
+* [Filtering Operations](#filtering-operations)
+* [Generation Operations](#generation-operations)
+* [Grouping Operations](#grouping-operations)
+* [Partitioning Operations](#partitioning-operations)
+* [Projection Operations](#projection-operations)
+* [Quantifier Operations](#quantifier-operations)
+* [Set Operations](#set-operations)
+* [Sorting Operations](#sorting-operations)
 
 ## Aggregation Operations
-
 
 #### Aggregate
 
@@ -502,7 +527,7 @@ two dictionaries.
 ```
 
 
-## Sorting Data
+## Sorting Operations
 
 #### OrderBy
 
