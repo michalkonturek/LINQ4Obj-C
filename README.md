@@ -381,7 +381,7 @@ Example:
 <!--## Equality Operations-->
 
 
-## Partitioning Data
+## Partitioning Operations
 
 #### Skip
 
