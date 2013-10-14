@@ -28,16 +28,18 @@
 }
 
 - (void)test_aggregate {
-    NSDictionary *input = @{@1: @"M", @2: @"A", @3: @"R", @4: @"K"};
-    NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
-        return [NSString stringWithFormat:@"%@, %@", aggregate, item];
+//    NSDictionary *input = @{@1: @"M", @2: @"A", @3: @"R", @4: @"K"};
+    NSNumber *result = [self.input_numbers LINQ_aggregate:^id(id item, id aggregate) {
+        NSDecimalNumber *acc = [NSDecimalNumber decimalNumberWithDecimal:[aggregate decimalValue]];
+        return [acc decimalNumberByMultiplyingBy:
+                [NSDecimalNumber decimalNumberWithDecimal:[item decimalValue]]];
     }];
     
-    assertThat(result, equalTo(@"M, A, R, K"));
+    assertThat(result, equalToInteger(3628800));
 }
 
 - (void)test_aggregate_returns_nil_when_empty {
-    NSString *result = [self.input_words LINQ_aggregate:^id(id item, id aggregate) {
+    NSString *result = [[NSDictionary LINQ_empty] LINQ_aggregate:^id(id item, id aggregate) {
         return [NSString stringWithFormat:@"%@, %@", aggregate, item];
     }];
     
@@ -45,7 +47,7 @@
 }
 
 - (void)test_aggregate_returns_self_when_no_accumulator {
-    NSDictionary *input = @{@1: @"M", @2: @"A", @3: @"R", @4: @"K"};
+    NSDictionary *input = self.input_words;
     id result = [input LINQ_aggregate:nil];
     assertThat(result, equalTo(input));
 }

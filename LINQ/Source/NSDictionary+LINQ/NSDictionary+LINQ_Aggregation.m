@@ -11,43 +11,82 @@
 @implementation NSDictionary (LINQ_Aggregation)
 
 - (id)LINQ_aggregate:(LINQAccumulatorBlock)accumulatorBlock {
-    METHOD_NOT_IMPLEMENTED
+    if (!accumulatorBlock) return self;
+    
+    __block id accumulator = nil;
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id item, BOOL *stop) {
+        if (!accumulator) accumulator = item;
+        else accumulator = accumulatorBlock(item, accumulator);
+    }];
+    
+    return accumulator;
 }
 
 - (id)LINQ_avg {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
+    id sum = [self LINQ_sum];
+    NSDecimalNumber *result = [NSDecimalNumber decimalNumberWithDecimal:[sum decimalValue]];
+    NSDecimalNumber *count = [NSDecimalNumber decimalNumberWithDecimal:
+                              [[NSNumber numberWithInteger:[self count]] decimalValue]];
+    
+    return [result decimalNumberByDividingBy:count];
 }
 
 - (id)LINQ_avgForKey:(NSString *)key {
-    METHOD_NOT_IMPLEMENTED
+    return [self _aux_applyOperator:@"@avg" toKey:key];
 }
 
 - (NSUInteger)LINQ_count:(LINQConditionBlock)conditionBlock {
-    METHOD_NOT_IMPLEMENTED
+    return [[self LINQ_whereValue:conditionBlock] count];
 }
 
 - (id)LINQ_max {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
+    return [self LINQ_aggregate:^id(id item, id aggregate) {
+        return ([item compare:aggregate] == NSOrderedDescending) ? item : aggregate;
+    }];
 }
 
 - (id)LINQ_maxForKey:(NSString *)key {
-    METHOD_NOT_IMPLEMENTED
+    return [self _aux_applyOperator:@"@max" toKey:key];
 }
 
 - (id)LINQ_min {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
+    return [self LINQ_aggregate:^id(id item, id aggregate) {
+        return ([item compare:aggregate] == NSOrderedAscending) ? item : aggregate;
+    }];
 }
 
 - (id)LINQ_minForKey:(NSString *)key {
-    METHOD_NOT_IMPLEMENTED
+    return [self _aux_applyOperator:@"@min" toKey:key];
 }
 
 - (id)LINQ_sum {
-    METHOD_NOT_IMPLEMENTED
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
+    return [self LINQ_aggregate:^id(id item, id aggregate) {
+        NSDecimalNumber *acc = [NSDecimalNumber
+                                decimalNumberWithDecimal:[aggregate decimalValue]];
+        return [acc decimalNumberByAdding:[NSDecimalNumber
+                                           decimalNumberWithDecimal:[item decimalValue]]];
+    }];
 }
 
 - (id)LINQ_sumForKey:(NSString *)key {
-    METHOD_NOT_IMPLEMENTED
+    return [self _aux_applyOperator:@"@sum" toKey:key];
+}
+
+- (id)_aux_applyOperator:(NSString *)op toKey:(NSString *)key {
+    NSString *keyPath = [NSString stringWithFormat:@"%@.%@", op, key];
+    return [[self allValues] valueForKeyPath:keyPath];
+}
+
+- (BOOL)_isEmpty {
+    return (self.count == 0);
 }
 
 @end

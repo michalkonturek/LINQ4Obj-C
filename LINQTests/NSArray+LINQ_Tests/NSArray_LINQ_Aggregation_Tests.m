@@ -37,7 +37,7 @@
 }
 
 - (void)test_aggregate_returns_nil_when_empty {
-    NSString *result = [self.input_words LINQ_aggregate:^id(id item, id aggregate) {
+    NSString *result = [[NSArray LINQ_empty] LINQ_aggregate:^id(id item, id aggregate) {
         return [NSString stringWithFormat:@"%@, %@", aggregate, item];
     }];
     
