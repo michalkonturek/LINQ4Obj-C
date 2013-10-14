@@ -22,8 +22,9 @@
 }
 
 - (id)LINQ_avg {
-    id sum = [self LINQ_sum];
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
     
+    id sum = [self LINQ_sum];    
     NSDecimalNumber *result = [NSDecimalNumber decimalNumberWithDecimal:[sum decimalValue]];
     NSDecimalNumber *count = [NSDecimalNumber decimalNumberWithDecimal:
                               [[NSNumber numberWithInteger:[self count]] decimalValue]];
@@ -40,6 +41,8 @@
 }
 
 - (id)LINQ_max {
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
     return [self LINQ_aggregate:^id(id item, id aggregate) {
         return ([item compare:aggregate] == NSOrderedDescending) ? item : aggregate;
     }];
@@ -50,6 +53,8 @@
 }
 
 - (id)LINQ_min {
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
     return [self LINQ_aggregate:^id(id item, id aggregate) {
         return ([item compare:aggregate] == NSOrderedAscending) ? item : aggregate;
     }];
@@ -60,6 +65,8 @@
 }
 
 - (id)LINQ_sum {
+    if ([self _isEmpty]) return [NSDecimalNumber zero];
+    
     return [self LINQ_aggregate:^id(id item, id aggregate) {
         NSDecimalNumber *acc = [NSDecimalNumber
                                 decimalNumberWithDecimal:[aggregate decimalValue]];
@@ -77,5 +84,8 @@
     return [self valueForKeyPath:keyPath];
 }
 
+- (BOOL)_isEmpty {
+    return (self.count == 0);
+}
 
 @end
