@@ -49,6 +49,19 @@
     return result;
 }
 
+- (NSDictionary *)LINQ_merge:(NSDictionary *)other {
+    if ([self _isEmpty]) return other;
+    if (!other) return self;
+    if ([other _isEmpty]) return self;
+    
+    NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:self];
+    [other enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (![result objectForKey:key]) [result setObject:obj forKey:key];
+    }];
+    
+    return result;
+}
+
 - (BOOL)_isEmpty {
     return ([self count] == 0);
 }

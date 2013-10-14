@@ -27,4 +27,11 @@
  */
 - (instancetype)LINQ_intersect:(NSDictionary *)other;
 
+/**
+ Merges to dictionaries by returning the set union
+ of unique elements which keys appear in either of
+ two dictionaries.
+ */
+- (NSDictionary *)LINQ_merge:(NSDictionary *)other;
+
 @end

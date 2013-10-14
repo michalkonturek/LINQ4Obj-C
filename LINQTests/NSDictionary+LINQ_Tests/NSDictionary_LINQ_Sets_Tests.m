@@ -95,5 +95,37 @@
     assertThat(result, sameInstance(input));
 }
 
+- (void)test_merge {
+    NSDictionary *input = [NSDictionary LINQ_from:1 to:8];
+    NSDictionary *other = [NSDictionary LINQ_from:1 to:10];
+    NSDictionary *result = [input LINQ_merge:other];
+    
+    assertThat(result, hasCountOf(10));
+    assertThat([result allValues], containsInAnyOrder(@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, nil));
+}
+
+- (void)test_merge_returns_other_when_empty {
+    NSDictionary *input = [NSDictionary LINQ_empty];
+    NSDictionary *other = [NSDictionary LINQ_from:1 to:5];
+    NSDictionary *result = [input LINQ_merge:other];
+    
+    assertThat(result, sameInstance(other));
+}
+
+- (void)test_merge_returns_self_when_other_empty {
+    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
+    NSDictionary *other = [NSDictionary LINQ_empty];
+    NSDictionary *result = [input LINQ_merge:other];
+    
+    assertThat(result, sameInstance(input));
+}
+
+- (void)test_merge_returns_self_when_other_nil {
+    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
+    NSDictionary *other = nil;
+    NSDictionary *result = [input LINQ_merge:other];
+    
+    assertThat(result, sameInstance(input));
+}
 
 @end
