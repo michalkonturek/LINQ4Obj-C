@@ -28,7 +28,6 @@
 }
 
 - (void)test_aggregate {
-//    NSDictionary *input = @{@1: @"M", @2: @"A", @3: @"R", @4: @"K"};
     NSNumber *result = [self.input_numbers LINQ_aggregate:^id(id item, id aggregate) {
         NSDecimalNumber *acc = [NSDecimalNumber decimalNumberWithDecimal:[aggregate decimalValue]];
         return [acc decimalNumberByMultiplyingBy:

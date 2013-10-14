@@ -1,11 +1,8 @@
 # LINQ for Objective-C
 
-<!-- [![Build Status](https://travis-ci.org/michalkonturek/LINQ.png)](https://travis-ci.org/michalkonturek/LINQ) -->
-[![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
-
-
-<!--[![Build Status](https://travis-ci.org/michalkonturek/LINQ.png?branch=develop)](https://travis-ci.org/michalkonturek/LINQ)-->
-<!-- [![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=develop)](https://travis-ci.org/michalkonturek/LINQ4Obj-C) -->
+[![Build Platform](http://cocoapod-badges.herokuapp.com/p/LINQ4Obj-C/badge.png)](https://github.com/michalkonturek/LINQ4Obj-C)
+[![Build Version](http://cocoapod-badges.herokuapp.com/v/LINQ4Obj-C/badge.png)](https://github.com/michalkonturek/LINQ4Obj-C)
+[![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=master)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
 
 
 ## Background
