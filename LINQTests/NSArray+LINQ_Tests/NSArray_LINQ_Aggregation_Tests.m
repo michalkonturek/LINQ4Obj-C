@@ -36,7 +36,15 @@
     assertThat(result, equalTo(@"M, A, R, K"));
 }
 
-- (void)test_aggregate_returns_when_no_accumulator {
+- (void)test_aggregate_returns_nil_when_empty {
+    NSString *result = [self.input_words LINQ_aggregate:^id(id item, id aggregate) {
+        return [NSString stringWithFormat:@"%@, %@", aggregate, item];
+    }];
+    
+    assertThat(result, nilValue());
+}
+
+- (void)test_aggregate_returns_self_when_no_accumulator {
     NSArray *input = @[@"M", @"A", @"R", @"K"];
     id result = [input LINQ_aggregate:nil];
     assertThat(result, equalTo(input));
