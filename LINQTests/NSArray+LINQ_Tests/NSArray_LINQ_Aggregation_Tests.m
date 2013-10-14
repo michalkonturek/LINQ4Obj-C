@@ -47,6 +47,11 @@
     assertThat(result, equalToDouble(5.5));
 }
 
+- (void)test_avg_returns_zero_when_empty {
+    NSNumber *result = [[NSArray LINQ_empty] LINQ_avg];
+    assertThat(result, equalToDouble(0.0));
+}
+
 - (void)test_avgForKey {
     NSNumber *result = [self.input_words LINQ_avgForKey:@"length"];
     assertThat(result, equalToInteger(3));
@@ -70,6 +75,11 @@
     assertThat(result, equalToInteger(10));
 }
 
+- (void)test_max_returns_zero_when_empty {
+    NSNumber *result = [[NSArray LINQ_empty] LINQ_max];
+    assertThat(result, equalToInteger(0));
+}
+
 - (void)test_maxForKey {
     NSNumber *result = [self.input_words LINQ_maxForKey:@"length"];
     assertThat(result, equalToInteger(5));
@@ -78,6 +88,11 @@
 - (void)test_min {
     NSNumber *result = [self.input_numbers LINQ_min];
     assertThat(result, equalToInteger(1));
+}
+
+- (void)test_min_returns_zero_when_empty {
+    NSNumber *result = [[NSArray LINQ_empty] LINQ_min];
+    assertThat(result, equalToInteger(0));
 }
 
 - (void)test_minForKey {
@@ -95,9 +110,19 @@
     assertThat(result, equalToDouble(9.91));
 }
 
+- (void)test_sum_returns_zero_when_empty {
+    NSNumber *result = [[NSArray LINQ_empty] LINQ_sum];
+    assertThat(result, equalToInteger(0));
+}
+
 - (void)test_sumForKey {
     NSNumber *result = [self.input_words LINQ_sumForKey:@"length"];
     assertThat(result, equalToInteger(15));
+}
+
+- (void)test_sumForKey_returns_zero_when_empty {
+    NSNumber *result = [[NSArray LINQ_empty] LINQ_sumForKey:@"someKey"];
+    assertThat(result, equalToInteger(0));
 }
 
 @end
