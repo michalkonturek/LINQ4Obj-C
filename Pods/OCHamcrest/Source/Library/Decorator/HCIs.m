@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIs.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -15,12 +15,12 @@
 
 @implementation HCIs
 
-+ (id)is:(id<HCMatcher>)aMatcher
++ (instancetype)is:(id<HCMatcher>)aMatcher
 {
     return [[self alloc] initWithMatcher:aMatcher];
 }
 
-- (id)initWithMatcher:(id<HCMatcher>)aMatcher
+- (instancetype)initWithMatcher:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)

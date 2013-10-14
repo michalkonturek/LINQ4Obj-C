@@ -1,6 +1,6 @@
 //
 //  NSArray+LINQ_Sets.m
-//  LINQ
+//  LINQ4Obj-C
 //
 //  Created by Michal Konturek on 23/06/2013.
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
@@ -19,9 +19,9 @@
 }
 
 - (instancetype)LINQ_except:(NSArray *)other {
-    if ([self isEmpty]) return self;
+    if ([self _isEmpty]) return self;
     if (!other) return self;
-    if ([other isEmpty]) return self;
+    if ([other _isEmpty]) return self;
     
     NSMutableArray *result = [NSMutableArray arrayWithArray:self];
     for (id item in other) {
@@ -31,9 +31,9 @@
 }
 
 - (instancetype)LINQ_intersect:(NSArray *)other {
-    if ([self isEmpty]) return self;
+    if ([self _isEmpty]) return self;
     if (!other) return self;
-    if ([other isEmpty]) return self;
+    if ([other _isEmpty]) return self;
     
     NSMutableOrderedSet *result = [NSMutableOrderedSet orderedSetWithArray:self];
     [result intersectOrderedSet:[NSOrderedSet orderedSetWithArray:other]];
@@ -41,16 +41,16 @@
 }
 
 - (NSArray *)LINQ_union:(NSArray *)other {
-    if ([self isEmpty]) return other;
+    if ([self _isEmpty]) return other;
     if (!other) return self;
-    if ([other isEmpty]) return self;
+    if ([other _isEmpty]) return self;
     
     NSMutableOrderedSet *result = [NSMutableOrderedSet orderedSetWithArray:self];
     [result unionOrderedSet:[NSOrderedSet orderedSetWithArray:other]];
     return [[result array] mutableCopy];
 }
 
-- (BOOL)isEmpty {
+- (BOOL)_isEmpty {
     return ([self count] == 0);
 }
 

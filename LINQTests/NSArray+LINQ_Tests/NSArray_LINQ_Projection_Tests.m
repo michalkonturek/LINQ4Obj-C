@@ -1,6 +1,6 @@
 //
 //  NSArray_LINQ_Projection_Tests.m
-//  LINQ
+//  LINQ4Obj-C
 //
 //  Created by Michal Konturek on 22/06/2013.
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
@@ -25,7 +25,7 @@
 
 - (void)test_select_returns_empty_when_no_condition {
     NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_select:nil];
-    assertThat(result, empty());
+    assertThat(result, isEmpty());
 }
 
 - (void)test_select_many {
@@ -47,7 +47,7 @@
 
 - (void)test_select_many_returns_empty_when_no_condition {
     NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_selectMany:nil];
-    assertThat(result, empty());
+    assertThat(result, isEmpty());
 }
 
 @end

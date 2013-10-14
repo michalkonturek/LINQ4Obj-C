@@ -1,6 +1,6 @@
 //
 //  NSArray_LINQ_Sorting_Tests.m
-//  LINQ
+//  LINQ4Obj-C
 //
 //  Created by Michal Konturek on 23/06/2013.
 //  Copyright (c) 2013 Michal Konturek. All rights reserved.
@@ -32,9 +32,19 @@
     assertThat(result, contains(@1, @2, @3, @4, @5, nil));
 }
 
-- (void)test_orderByDescending {
+- (void)test_orderByAscending_words {
+    NSArray *result = [[self.input_words LINQ_reverse] LINQ_orderByAscending];
+    assertThat(result, contains(@"A", @"AB", @"ABC", @"ABCD", @"ABCDE", nil));
+}
+
+- (void)test_orderByDescending_numbers {
     NSArray *result = [self.input_numbers LINQ_orderByDescending];
     assertThat(result, contains(@5, @4, @3, @2, @1, nil));
+}
+
+- (void)test_orderByDescending_words {
+    NSArray *result = [self.input_words LINQ_orderByDescending];
+    assertThat(result, contains(@"ABCDE", @"ABCD", @"ABC", @"AB", @"A", nil));
 }
 
 - (void)test_reverese {

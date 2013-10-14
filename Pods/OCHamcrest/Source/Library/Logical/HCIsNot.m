@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsNot.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -15,12 +15,12 @@
 
 @implementation HCIsNot
 
-+ (id)isNot:(id<HCMatcher>)aMatcher
++ (instancetype)isNot:(id<HCMatcher>)aMatcher
 {
     return [[self alloc] initNot:aMatcher];
 }
 
-- (id)initNot:(id<HCMatcher>)aMatcher
+- (instancetype)initNot:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)

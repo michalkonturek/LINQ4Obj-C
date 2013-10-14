@@ -13,12 +13,14 @@ Matchers are useful for a variety of purposes, such as UI validation. But
 they're most commonly used for writing unit tests that are expressive and
 flexible.
 
-OCHamcrest can be used for either Mac and iOS development with:
+OCHamcrest is used for both iOS or OS X development, and is compatible with:
 
-* OCUnit (SenTestingKit) built in to Xcode
-* Google Toolbox for Mac (GTM)
+* XCTest
+* OCUnit (SenTestingKit)
+* Kiwi
+* Cedar
 * GHUnit
-* Cedar BDD framework
+* Google Toolbox for Mac (GTM)
 * OCMock
 * OCMockito
 
@@ -28,15 +30,34 @@ How do I add OCHamcrest to my project?
 
 __Building:__
 
-If you want to build OCHamcrest yourself, cd to the Source folder, then
+If you want to build OCHamcrest yourself, clone the repo, then
 
-    $ ./MakeDistribution.sh
+```sh
+$ git submodule update --init
+$ cd Source
+$ ./MakeDistribution.sh
+```
 
-Or just use the pre-built release available in
-[Downloads](https://github.com/hamcrest/OCHamcrest/downloads).
+If you have doxygen installed somewhere other than the Applications folder --
+in /usr/local/bin, for example -- use this as the build step:
 
+```sh
+$ DOXYGEN=/usr/local/bin/doxygen ./MakeDistribution.sh
+```
 
-__Mac Project Setup:__
+Or just use the pre-built release available at
+[QualityCoding.org](http://qualitycoding.org/resources/).
+
+__iOS Project Setup:__
+
+Add OCHamcrestIOS.framework to your project.
+
+Add:
+
+    #define HC_SHORTHAND
+    #import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+__OS X Project Setup:__
 
 Add OCHamcrest.framework to your project.
 
@@ -55,15 +76,6 @@ Note: If your Console shows
 
 double-check your Copy Files phase.
 
-__iOS Project Setup:__
-
-Add OCHamcrestIOS.framework to your project.
-
-Add:
-
-    #define HC_SHORTHAND
-    #import <OCHamcrestIOS/OCHamcrestIOS.h>
-
 
 My first OCHamcrest test
 ========================
@@ -72,24 +84,26 @@ We'll start by writing a very simple Xcode unit test, but instead of using
 OCUnit's ``STAssertEqualObjects`` function, we'll use OCHamcrest's
 ``assertThat`` construct and a predefined matcher:
 
-    #import <SenTestingKit/SenTestingKit.h>
+```obj-c
+#import <SenTestingKit/SenTestingKit.h>
 
-    #define HC_SHORTHAND
-    #import <OCHamcrest/OCHamcrest.h>
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
 
-    @interface BiscuitTest : SenTestCase
-    @end
+@interface BiscuitTest : SenTestCase
+@end
 
-    @implementation BiscuitTest
+@implementation BiscuitTest
 
-    - (void) testEquals
-    {
-        Biscuit* theBiscuit = [Biscuit biscuitNamed:@"Ginger"];
-        Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
-        assertThat(theBiscuit, equalTo(myBiscuit));
-    }
+- (void)testEquals
+{
+    Biscuit* theBiscuit = [Biscuit biscuitNamed:@"Ginger"];
+    Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
+    assertThat(theBiscuit, equalTo(myBiscuit));
+}
 
-    @end
+@end
+```
 
 The ``assertThat`` function is a stylized sentence for making a test assertion.
 In this example, the subject of the assertion is the object ``theBiscuit``,
@@ -117,6 +131,7 @@ OCHamcrest comes with a library of useful matchers:
   * ``hasDescription`` - match object's ``-description``
   * ``hasProperty`` - match return value of method with given name
   * ``instanceOf`` - match object type
+  * ``isA`` - match object type precisely, no subclasses
   * ``nilValue``, ``notNilValue`` - match ``nil``, or not ``nil``
   * ``sameInstance`` - match same object
 
@@ -150,7 +165,6 @@ OCHamcrest comes with a library of useful matchers:
 
   * ``contains`` - exactly match the entire collection
   * ``containsInAnyOrder`` - match the entire collection, but in any order
-  * ``empty`` - match empty collection
   * ``hasCount`` - match number of elements against another matcher
   * ``hasCountOf`` - match collection with given number of elements
   * ``hasEntries`` - match dictionary with list of key-value pairs
@@ -159,7 +173,8 @@ OCHamcrest comes with a library of useful matchers:
   * ``hasItems`` - match if all given items appear in the collection, in any order
   * ``hasKey`` - match dictionary with a key
   * ``hasValue`` - match dictionary with a value
-  * ``onlyContains`` - match if collections's items appear in given list
+  * ``isEmpty`` - match empty collection
+  * ``onlyContains`` - match if collection's items appear in given list
 
 * Decorator
 
@@ -179,9 +194,11 @@ OCHamcrest strives to make your tests as readable as possible. For example, the
 ``is`` matcher is a wrapper that doesn't add any extra behavior to the
 underlying matcher. The following assertions are all equivalent:
 
-    assertThat(theBiscuit, equalTo(myBiscuit));
-    assertThat(theBiscuit, is(equalTo(myBiscuit)));
-    assertThat(theBiscuit, is(myBiscuit));
+```obj-c
+assertThat(theBiscuit, equalTo(myBiscuit));
+assertThat(theBiscuit, is(equalTo(myBiscuit)));
+assertThat(theBiscuit, is(myBiscuit));
+```
 
 The last form is allowed since ``is`` wraps non-matcher arguments with
 ``equalTo``. Other matchers that take matchers as arguments provide similar
@@ -201,74 +218,80 @@ eliminate code duplication and make your tests more readable!
 Let's write our own matcher for testing if a calendar date falls on a Saturday.
 This is the test we want to write:
 
-    - (void) testDateIsOnASaturday
-    {
-        NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
-        assertThat(date, is(onASaturday()))
-    }
+```obj-c
+- (void)testDateIsOnASaturday
+{
+    NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
+    assertThat(date, is(onASaturday()))
+}
+```
 
 Here's the interface:
 
-    #import <OCHamcrest/HCBaseMatcher.h>
-    #import <objc/objc-api.h>
+```obj-c
+#import <OCHamcrest/HCBaseMatcher.h>
+#import <objc/objc-api.h>
 
-    @interface IsGivenDayOfWeek : HCBaseMatcher
-    {
-        NSInteger day;      // 0 indicates Sunday
-    }
+@interface IsGivenDayOfWeek : HCBaseMatcher
+{
+    NSInteger day;      // Sunday is 0, Saturday is 6
+}
 
-    + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
-    - (id) initWithDay:(NSInteger)dayOfWeek;
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (instancetype)initWithDay:(NSInteger)dayOfWeek;
 
-    @end
+@end
 
-    OBJC_EXPORT id<HCMatcher> onASaturday();
+OBJC_EXPORT id <HCMatcher> onASaturday();
+```
 
 The interface consists of two parts: a class definition, and a factory function
 (with C binding). Here's what the implementation looks like:
 
-    #import "IsGivenDayOfWeek.h"
-    #import <OCHamcrest/HCDescription.h>
+```obj-c
+#import "IsGivenDayOfWeek.h"
+#import <OCHamcrest/HCDescription.h>
 
-    @implementation IsGivenDayOfWeek
+@implementation IsGivenDayOfWeek
 
-    + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
-    {
-        return [[self alloc] initWithDay:dayOfWeek];
-    }
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek
+{
+    return [[self alloc] initWithDay:dayOfWeek];
+}
 
-    - (id) initWithDay:(NSInteger)dayOfWeek
-    {
-        self = [super init];
-        if (self != nil)
-            day = dayOfWeek;
-        return self;
-    }
+- (instancetype)initWithDay:(NSInteger)dayOfWeek
+{
+    self = [super init];
+    if (self)
+        day = dayOfWeek;
+    return self;
+}
 
-    // Test whether item matches.
-    - (BOOL) matches:(id)item
-    {
-        if (![item respondsToSelector:@selector(dayOfWeek)])
-            return NO;
+// Test whether item matches.
+- (BOOL)matches:(id)item
+{
+    if (![item respondsToSelector:@selector(dayOfWeek)])
+        return NO;
 
-        return [item dayOfWeek] == day;
-    }
+    return [item dayOfWeek] == day;
+}
 
-    // Describe the matcher.
-    - (void) describeTo:(id<HCDescription>)description
-    {
-        NSString* dayAsString[] =
-            {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
-        [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
-    }
+// Describe the matcher.
+- (void)describeTo:(id <HCDescription>)description
+{
+    NSString* dayAsString[] =
+        { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
+    [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
+}
 
-    @end
+@end
 
 
-    id<HCMatcher> onASaturday()
-    {
-        return [IsGivenDayOfWeek isGivenDayOfWeek:6];
-    }
+id <HCMatcher> onASaturday()
+{
+    return [IsGivenDayOfWeek isGivenDayOfWeek:6];
+}
+```
 
 For our Matcher implementation we implement the ``-matches:`` method (which
 calls ``-dayOfWeek`` after confirming that the argument has such a method) and

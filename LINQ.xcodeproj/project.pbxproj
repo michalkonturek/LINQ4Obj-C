@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */; };
+		901F6132180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F6131180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.m */; };
+		901F6134180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */; };
+		901F6137180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F6136180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.m */; };
+		901F613D180B308100A4D26B /* NSDictionary+LINQ_Sets.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F613C180B308100A4D26B /* NSDictionary+LINQ_Sets.m */; };
+		901F613F180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */; };
+		901F6143180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F6142180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m */; };
 		9028A8091776F899004B3C97 /* NSArray+LINQ_Sets.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8081776F899004B3C97 /* NSArray+LINQ_Sets.m */; };
 		9028A80B1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */; };
 		9028A80E1776FA3F004B3C97 /* NSArray+LINQ_Converting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A80D1776FA3F004B3C97 /* NSArray+LINQ_Converting.m */; };
@@ -26,6 +32,14 @@
 		90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */; };
 		90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */; };
 		90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */; };
+		906FACA4180A010500F26554 /* NSDictionary+LINQ_Aggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACA3180A010500F26554 /* NSDictionary+LINQ_Aggregation.m */; };
+		906FACA7180A012000F26554 /* NSDictionary+LINQ_Converting.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACA6180A012000F26554 /* NSDictionary+LINQ_Converting.m */; };
+		906FACAA180A012D00F26554 /* NSDictionary+LINQ_Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACA9180A012D00F26554 /* NSDictionary+LINQ_Filtering.m */; };
+		906FACAD180A016100F26554 /* NSDictionary+LINQ_Generation.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACAC180A016100F26554 /* NSDictionary+LINQ_Generation.m */; };
+		906FACB1180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB0180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m */; };
+		906FACB3180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB2180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m */; };
+		906FACB5180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB4180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m */; };
+		906FACB7180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB6180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m */; };
 		908990011775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
 		908990031775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
 		908990051775E1C100AA935C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990041775E1C100AA935C /* CoreGraphics.framework */; };
@@ -40,7 +54,7 @@
 		908990211775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
 		908990291775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990271775E1C100AA935C /* InfoPlist.strings */; };
 		90B422121775E995007DAF99 /* NSArray+LINQ_Generation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */; };
-		90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */; };
+		90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +70,15 @@
 /* Begin PBXFileReference section */
 		6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.xcconfig"; path = "Pods/Pods-LINQTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LINQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		901F6130180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Partitioning.h"; sourceTree = "<group>"; };
+		901F6131180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Partitioning.m"; sourceTree = "<group>"; };
+		901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Partitioning_Tests.m; sourceTree = "<group>"; };
+		901F6135180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Quantifier.h"; sourceTree = "<group>"; };
+		901F6136180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Quantifier.m"; sourceTree = "<group>"; };
+		901F613B180B308100A4D26B /* NSDictionary+LINQ_Sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Sets.h"; sourceTree = "<group>"; };
+		901F613C180B308100A4D26B /* NSDictionary+LINQ_Sets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Sets.m"; sourceTree = "<group>"; };
+		901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Sets_Tests.m; sourceTree = "<group>"; };
+		901F6142180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Quantifier_Tests.m; sourceTree = "<group>"; };
 		9028A8071776F899004B3C97 /* NSArray+LINQ_Sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Sets.h"; sourceTree = "<group>"; };
 		9028A8081776F899004B3C97 /* NSArray+LINQ_Sets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Sets.m"; sourceTree = "<group>"; };
 		9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Sets_Tests.m; sourceTree = "<group>"; };
@@ -83,6 +106,19 @@
 		90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Grouping_Tests.m; sourceTree = "<group>"; };
 		90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Partitioning_Tests.m; sourceTree = "<group>"; };
 		90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Projection_Tests.m; sourceTree = "<group>"; };
+		906FACA11809FD3A00F26554 /* MKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacros.h; sourceTree = "<group>"; };
+		906FACA2180A010500F26554 /* NSDictionary+LINQ_Aggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Aggregation.h"; sourceTree = "<group>"; };
+		906FACA3180A010500F26554 /* NSDictionary+LINQ_Aggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Aggregation.m"; sourceTree = "<group>"; };
+		906FACA5180A012000F26554 /* NSDictionary+LINQ_Converting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Converting.h"; sourceTree = "<group>"; };
+		906FACA6180A012000F26554 /* NSDictionary+LINQ_Converting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Converting.m"; sourceTree = "<group>"; };
+		906FACA8180A012D00F26554 /* NSDictionary+LINQ_Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Filtering.h"; sourceTree = "<group>"; };
+		906FACA9180A012D00F26554 /* NSDictionary+LINQ_Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Filtering.m"; sourceTree = "<group>"; };
+		906FACAB180A016100F26554 /* NSDictionary+LINQ_Generation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Generation.h"; sourceTree = "<group>"; };
+		906FACAC180A016100F26554 /* NSDictionary+LINQ_Generation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Generation.m"; sourceTree = "<group>"; };
+		906FACB0180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Generation_Tests.m; sourceTree = "<group>"; };
+		906FACB2180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Aggregation_Tests.m; sourceTree = "<group>"; };
+		906FACB4180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Converting_Tests.m; sourceTree = "<group>"; };
+		906FACB6180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Filtering_Tests.m; sourceTree = "<group>"; };
 		90898FFD1775E1C100AA935C /* LINQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LINQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908990001775E1C100AA935C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		908990021775E1C100AA935C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,14 +136,13 @@
 		9089901E1775E1C100AA935C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		908990261775E1C100AA935C /* LINQTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQTests-Info.plist"; sourceTree = "<group>"; };
 		908990281775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		90B4220C1775E817007DAF99 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		90B422101775E995007DAF99 /* NSArray+LINQ_Generation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Generation.h"; sourceTree = "<group>"; };
 		90B422111775E995007DAF99 /* NSArray+LINQ_Generation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Generation.m"; sourceTree = "<group>"; };
 		90B422131775E9FF007DAF99 /* LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ.h; sourceTree = "<group>"; };
 		90B422161775EA24007DAF99 /* NSArray+LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ.h"; sourceTree = "<group>"; };
 		90B422171775EA70007DAF99 /* NSDictionary+LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ.h"; sourceTree = "<group>"; };
 		90B4221A1775EAFE007DAF99 /* LINQ_Base_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ_Base_Tests.h; sourceTree = "<group>"; };
-		90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Generation_.m; sourceTree = "<group>"; };
+		90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Generation_Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +170,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		906FACA01809FD3A00F26554 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				906FACA11809FD3A00F26554 /* MKMacros.h */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
 		90898FF41775E1C100AA935C = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +258,7 @@
 		90B422041775E807007DAF99 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				906FACA01809FD3A00F26554 /* Externals */,
 				90B422051775E807007DAF99 /* NSArray+LINQ */,
 				90B422071775E807007DAF99 /* NSDictionary+LINQ */,
 				90B422131775E9FF007DAF99 /* LINQ.h */,
@@ -254,6 +298,20 @@
 			isa = PBXGroup;
 			children = (
 				90B422171775EA70007DAF99 /* NSDictionary+LINQ.h */,
+				906FACA2180A010500F26554 /* NSDictionary+LINQ_Aggregation.h */,
+				906FACA3180A010500F26554 /* NSDictionary+LINQ_Aggregation.m */,
+				906FACA5180A012000F26554 /* NSDictionary+LINQ_Converting.h */,
+				906FACA6180A012000F26554 /* NSDictionary+LINQ_Converting.m */,
+				906FACA8180A012D00F26554 /* NSDictionary+LINQ_Filtering.h */,
+				906FACA9180A012D00F26554 /* NSDictionary+LINQ_Filtering.m */,
+				906FACAB180A016100F26554 /* NSDictionary+LINQ_Generation.h */,
+				906FACAC180A016100F26554 /* NSDictionary+LINQ_Generation.m */,
+				901F6130180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.h */,
+				901F6131180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.m */,
+				901F6135180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.h */,
+				901F6136180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.m */,
+				901F613B180B308100A4D26B /* NSDictionary+LINQ_Sets.h */,
+				901F613C180B308100A4D26B /* NSDictionary+LINQ_Sets.m */,
 			);
 			path = "NSDictionary+LINQ";
 			sourceTree = "<group>";
@@ -263,8 +321,8 @@
 			children = (
 				90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */,
 				9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */,
-				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m */,
 				90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */,
+				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m */,
 				90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */,
 				90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */,
 				90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */,
@@ -278,7 +336,13 @@
 		90B4220B1775E817007DAF99 /* NSDictionary+LINQ_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				90B4220C1775E817007DAF99 /* .gitkeep */,
+				906FACB2180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m */,
+				906FACB4180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m */,
+				906FACB6180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m */,
+				906FACB0180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m */,
+				901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */,
+				901F6142180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m */,
+				901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */,
 			);
 			path = "NSDictionary+LINQ_Tests";
 			sourceTree = "<group>";
@@ -330,7 +394,7 @@
 		90898FF51775E1C100AA935C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Michal Konturek";
 			};
 			buildConfigurationList = 90898FF81775E1C100AA935C /* Build configuration list for PBXProject "LINQ" */;
@@ -422,13 +486,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901F6137180B304D00A4D26B /* NSDictionary+LINQ_Quantifier.m in Sources */,
 				9028A8091776F899004B3C97 /* NSArray+LINQ_Sets.m in Sources */,
+				906FACA7180A012000F26554 /* NSDictionary+LINQ_Converting.m in Sources */,
+				906FACAA180A012D00F26554 /* NSDictionary+LINQ_Filtering.m in Sources */,
 				9028A8141776FAC2004B3C97 /* NSArray+LINQ_Sorting.m in Sources */,
 				90373B5317764F1B009511C4 /* NSArray+LINQ_Partitioning.m in Sources */,
 				9028A8111776FA7E004B3C97 /* NSArray+LINQ_Quantifier.m in Sources */,
+				901F613D180B308100A4D26B /* NSDictionary+LINQ_Sets.m in Sources */,
 				90B422121775E995007DAF99 /* NSArray+LINQ_Generation.m in Sources */,
 				9089900D1775E1C100AA935C /* main.m in Sources */,
+				901F6132180B237F00A4D26B /* NSDictionary+LINQ_Partitioning.m in Sources */,
+				906FACA4180A010500F26554 /* NSDictionary+LINQ_Aggregation.m in Sources */,
 				908990111775E1C100AA935C /* AppDelegate.m in Sources */,
+				906FACAD180A016100F26554 /* NSDictionary+LINQ_Generation.m in Sources */,
 				90373B4B17764DC1009511C4 /* NSArray+LINQ_Filtering.m in Sources */,
 				90373B4617764C60009511C4 /* NSArray+LINQ_Aggregation.m in Sources */,
 				9028A80E1776FA3F004B3C97 /* NSArray+LINQ_Converting.m in Sources */,
@@ -443,14 +514,21 @@
 			files = (
 				9028A8181776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m in Sources */,
 				9028A80B1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m in Sources */,
+				901F6134180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m in Sources */,
+				901F613F180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m in Sources */,
 				90373B4D17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m in Sources */,
+				901F6143180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m in Sources */,
 				90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */,
-				90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_.m in Sources */,
+				90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m in Sources */,
+				906FACB1180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m in Sources */,
 				90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */,
 				90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */,
 				9028A8161776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m in Sources */,
+				906FACB7180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m in Sources */,
 				90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */,
 				9028A81A1776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m in Sources */,
+				906FACB3180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m in Sources */,
+				906FACB5180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
@@ -535,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -549,6 +627,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
 				INFOPLIST_FILE = "LINQ/LINQ-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -560,6 +639,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
 				INFOPLIST_FILE = "LINQ/LINQ-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -577,6 +657,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
 				INFOPLIST_FILE = "LINQTests/LINQTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -595,6 +676,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
 				INFOPLIST_FILE = "LINQTests/LINQTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

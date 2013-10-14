@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsSame.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -14,12 +14,12 @@
 
 @implementation HCIsSame
 
-+ (id)isSameAs:(id)anObject
++ (instancetype)isSameAs:(id)anObject
 {
     return [[self alloc] initSameAs:anObject];
 }
 
-- (id)initSameAs:(id)anObject
+- (instancetype)initSameAs:(id)anObject
 {
     self = [super init];
     if (self)
@@ -36,13 +36,13 @@
 {
     [mismatchDescription appendText:@"was "];
     if (item)
-        [mismatchDescription appendText:[NSString stringWithFormat:@"%p ", item]];
+        [mismatchDescription appendText:[NSString stringWithFormat:@"%p ", (__bridge void *)item]];
     [mismatchDescription appendDescriptionOf:item];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:[NSString stringWithFormat:@"same instance as %p ", object]]
+    [[description appendText:[NSString stringWithFormat:@"same instance as %p ", (__bridge void *)object]]
          appendDescriptionOf:object];
 }
 

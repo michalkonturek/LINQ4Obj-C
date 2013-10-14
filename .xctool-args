@@ -1,4 +1,5 @@
 [
   "-workspace", "LINQ.xcworkspace",
-  "-scheme", "LINQ"
+  "-scheme", "LINQ",
+  "-sdk", "iphonesimulator"
 ]

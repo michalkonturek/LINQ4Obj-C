@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCStringContainsInOrder.m
-//  Copyright 2012 hamcrest.org. See LICENSE.txt
+//  Copyright 2013 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -10,18 +10,16 @@
 #import "HCStringContainsInOrder.h"
 
 #import "HCDescription.h"
-#import "HCRequireNonNilObject.h"
-#import <stdarg.h>
 
 
 @implementation HCStringContainsInOrder
 
-+ (id)containsInOrder:(NSArray *)substringList
++ (instancetype)containsInOrder:(NSArray *)substringList
 {
     return [[self alloc] initWithSubstrings:substringList];
 }
 
-- (id)initWithSubstrings:(NSArray *)substringList
+- (instancetype)initWithSubstrings:(NSArray *)substringList
 {
     self = [super init];
     if (self)
