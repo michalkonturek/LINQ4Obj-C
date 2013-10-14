@@ -65,5 +65,4 @@
  */
 - (id)LINQ_sumForKey:(NSString *)key;
 
-
 @end

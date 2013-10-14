@@ -28,7 +28,7 @@ NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
 // Result is: @"M, A, R, K"
 ```
 
-#### Avg
+#### Average
 
 Calculates the average value of a collection of values.
 
@@ -146,7 +146,33 @@ NSInteger result = [words LINQ_maxForKey:@"length"];
 
 <!--## Concatenation Operations-->
 
-## Converting Data Types
+## Converting Operations
+
+#### ToArray
+
+Puts value elements into an NSArray.
+
+```objc
+- (NSArray *)LINQ_toArray;
+```
+
+Puts value elements into a NSArray which satisfy key condtion.
+ 
+```objc
+- (NSArray *)LINQ_toArrayWhereKey:(LINQConditionBlock)conditionBlock;
+```
+
+Puts value elements into a NSArray which satisfy value condtion.
+
+```objc
+- (NSArray *)LINQ_toArrayWhereValue:(LINQConditionBlock)conditionBlock;
+```
+
+Puts value elements into a NSArray which satisfy both key and value condtion.
+
+```objc
+- (NSArray *)LINQ_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)conditionBlock;
+```
 
 #### ToDictionary
 
@@ -155,7 +181,7 @@ NSInteger result = [words LINQ_maxForKey:@"length"];
 ```objc
 - (NSDictionary *)LINQ_toDictionary;
 ```
-
+<!--
  Example: 
 
 ```objc
@@ -171,14 +197,15 @@ NSInteger result = [words LINQ_maxForKey:@"length"];
 // }
 
 ```
+-->
 
- Puts elements into a NSDictionary based on a key selector function.
+Puts elements into a NSDictionary based on a key selector function.
 
 ```objc
 - (NSDictionary *)LINQ_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector;
 ```
 
- Puts elements into a NSDictionary based on a key and value selector functions.
+Puts elements into a NSDictionary based on a key and value selector functions.
 
 ```objc
 - (NSDictionary *)LINQ_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector
@@ -190,15 +217,28 @@ NSInteger result = [words LINQ_maxForKey:@"length"];
 
 #### OfType
 
- Selects values, depending on their ability to be cast to a specified type.
+Selects values, depending on their ability to be cast to a specified type.
 
 ```objc
 - (instancetype)LINQ_ofType:(Class)klass;
 ```
-
+<!--
  Example: 
 
 ```objc
+```
+-->
+
+Selects elements which keys can be cast to a specified type.
+
+```objc
+- (instancetype)LINQ_ofTypeKey:(Class)klass;
+```
+
+Selects elements which values can be cast to a specified type.
+
+```objc
+- (instancetype)LINQ_ofTypeValue:(Class)klass;
 ```
 
 #### Where
@@ -208,12 +248,30 @@ NSInteger result = [words LINQ_maxForKey:@"length"];
 ```objc
 - (instancetype)LINQ_where:(LINQConditionBlock)conditionBlock;
 ```
-
+<!--
  Example: 
 
 ```objc
 ```
+-->
 
+Selects values which satisify key-value condition.
+
+```objc
+- (instancetype)LINQ_where:(LINQKeyValueConditionBlock)conditionBlock;
+```
+
+Selects values which keys satisify condition.
+
+```objc
+- (instancetype)LINQ_whereKey:(LINQConditionBlock)conditionBlock;
+```
+
+Selects values which satisify condition.
+
+```objc
+- (instancetype)LINQ_whereValue:(LINQConditionBlock)conditionBlock;
+```
 
 ## Generation Operations
 
@@ -332,31 +390,33 @@ Skips elements up to a specified position in a collection.
 
 ```objc
 - (NSArray *)LINQ_skip:(NSInteger)count;
+- (NSDictionary *)LINQ_skip:(NSInteger)count;
 ```
 
+<!--
 Example: 
 
 ```objc
 NSArray *result = [[NSArray LINQ_from:1 to:10] LINQ_skip:5];
 // result is @[@6, @7, @8, @9, @10]
 ```
-
+-->
 #### Take
 
- Takes elements up to a specified position in a collection.
-
+Takes elements up to a specified position in a collection.
 
 ```objc
 - (NSArray *)LINQ_take:(NSInteger)count;
+- (NSDictionary *)LINQ_take:(NSInteger)count;
 ```
-
+<!--
 Example: 
 
 ```objc
 NSArray *result = [[NSArray LINQ_from:1 to:10] LINQ_take:5];
 // result is @[@1, @2, @3, @4, @5]
 ```
-
+-->
 
 ## Projection Operations
 
@@ -407,14 +467,16 @@ Determines whether all the elements in a sequence satisfy a condition.
 
 ```objc
 - (BOOL)LINQ_all:(LINQConditionBlock)conditionBlock;
+- (BOOL)LINQ_all:(LINQKeyValueConditionBlock)conditionBlock;
 ```
 
 #### Any
 
- Determines whether any elements in a sequence satisfy a condition.
+Determines whether any elements in a sequence satisfy a condition.
  
 ```objc
 - (BOOL)LINQ_any:(LINQConditionBlock)conditionBlock;
+- (BOOL)LINQ_any:(LINQKeyValueConditionBlock)conditionBlock;
 ```
 
 ## Set Operations
@@ -434,6 +496,7 @@ Determines whether all the elements in a sequence satisfy a condition.
 
 ```objc
 - (instancetype)LINQ_except:(NSArray *)other;
+- (instancetype)LINQ_except:(NSDictionary *)other;
 ```
 
 #### Intersect
@@ -443,6 +506,7 @@ Determines whether all the elements in a sequence satisfy a condition.
 
 ```objc
 - (instancetype)LINQ_intersect:(NSArray *)other;
+- (instancetype)LINQ_intersect:(NSDictionary *)other;
 ```
 
 #### Union
@@ -452,6 +516,14 @@ Determines whether all the elements in a sequence satisfy a condition.
 
 ```objc
 - (NSArray *)LINQ_union:(NSArray *)other;
+```
+
+Merges to dictionaries by returning the set union
+of unique elements which keys appear in either of
+two dictionaries.
+
+```objc
+- (NSDictionary *)LINQ_merge:(NSDictionary *)other;
 ```
 
 
