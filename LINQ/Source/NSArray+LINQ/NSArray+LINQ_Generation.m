@@ -17,7 +17,7 @@
 + (instancetype)LINQ_from:(NSInteger)from to:(NSInteger)to {
     if (from == to) return [self array];
     
-    NSInteger range = abs(from - to) + 1;
+    NSInteger range = labs(from - to) + 1;
     NSInteger step = (from < to) ? 1 : -1;
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:range];
