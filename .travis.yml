@@ -1,16 +1,20 @@
 language: objective-c
 before_install:
-    # #install xcode 5
-    # - chmod -R +x ./scripts
-    # - ./scripts/travis/xcode5.sh
 
     # install xctool
     - brew update
     - brew remove xctool
     - brew install xctool
-#    - brew install xctool --HEAD
 
+    # update cocoapods
     - gem update cocoapods
+
+    # print version summmary
+    - pod --version
+    - xctool -version
+
 script: xctool clean build test -arch i386 ONLY_ACTIVE_ARCH=NO
 # script: xctool clean build test 
-# script: xctool -workspace LINQ.xcworkspace -scheme LINQ clean build test
+
+notifications:
+    email: false
