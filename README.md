@@ -559,4 +559,7 @@ two dictionaries.
 - (instancetype)LINQ_reverse;
 ```
 
+- - - 
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michalkonturek/linq4obj-c/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
