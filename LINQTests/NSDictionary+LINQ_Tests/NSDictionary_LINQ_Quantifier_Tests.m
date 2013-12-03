@@ -41,7 +41,7 @@
 }
 
 - (void)test_all_returns_true_when_empty {
-    BOOL result = [[NSDictionary LINQ_empty] LINQ_all:^BOOL(id key, id value) {
+    BOOL result = [[NSDictionary LINQ_empty] linq_all:^BOOL(id key, id value) {
         return YES;
     }];
     
@@ -70,7 +70,7 @@
 }
 
 - (void)test_any_returns_false_when_empty {
-    BOOL result = [[NSDictionary LINQ_empty] LINQ_any:^BOOL(id key, id value) {
+    BOOL result = [[NSDictionary LINQ_empty] linq_any:^BOOL(id key, id value) {
         return YES;
     }];
     

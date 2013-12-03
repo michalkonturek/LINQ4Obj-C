@@ -10,11 +10,11 @@
 
 @implementation NSArray (LINQ_Generation)
 
-+ (instancetype)LINQ_empty {
++ (instancetype)linq_empty {
     return [self array];
 }
 
-+ (instancetype)LINQ_from:(NSInteger)from to:(NSInteger)to {
++ (instancetype)linq_from:(NSInteger)from to:(NSInteger)to {
     if (from == to) return [self array];
     
     NSInteger range = labs(from - to) + 1;
@@ -29,9 +29,9 @@
     return result;
 }
 
-+ (instancetype)LINQ_repeat:(id)element count:(NSInteger)count {
-    if (count < 1) return [self LINQ_empty];
-    if (!element) return [self LINQ_empty];
++ (instancetype)linq_repeat:(id)element count:(NSInteger)count {
+    if (count < 1) return [self linq_empty];
+    if (!element) return [self linq_empty];
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:count];
     for (NSInteger i = 0; i < count; i++) {
@@ -40,9 +40,9 @@
     return result;
 }
 
-+ (instancetype)LINQ_with:(LINQSelectorBlock)block count:(NSInteger)count {
-    if (count < 1) return [self LINQ_empty];
-    if (!block) return [self LINQ_empty];
++ (instancetype)linq_with:(LINQSelectorBlock)block count:(NSInteger)count {
+    if (count < 1) return [self linq_empty];
+    if (!block) return [self linq_empty];
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:count];
     for (NSInteger i = 0; i < count; i++) {

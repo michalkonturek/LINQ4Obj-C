@@ -13,7 +13,7 @@
 /**
  Sorts values in ascending order.
  */
-- (instancetype)LINQ_orderByAscending;
+- (instancetype)linq_orderByAscending;
 
 /**
  Sorts values in descending order.

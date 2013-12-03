@@ -15,12 +15,12 @@
 @implementation NSDictionary_LINQ_Partitioning_Tests
 
 - (void)test_skip {
-    NSDictionary *result = [[NSDictionary LINQ_from:1 to:10] LINQ_skip:5];
+    NSDictionary *result = [[NSDictionary LINQ_from:1 to:10] linq_skip:5];
     assertThat(result, hasCountOf(5));
 }
 
 - (void)test_take {
-    NSDictionary *result = [[NSDictionary LINQ_from:1 to:10] LINQ_take:5];
+    NSDictionary *result = [[NSDictionary LINQ_from:1 to:10] linq_take:5];
     assertThat(result, hasCountOf(5));
 }
 

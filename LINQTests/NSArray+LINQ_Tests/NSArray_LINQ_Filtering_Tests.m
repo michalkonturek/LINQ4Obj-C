@@ -16,14 +16,14 @@
 
 - (void)test_ofType {
     NSArray *input = @[@"A", @1, @"B", @2];
-    NSArray *result = [input LINQ_ofType:[NSString class]];
+    NSArray *result = [input linq_ofType:[NSString class]];
     
     assertThat(result, contains(@"A", @"B", nil));
 }
 
 - (void)test_where {
     
-    NSArray *result = [[NSArray LINQ_from:1 to:10] LINQ_where:^BOOL(id item) {
+    NSArray *result = [[NSArray linq_from:1 to:10] linq_where:^BOOL(id item) {
         return (([item integerValue] % 2) == 0);
     }];
     
@@ -31,7 +31,7 @@
 }
 
 - (void)test_where_returns_when_no_condition {
-    NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_where:nil];
+    NSArray *result = [[NSArray linq_from:1 to:5] linq_where:nil];
     assertThatInteger([result count], equalToInteger(5));
 }
 

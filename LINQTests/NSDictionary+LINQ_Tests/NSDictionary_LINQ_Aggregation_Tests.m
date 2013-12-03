@@ -38,7 +38,7 @@
 }
 
 - (void)test_aggregate_returns_nil_when_empty {
-    NSString *result = [[NSDictionary LINQ_empty] LINQ_aggregate:^id(id item, id aggregate) {
+    NSString *result = [[NSDictionary LINQ_empty] linq_aggregate:^id(id item, id aggregate) {
         return [NSString stringWithFormat:@"%@, %@", aggregate, item];
     }];
     
@@ -57,7 +57,7 @@
 }
 
 - (void)test_avg_returns_zero_when_empty {
-    NSNumber *result = [[NSDictionary LINQ_empty] LINQ_avg];
+    NSNumber *result = [[NSDictionary LINQ_empty] linq_avg];
     assertThat(result, equalToDouble(0.0));
 }
 
@@ -85,7 +85,7 @@
 }
 
 - (void)test_max_returns_zero_when_empty {
-    NSNumber *result = [[NSDictionary LINQ_empty] LINQ_max];
+    NSNumber *result = [[NSDictionary LINQ_empty] linq_max];
     assertThat(result, equalToInteger(0));
 }
 
@@ -100,7 +100,7 @@
 }
 
 - (void)test_min_returns_zero_when_empty {
-    NSNumber *result = [[NSDictionary LINQ_empty] LINQ_min];
+    NSNumber *result = [[NSDictionary LINQ_empty] linq_min];
     assertThat(result, equalToInteger(0));
 }
 
@@ -115,12 +115,12 @@
 }
 
 - (void)test_sum_double {
-    NSNumber *result = [@[@1.25, @1.25, @3.3, @4.11] LINQ_sum];
+    NSNumber *result = [@[@1.25, @1.25, @3.3, @4.11] linq_sum];
     assertThat(result, equalToDouble(9.91));
 }
 
 - (void)test_sum_returns_zero_when_empty {
-    NSNumber *result = [[NSDictionary LINQ_empty] LINQ_sum];
+    NSNumber *result = [[NSDictionary LINQ_empty] linq_sum];
     assertThat(result, equalToInteger(0));
 }
 
@@ -130,7 +130,7 @@
 }
 
 - (void)test_sumForKey_returns_zero_when_empty {
-    NSNumber *result = [[NSDictionary LINQ_empty] LINQ_sumForKey:@"someKey"];
+    NSNumber *result = [[NSDictionary LINQ_empty] linq_sumForKey:@"someKey"];
     assertThat(result, equalToInteger(0));
 }
 

@@ -16,7 +16,7 @@
 
 - (void)test_select {
     
-    NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_select:^id(id item) {
+    NSArray *result = [[NSArray linq_from:1 to:5] linq_select:^id(id item) {
         return [NSNumber numberWithInteger:([item integerValue] + 10)];
     }];
     
@@ -24,13 +24,13 @@
 }
 
 - (void)test_select_returns_empty_when_no_condition {
-    NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_select:nil];
+    NSArray *result = [[NSArray linq_from:1 to:5] linq_select:nil];
     assertThat(result, isEmpty());
 }
 
 - (void)test_select_many {
     
-    NSArray *result = [@[@"an apple a day", @"the quick brown fox"] LINQ_selectMany:^id(id item) {
+    NSArray *result = [@[@"an apple a day", @"the quick brown fox"] linq_selectMany:^id(id item) {
         return [item componentsSeparatedByString:@" "];
     }];
     
@@ -46,7 +46,7 @@
 }
 
 - (void)test_select_many_returns_empty_when_no_condition {
-    NSArray *result = [[NSArray LINQ_from:1 to:5] LINQ_selectMany:nil];
+    NSArray *result = [[NSArray linq_from:1 to:5] linq_selectMany:nil];
     assertThat(result, isEmpty());
 }
 

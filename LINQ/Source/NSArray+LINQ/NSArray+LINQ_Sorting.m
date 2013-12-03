@@ -10,12 +10,12 @@
 
 @implementation NSArray (LINQ_Sorting)
 
-- (instancetype)LINQ_orderByAscending {
+- (instancetype)linq_orderByAscending {
     return [self sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (instancetype)LINQ_orderByDescending {
-    return [[self LINQ_orderByAscending] LINQ_reverse];
+    return [[self linq_orderByAscending] LINQ_reverse];
 }
 
 - (instancetype)LINQ_orderByKey:(NSString *)key ascending:(BOOL)ascending {

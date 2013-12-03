@@ -28,7 +28,7 @@
 }
 
 - (void)test_toDictionary {
-    NSDictionary *result = [self.input_words LINQ_toDictionary];
+    NSDictionary *result = [self.input_words linq_toDictionary];
     
     assertThat(result, hasCountOf(5));
     
@@ -40,7 +40,7 @@
 }
 
 - (void)test_toDictionary_with_key_selector {
-    NSDictionary *result = [self.input_numbers LINQ_toDictionaryWithKeySelector:^id(id item) {
+    NSDictionary *result = [self.input_numbers linq_toDictionaryWithKeySelector:^id(id item) {
         return [NSNumber numberWithInteger:(10 + [item integerValue])];
     }];
     
@@ -55,7 +55,7 @@
 
 - (void)test_toDictionary_with_key_and_value_selectors {
     
-    NSDictionary *result = [self.input_numbers LINQ_toDictionaryWithKeySelector:^id(id item) {
+    NSDictionary *result = [self.input_numbers linq_toDictionaryWithKeySelector:^id(id item) {
         return [NSNumber numberWithInteger:(10 + [item integerValue])];
     } valueSelector:^id(id item) {
         return @"A";

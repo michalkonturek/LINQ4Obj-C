@@ -15,7 +15,7 @@
 @implementation NSDictionary_LINQ_Sets_Tests
 
 - (void)test_distinct {
-    NSDictionary *result = [@{@1: @1, @2: @2, @3: @3, @4: @2} LINQ_distinct];
+    NSDictionary *result = [@{@1: @1, @2: @2, @3: @3, @4: @2} linq_distinct];
 
     assertThat(result, hasCountOf(3));
     assertThat([result allValues], containsInAnyOrder(@1, @2, @3, nil));

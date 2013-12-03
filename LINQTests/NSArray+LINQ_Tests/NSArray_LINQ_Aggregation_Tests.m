@@ -18,7 +18,7 @@
 @implementation NSArray_LINQ_Aggregation_Tests
 
 - (void)setUp {
-    self.input_numbers = [NSArray LINQ_from:1 to:10];
+    self.input_numbers = [NSArray linq_from:1 to:10];
     self.input_words = @[@"A", @"AB", @"ABC", @"ABCD", @"ABCDE"];
 }
 
@@ -29,7 +29,7 @@
 
 - (void)test_aggregate {
     NSArray *input = @[@"M", @"A", @"R", @"K"];
-    NSString *result = [input LINQ_aggregate:^id(id item, id aggregate) {
+    NSString *result = [input linq_aggregate:^id(id item, id aggregate) {
         return [NSString stringWithFormat:@"%@, %@", aggregate, item];
     }];
     
@@ -37,7 +37,7 @@
 }
 
 - (void)test_aggregate_returns_nil_when_empty {
-    NSString *result = [[NSArray LINQ_empty] LINQ_aggregate:^id(id item, id aggregate) {
+    NSString *result = [[NSArray linq_empty] linq_aggregate:^id(id item, id aggregate) {
         return [NSString stringWithFormat:@"%@, %@", aggregate, item];
     }];
     
@@ -46,27 +46,27 @@
 
 - (void)test_aggregate_returns_self_when_no_accumulator {
     NSArray *input = @[@"M", @"A", @"R", @"K"];
-    id result = [input LINQ_aggregate:nil];
+    id result = [input linq_aggregate:nil];
     assertThat(result, equalTo(input));
 }
 
 - (void)test_avg {
-    NSNumber *result = [self.input_numbers LINQ_avg];
+    NSNumber *result = [self.input_numbers linq_avg];
     assertThat(result, equalToDouble(5.5));
 }
 
 - (void)test_avg_returns_zero_when_empty {
-    NSNumber *result = [[NSArray LINQ_empty] LINQ_avg];
+    NSNumber *result = [[NSArray linq_empty] linq_avg];
     assertThat(result, equalToDouble(0.0));
 }
 
 - (void)test_avgForKey {
-    NSNumber *result = [self.input_words LINQ_avgForKey:@"length"];
+    NSNumber *result = [self.input_words linq_avgForKey:@"length"];
     assertThat(result, equalToInteger(3));
 }
 
 - (void)test_count_returns_when_condition {
-    NSInteger result = [self.input_numbers LINQ_count:^BOOL(id item) {
+    NSInteger result = [self.input_numbers linq_count:^BOOL(id item) {
         return ([item compare:@8] != NSOrderedAscending);
     }];
     
@@ -74,62 +74,62 @@
 }
 
 - (void)test_count_returns_when_no_condition {
-    NSInteger result = [self.input_numbers LINQ_count:nil];
+    NSInteger result = [self.input_numbers linq_count:nil];
     assertThatInteger(result, equalToInteger([self.input_numbers count]));
 }
 
 - (void)test_max {
-    NSNumber *result = [self.input_numbers LINQ_max];
+    NSNumber *result = [self.input_numbers linq_max];
     assertThat(result, equalToInteger(10));
 }
 
 - (void)test_max_returns_zero_when_empty {
-    NSNumber *result = [[NSArray LINQ_empty] LINQ_max];
+    NSNumber *result = [[NSArray linq_empty] linq_max];
     assertThat(result, equalToInteger(0));
 }
 
 - (void)test_maxForKey {
-    NSNumber *result = [self.input_words LINQ_maxForKey:@"length"];
+    NSNumber *result = [self.input_words linq_maxForKey:@"length"];
     assertThat(result, equalToInteger(5));
 }
 
 - (void)test_min {
-    NSNumber *result = [self.input_numbers LINQ_min];
+    NSNumber *result = [self.input_numbers linq_min];
     assertThat(result, equalToInteger(1));
 }
 
 - (void)test_min_returns_zero_when_empty {
-    NSNumber *result = [[NSArray LINQ_empty] LINQ_min];
+    NSNumber *result = [[NSArray linq_empty] linq_min];
     assertThat(result, equalToInteger(0));
 }
 
 - (void)test_minForKey {
-    NSNumber *result = [self.input_words LINQ_minForKey:@"length"];
+    NSNumber *result = [self.input_words linq_minForKey:@"length"];
     assertThat(result, equalToInteger(1));
 }
 
 - (void)test_sum_integers {
-    NSNumber *result = [self.input_numbers LINQ_sum];
+    NSNumber *result = [self.input_numbers linq_sum];
     assertThat(result, equalToInteger(55));
 }
 
 - (void)test_sum_double {
-    NSNumber *result = [@[@1.25, @1.25, @3.3, @4.11] LINQ_sum];
+    NSNumber *result = [@[@1.25, @1.25, @3.3, @4.11] linq_sum];
     assertThat(result, equalToDouble(9.91));
 }
 
 - (void)test_sum_returns_zero_when_empty {
-    NSNumber *result = [[NSArray LINQ_empty] LINQ_sum];
+    NSNumber *result = [[NSArray linq_empty] linq_sum];
     assertThat(result, equalToInteger(0));
 }
 
 - (void)test_sumForKey {
-    NSNumber *result = [self.input_words LINQ_sumForKey:@"length"];
+    NSNumber *result = [self.input_words linq_sumForKey:@"length"];
     assertThat(result, equalToInteger(15));
 }
 
 - (void)test_sumForKey_returns_zero_when_empty {
-    NSNumber *result = [[NSArray LINQ_empty] LINQ_sumForKey:@"someKey"];
+    NSNumber *result = [[NSArray linq_empty] linq_sumForKey:@"someKey"];
     assertThat(result, equalToInteger(0));
 }
 

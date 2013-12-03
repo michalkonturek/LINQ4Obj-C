@@ -13,7 +13,7 @@
 - (instancetype)LINQ_distinct {
     if ([self _isEmpty]) return self;
     
-    NSArray *values = [[self allValues] LINQ_distinct];
+    NSArray *values = [[self allValues] linq_distinct];
     return [self _aux_dictionary_with_values:values];
 }
 
@@ -22,7 +22,7 @@
     if (!other) return self;
     if ([other _isEmpty]) return self;
     
-    NSArray *values = [[self allValues] LINQ_except:[other allValues]];
+    NSArray *values = [[self allValues] linq_except:[other allValues]];
     return [self _aux_dictionary_with_values:values];
 }
 
@@ -31,7 +31,7 @@
     if (!other) return self;
     if ([other _isEmpty]) return self;
     
-    NSArray *values = [[self allValues] LINQ_intersect:[other allValues]];
+    NSArray *values = [[self allValues] linq_intersect:[other allValues]];
     return [self _aux_dictionary_with_values:values];
 }
 

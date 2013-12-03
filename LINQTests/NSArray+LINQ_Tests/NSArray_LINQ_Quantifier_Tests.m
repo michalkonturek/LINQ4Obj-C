@@ -28,7 +28,7 @@
 }
 
 - (void)test_all {
-    BOOL result = [self.input_words LINQ_all:^BOOL(id item) {
+    BOOL result = [self.input_words linq_all:^BOOL(id item) {
         return ([item length] > 0);
     }];
     
@@ -36,7 +36,7 @@
 }
 
 - (void)test_all_returns_true_when_empty {
-    BOOL result = [[NSArray array] LINQ_all:^BOOL(id item) {
+    BOOL result = [[NSArray array] linq_all:^BOOL(id item) {
         return YES;
     }];
     
@@ -44,12 +44,12 @@
 }
 
 - (void)test_all_returns_true_when_no_condition {
-    BOOL result = [self.input_numbers LINQ_all:nil];
+    BOOL result = [self.input_numbers linq_all:nil];
     assertThatBool(result, equalToBool(YES));
 }
 
 - (void)test_any {
-    BOOL result = [self.input_words LINQ_any:^BOOL(id item) {
+    BOOL result = [self.input_words linq_any:^BOOL(id item) {
         return ([item length] > 3);
     }];
     
@@ -57,7 +57,7 @@
 }
 
 - (void)test_any_returns_false_when_empty {
-    BOOL result = [[NSArray array] LINQ_any:^BOOL(id item) {
+    BOOL result = [[NSArray array] linq_any:^BOOL(id item) {
         return YES;
     }];
     
@@ -65,7 +65,7 @@
 }
 
 - (void)test_any_returns_false_when_no_condition {
-    BOOL result = [self.input_numbers LINQ_any:nil];
+    BOOL result = [self.input_numbers linq_any:nil];
     assertThatBool(result, equalToBool(NO));
 }
 

@@ -18,7 +18,7 @@
 @implementation NSArray_LINQ_Grouping_Tests
 
 - (void)setUp {
-    self.input_numbers = [NSArray LINQ_from:1 to:10];
+    self.input_numbers = [NSArray linq_from:1 to:10];
     self.input_words = @[@"Adam", @"Anthony",
                          @"Ben", @"Bob",
                          @"Michael", @"Max", @"Matt",
@@ -31,7 +31,7 @@
 }
 
 - (void)test_groupBy {
-    NSDictionary *results = [self.input_words LINQ_groupBy:^id(id item) {
+    NSDictionary *results = [self.input_words linq_groupBy:^id(id item) {
         return [item substringToIndex:1];
     }];
     
@@ -44,17 +44,17 @@
 }
 
 - (void)test_toLookup {
-    NSArray *results = [self.input_words LINQ_toLookup:^id(id item) {
+    NSArray *results = [self.input_words linq_toLookup:^id(id item) {
         return [item substringToIndex:1];
     }];
     
     assertThat(results, hasCountOf(8));
-    assertThat([results LINQ_lookup:@"A"], hasCountOf(2));
-    assertThat([results LINQ_lookup:@"B"], hasCountOf(2));
-    assertThat([results LINQ_lookup:@"M"], hasCountOf(3));
-    assertThat([results LINQ_lookup:@"S"], hasCountOf(1));
+    assertThat([results linq_lookup:@"A"], hasCountOf(2));
+    assertThat([results linq_lookup:@"B"], hasCountOf(2));
+    assertThat([results linq_lookup:@"M"], hasCountOf(3));
+    assertThat([results linq_lookup:@"S"], hasCountOf(1));
     
-    assertThat([results LINQ_lookup:@"S"][0], hasEntry(@"S", @"Simon"));
+    assertThat([results linq_lookup:@"S"][0], hasEntry(@"S", @"Simon"));
 }
 
 

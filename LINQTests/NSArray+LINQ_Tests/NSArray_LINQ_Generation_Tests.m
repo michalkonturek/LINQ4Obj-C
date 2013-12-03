@@ -15,12 +15,12 @@
 @implementation NSArray_LINQ_Generation_Tests
 
 - (void)test_empty {
-    NSArray *result = [NSArray LINQ_empty];
+    NSArray *result = [NSArray linq_empty];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_from_to_returns_empty_when_equal_parameters {
-    NSArray *result = [NSArray LINQ_from:5 to:5];
+    NSArray *result = [NSArray linq_from:5 to:5];
     assertThat(result, isEmpty());
 }
 
@@ -61,7 +61,7 @@
 }
 
 - (void)aux_test_from_to_from:(NSInteger)from to:(NSInteger)to {
-    NSArray *result = [NSArray LINQ_from:from to:to];
+    NSArray *result = [NSArray linq_from:from to:to];
     
     NSInteger range = abs(from - to) + 1;
     assertThat(result, hasCountOf(range));
@@ -70,18 +70,18 @@
 }
 
 - (void)test_repeat_count_returns_empty_when_no_element {
-    NSArray *result = [NSArray LINQ_repeat:nil count:1];
+    NSArray *result = [NSArray linq_repeat:nil count:1];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_repeat_count_returns_empty_when_count_below_one {
-    NSArray *result = [NSArray LINQ_repeat:@"Element" count:0];
+    NSArray *result = [NSArray linq_repeat:@"Element" count:0];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_repeat {
     NSString *element = @"Element";
-    NSArray *result = [NSArray LINQ_repeat:element count:5];
+    NSArray *result = [NSArray linq_repeat:element count:5];
     assertThat(result, hasCountOf(5));
     assertThat(result[0], equalTo(element));
     assertThat(result[1], equalTo(element));
