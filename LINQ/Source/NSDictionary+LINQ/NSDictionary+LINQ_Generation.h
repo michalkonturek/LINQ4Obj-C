@@ -25,9 +25,9 @@
  */
 + (instancetype)linq_repeat:(id)element count:(NSInteger)count;
 
-/**
- TBC
- */
-+ (instancetype)linq_with:(LINQKeyValueSelectorBlock)block count:(NSInteger)count;
+///**
+// TBC
+// */
+//+ (instancetype)linq_with:(LINQKeyValueSelectorBlock)block count:(NSInteger)count;
 
 @end

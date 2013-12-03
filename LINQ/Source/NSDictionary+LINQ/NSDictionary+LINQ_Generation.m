@@ -39,8 +39,8 @@
     return result;
 }
 
-+ (instancetype)linq_with:(LINQKeyValueSelectorBlock)block count:(NSInteger)count {
-    METHOD_NOT_IMPLEMENTED
-}
+//+ (instancetype)linq_with:(LINQKeyValueSelectorBlock)block count:(NSInteger)count {
+//    METHOD_NOT_IMPLEMENTED
+//}
 
 @end
