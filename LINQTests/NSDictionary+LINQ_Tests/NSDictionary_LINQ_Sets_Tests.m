@@ -22,108 +22,108 @@
 }
 
 - (void)test_distinct_returns_self_when_empty {
-    NSDictionary *input = [NSDictionary LINQ_empty];
-    NSDictionary *result = [input LINQ_distinct];
+    NSDictionary *input = [NSDictionary linq_empty];
+    NSDictionary *result = [input linq_distinct];
     
     assertThat(result, hasCountOf(0));
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_except {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
-    NSDictionary *other = [NSDictionary LINQ_from:3 to:10];
-    NSDictionary *result = [input LINQ_except:other];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
+    NSDictionary *other = [NSDictionary linq_from:3 to:10];
+    NSDictionary *result = [input linq_except:other];
     
     assertThat(result, hasCountOf(2));
     assertThat([result allValues], containsInAnyOrder(@1, @2, nil));
 }
 
 - (void)test_except_returns_self_when_empty {
-    NSDictionary *input = [NSDictionary LINQ_empty];
-    NSDictionary *other = [NSDictionary LINQ_from:3 to:10];
-    NSDictionary *result = [input LINQ_except:other];
+    NSDictionary *input = [NSDictionary linq_empty];
+    NSDictionary *other = [NSDictionary linq_from:3 to:10];
+    NSDictionary *result = [input linq_except:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_except_returns_self_when_other_empty {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
-    NSDictionary *other = [NSDictionary LINQ_empty];
-    NSDictionary *result = [input LINQ_except:other];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
+    NSDictionary *other = [NSDictionary linq_empty];
+    NSDictionary *result = [input linq_except:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_except_returns_self_when_other_nil {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
     NSDictionary *other = nil;
-    NSDictionary *result = [input LINQ_except:other];
+    NSDictionary *result = [input linq_except:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_intersect {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:8];
-    NSDictionary *other = [NSDictionary LINQ_from:6 to:10];
-    NSDictionary *result = [input LINQ_intersect:other];
+    NSDictionary *input = [NSDictionary linq_from:1 to:8];
+    NSDictionary *other = [NSDictionary linq_from:6 to:10];
+    NSDictionary *result = [input linq_intersect:other];
     
     assertThat(result, hasCountOf(3));
     assertThat([result allValues], containsInAnyOrder(@6, @7, @8, nil));
 }
 
 - (void)test_intersect_returns_self_when_empty {
-    NSDictionary *input = [NSDictionary LINQ_empty];
-    NSDictionary *other = [NSDictionary LINQ_from:3 to:10];
-    NSDictionary *result = [input LINQ_intersect:other];
+    NSDictionary *input = [NSDictionary linq_empty];
+    NSDictionary *other = [NSDictionary linq_from:3 to:10];
+    NSDictionary *result = [input linq_intersect:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_intersect_returns_self_when_other_empty {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
-    NSDictionary *other = [NSDictionary LINQ_empty];
-    NSDictionary *result = [input LINQ_intersect:other];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
+    NSDictionary *other = [NSDictionary linq_empty];
+    NSDictionary *result = [input linq_intersect:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_intersect_returns_self_when_other_nil {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
     NSDictionary *other = nil;
-    NSDictionary *result = [input LINQ_intersect:other];
+    NSDictionary *result = [input linq_intersect:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_merge {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:8];
-    NSDictionary *other = [NSDictionary LINQ_from:1 to:10];
-    NSDictionary *result = [input LINQ_merge:other];
+    NSDictionary *input = [NSDictionary linq_from:1 to:8];
+    NSDictionary *other = [NSDictionary linq_from:1 to:10];
+    NSDictionary *result = [input linq_merge:other];
     
     assertThat(result, hasCountOf(10));
     assertThat([result allValues], containsInAnyOrder(@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, nil));
 }
 
 - (void)test_merge_returns_other_when_empty {
-    NSDictionary *input = [NSDictionary LINQ_empty];
-    NSDictionary *other = [NSDictionary LINQ_from:1 to:5];
-    NSDictionary *result = [input LINQ_merge:other];
+    NSDictionary *input = [NSDictionary linq_empty];
+    NSDictionary *other = [NSDictionary linq_from:1 to:5];
+    NSDictionary *result = [input linq_merge:other];
     
     assertThat(result, sameInstance(other));
 }
 
 - (void)test_merge_returns_self_when_other_empty {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
-    NSDictionary *other = [NSDictionary LINQ_empty];
-    NSDictionary *result = [input LINQ_merge:other];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
+    NSDictionary *other = [NSDictionary linq_empty];
+    NSDictionary *result = [input linq_merge:other];
     
     assertThat(result, sameInstance(input));
 }
 
 - (void)test_merge_returns_self_when_other_nil {
-    NSDictionary *input = [NSDictionary LINQ_from:1 to:10];
+    NSDictionary *input = [NSDictionary linq_from:1 to:10];
     NSDictionary *other = nil;
-    NSDictionary *result = [input LINQ_merge:other];
+    NSDictionary *result = [input linq_merge:other];
     
     assertThat(result, sameInstance(input));
 }

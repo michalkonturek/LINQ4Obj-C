@@ -28,27 +28,27 @@
 }
 
 - (void)test_orderByAscending_numbers {
-    NSArray *result = [[self.input_numbers LINQ_reverse] linq_orderByAscending];
+    NSArray *result = [[self.input_numbers linq_reverse] linq_orderByAscending];
     assertThat(result, contains(@1, @2, @3, @4, @5, nil));
 }
 
 - (void)test_orderByAscending_words {
-    NSArray *result = [[self.input_words LINQ_reverse] linq_orderByAscending];
+    NSArray *result = [[self.input_words linq_reverse] linq_orderByAscending];
     assertThat(result, contains(@"A", @"AB", @"ABC", @"ABCD", @"ABCDE", nil));
 }
 
 - (void)test_orderByDescending_numbers {
-    NSArray *result = [self.input_numbers LINQ_orderByDescending];
+    NSArray *result = [self.input_numbers linq_orderByDescending];
     assertThat(result, contains(@5, @4, @3, @2, @1, nil));
 }
 
 - (void)test_orderByDescending_words {
-    NSArray *result = [self.input_words LINQ_orderByDescending];
+    NSArray *result = [self.input_words linq_orderByDescending];
     assertThat(result, contains(@"ABCDE", @"ABCD", @"ABC", @"AB", @"A", nil));
 }
 
 - (void)test_reverese {
-    NSArray *result = [self.input_numbers LINQ_reverse];
+    NSArray *result = [self.input_numbers linq_reverse];
     assertThat(result, contains(@5, @4, @3, @2, @1, nil));
 }
 

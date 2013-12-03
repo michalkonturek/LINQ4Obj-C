@@ -25,14 +25,14 @@
 }
 
 - (void)test_toArray {
-    id result = [self.input LINQ_toArray];
+    id result = [self.input linq_toArray];
     
     assertThat(result, hasCountOf([self.input count]));
     assertThat(result, containsInAnyOrder(@"A", @"B", @"C", @"D", @"E", nil));
 }
 
 - (void)test_toArrayWhereKey {
-    id result = [self.input LINQ_toArrayWhereKey:^BOOL(id item) {
+    id result = [self.input linq_toArrayWhereKey:^BOOL(id item) {
         return ([item integerValue] > 3);
     }];
     
@@ -42,7 +42,7 @@
 }
 
 - (void)test_toArrayWhereValue {
-    id result = [self.input LINQ_toArrayWhereValue:^BOOL(id item) {
+    id result = [self.input linq_toArrayWhereValue:^BOOL(id item) {
         return ([item isEqualToString:@"A"] || [item isEqualToString:@"B"]);
     }];
     
@@ -51,7 +51,7 @@
 }
 
 - (void)test_toArrayWhereKeyValue {
-    id result = [self.input LINQ_toArrayWhereKeyValue:^BOOL(id key, id value) {
+    id result = [self.input linq_toArrayWhereKeyValue:^BOOL(id key, id value) {
         return (([key integerValue] == 1) && ([value isEqualToString:@"A"]));
     }];
     

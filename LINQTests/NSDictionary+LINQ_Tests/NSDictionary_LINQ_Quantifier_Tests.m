@@ -25,7 +25,7 @@
 }
 
 - (void)test_all_returns_true {
-    BOOL result = [self.input LINQ_all:^BOOL(id key, id value) {
+    BOOL result = [self.input linq_all:^BOOL(id key, id value) {
         return (([key integerValue] > 0) && ([value length] > 0));
     }];
     
@@ -33,7 +33,7 @@
 }
 
 - (void)test_all_returns_false {
-    BOOL result = [self.input LINQ_all:^BOOL(id key, id value) {
+    BOOL result = [self.input linq_all:^BOOL(id key, id value) {
         return (([key integerValue] > 0) && ([value length] > 10));
     }];
     
@@ -41,7 +41,7 @@
 }
 
 - (void)test_all_returns_true_when_empty {
-    BOOL result = [[NSDictionary LINQ_empty] linq_all:^BOOL(id key, id value) {
+    BOOL result = [[NSDictionary linq_empty] linq_all:^BOOL(id key, id value) {
         return YES;
     }];
     
@@ -49,12 +49,12 @@
 }
 
 - (void)test_all_returns_true_when_no_condition {
-    BOOL result = [self.input LINQ_all:nil];
+    BOOL result = [self.input linq_all:nil];
     assertThatBool(result, equalToBool(YES));
 }
 
 - (void)test_any_returns_true {
-    BOOL result = [self.input LINQ_any:^BOOL(id key, id value) {
+    BOOL result = [self.input linq_any:^BOOL(id key, id value) {
         return (([key integerValue] > 0) && ([value length] > 4));
     }];
     
@@ -62,7 +62,7 @@
 }
 
 - (void)test_any_returns_false {
-    BOOL result = [self.input LINQ_any:^BOOL(id key, id value) {
+    BOOL result = [self.input linq_any:^BOOL(id key, id value) {
         return (([key integerValue] > 0) && ([value length] > 10));
     }];
     
@@ -70,7 +70,7 @@
 }
 
 - (void)test_any_returns_false_when_empty {
-    BOOL result = [[NSDictionary LINQ_empty] linq_any:^BOOL(id key, id value) {
+    BOOL result = [[NSDictionary linq_empty] linq_any:^BOOL(id key, id value) {
         return YES;
     }];
     
@@ -78,7 +78,7 @@
 }
 
 - (void)test_any_returns_false_when_no_condition {
-    BOOL result = [self.input LINQ_any:nil];
+    BOOL result = [self.input linq_any:nil];
     assertThatBool(result, equalToBool(NO));
 }
 

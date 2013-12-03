@@ -15,12 +15,12 @@
 @implementation NSDictionary_LINQ_Generation_Tests
 
 - (void)test_empty {
-    id result = [NSDictionary LINQ_empty];
+    id result = [NSDictionary linq_empty];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_from_to_returns_empty_when_equal_parameters {
-    id result = [NSDictionary LINQ_from:5 to:5];
+    id result = [NSDictionary linq_from:5 to:5];
     assertThat(result, isEmpty());
 }
 
@@ -61,7 +61,7 @@
 }
 
 - (void)aux_test_from_to_from:(NSInteger)from to:(NSInteger)to {
-    id result = [NSDictionary LINQ_from:from to:to];
+    id result = [NSDictionary linq_from:from to:to];
     
     NSInteger range = abs(from - to) + 1;
     assertThat(result, hasCountOf(range));
@@ -70,18 +70,18 @@
 }
 
 - (void)test_repeat_count_returns_empty_when_no_element {
-    id result = [NSDictionary LINQ_repeat:nil count:1];
+    id result = [NSDictionary linq_repeat:nil count:1];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_repeat_count_returns_empty_when_count_below_one {
-    id result = [NSDictionary LINQ_repeat:@"Element" count:0];
+    id result = [NSDictionary linq_repeat:@"Element" count:0];
     assertThat(result, hasCountOf(0));
 }
 
 - (void)test_repeat {
     NSString *element = @"Element";
-    NSDictionary *result = [NSDictionary LINQ_repeat:element count:5];
+    NSDictionary *result = [NSDictionary linq_repeat:element count:5];
     assertThat(result, hasCountOf(5));
     assertThat([result objectForKey:@(0)], equalTo(element));
     assertThat([result objectForKey:@(1)], equalTo(element));
