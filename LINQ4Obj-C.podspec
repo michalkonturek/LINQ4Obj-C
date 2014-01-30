@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "LINQ4Obj-C"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Provides fluent interface of LINQ-style query to Objective-C."
   s.homepage     = "https://github.com/michalkonturek/LINQ4Obj-C"
   s.license      = 'MIT'
@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
 
   s.source       = { 
     :git => "https://github.com/michalkonturek/LINQ4Obj-C.git", 
-    :tag => "1.0.2" 
+    :tag => "1.0.3" 
   }
 
-  s.source_files = 'LINQ/Source/**/*.{h,m}'
+  s.source_files = 'Source/**/*.{h,m}'
   s.requires_arc = true
 end
