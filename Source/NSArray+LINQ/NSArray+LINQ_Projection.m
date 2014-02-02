@@ -15,7 +15,8 @@
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [result addObject:selectorBlock(obj)];
+        id value = selectorBlock(obj) ?: [NSNull null];
+        [result addObject:value];
     }];
     return result;
 }
@@ -26,7 +27,8 @@
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
     [self enumerateObjectsUsingBlock:^(id parent, NSUInteger idx, BOOL *stop) {
         [selectorBlock(parent) enumerateObjectsUsingBlock:^(id child, NSUInteger idx, BOOL *stop) {
-            [result addObject:child];
+            id value = child ?: [NSNull null];
+            [result addObject:value];
         }];
     }];
     
