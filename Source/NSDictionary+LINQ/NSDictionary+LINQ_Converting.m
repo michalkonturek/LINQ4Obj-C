@@ -14,7 +14,7 @@
     return [self linq_toArrayWhereKey:nil];
 }
 
-- (NSArray *)linq_toArrayWhereKey:(LINQConditionBlock)block {
+- (NSArray *)linq_toArrayWhereKey:(BOOL (^)(id item))block {
     if (!block) block = ^BOOL(id item) { return YES; };
     
     NSMutableArray *result = [NSMutableArray array];
@@ -25,7 +25,7 @@
     return result;
 }
 
-- (NSArray *)linq_toArrayWhereValue:(LINQConditionBlock)block {
+- (NSArray *)linq_toArrayWhereValue:(BOOL (^)(id item))block {
     if (!block) block = ^BOOL(id item) { return YES; };
     
     NSMutableArray *result = [NSMutableArray array];
@@ -36,7 +36,7 @@
     return result;
 }
 
-- (NSArray *)linq_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)block {
+- (NSArray *)linq_toArrayWhereKeyValue:(BOOL (^)(id key, id value))block {
     if (!block) block = ^BOOL(id key, id value) { return YES; };
     
     NSMutableArray *result = [NSMutableArray array];

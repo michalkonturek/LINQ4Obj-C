@@ -14,12 +14,12 @@
     return [self linq_toDictionaryWithKeyBlock:nil valueBlock:nil];
 }
 
-- (NSDictionary *)linq_toDictionaryWithKeyBlock:(LINQSelectorBlock)block {
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))block {
     return [self linq_toDictionaryWithKeyBlock:block valueBlock:nil];
 }
 
-- (NSDictionary *)linq_toDictionaryWithKeyBlock:(LINQSelectorBlock)keyBlock
-                                     valueBlock:(LINQSelectorBlock)valueBlock {
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))keyBlock
+                                     valueBlock:(id (^)(id item))valueBlock {
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

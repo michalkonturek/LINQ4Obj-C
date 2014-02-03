@@ -24,7 +24,7 @@
     }];
 }
 
-- (instancetype)linq_where:(LINQKeyValueConditionBlock)block {
+- (instancetype)linq_where:(BOOL (^)(id key, id value))block {
     if (!block) return self;
     
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
@@ -34,7 +34,7 @@
     return result;
 }
 
-- (instancetype)linq_whereKey:(LINQConditionBlock)block {
+- (instancetype)linq_whereKey:(BOOL (^)(id item))block {
     if (!block) return self;
     
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
@@ -44,7 +44,7 @@
     return result;
 }
 
-- (instancetype)linq_whereValue:(LINQConditionBlock)block {
+- (instancetype)linq_whereValue:(BOOL (^)(id item))block {
     if (!block) return self;
     
     NSMutableDictionary *result = [NSMutableDictionary dictionary];

@@ -18,16 +18,16 @@
 /**
  Puts value elements into a NSArray which satisfy key condtion.
  */
-- (NSArray *)linq_toArrayWhereKey:(LINQConditionBlock)block;
+- (NSArray *)linq_toArrayWhereKey:(BOOL (^)(id item))block;
 
 /**
  Puts value elements into a NSArray which satisfy value condtion.
  */
-- (NSArray *)linq_toArrayWhereValue:(LINQConditionBlock)block;
+- (NSArray *)linq_toArrayWhereValue:(BOOL (^)(id item))block;
 
 /**
  Puts value elements into a NSArray which satisfy both key and value condtion.
  */
-- (NSArray *)linq_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)block;
+- (NSArray *)linq_toArrayWhereKeyValue:(BOOL (^)(id key, id value))block;
 
 @end

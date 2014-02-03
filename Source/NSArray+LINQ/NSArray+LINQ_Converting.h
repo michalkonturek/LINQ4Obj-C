@@ -18,12 +18,12 @@
 /**
  Puts elements into a NSDictionary based on a key selector function.
  */
-- (NSDictionary *)linq_toDictionaryWithKeyBlock:(LINQSelectorBlock)block;
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))block;
 
 /**
  Puts elements into a NSDictionary based on a key and value selector functions.
  */
-- (NSDictionary *)linq_toDictionaryWithKeyBlock:(LINQSelectorBlock)keyBlock
-                                     valueBlock:(LINQSelectorBlock)valueBlock;
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))keyBlock
+                                     valueBlock:(id (^)(id item))valueBlock;
 
 @end

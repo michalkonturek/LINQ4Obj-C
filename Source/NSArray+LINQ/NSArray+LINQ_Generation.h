@@ -28,6 +28,6 @@
 /**
  TBC
  */
-+ (instancetype)linq_with:(LINQSelectorBlock)block count:(NSInteger)count;
++ (instancetype)linq_with:(id (^)(id item))block count:(NSInteger)count;
 
 @end

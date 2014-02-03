@@ -23,7 +23,7 @@
  }
  
  */
-- (NSDictionary *)linq_groupBy:(LINQSelectorBlock)block;
+- (NSDictionary *)linq_groupBy:(id (^)(id item))block;
 
 /**
  Returns array of NSDictionaries by entering each element
@@ -36,7 +36,7 @@
  }
  
  */
-- (instancetype)linq_toLookup:(LINQSelectorBlock)block;
+- (instancetype)linq_toLookup:(id (^)(id item))block;
 
 /**
  Helps to filter results of toLookup: method.

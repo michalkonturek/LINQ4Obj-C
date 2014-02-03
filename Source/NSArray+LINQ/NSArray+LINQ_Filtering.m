@@ -17,7 +17,7 @@
     }];
 }
 
-- (instancetype)linq_where:(LINQConditionBlock)block {
+- (instancetype)linq_where:(BOOL (^)(id item))block {
     if (!block) return self;
     
     NSMutableArray *result = [NSMutableArray array];

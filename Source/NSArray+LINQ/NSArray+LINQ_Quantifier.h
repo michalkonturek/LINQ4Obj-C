@@ -13,11 +13,11 @@
 /**
  Determines whether all the elements in a sequence satisfy a condition.
  */
-- (BOOL)linq_all:(LINQConditionBlock)block;
+- (BOOL)linq_all:(BOOL (^)(id item))block;
 
 /**
  Determines whether any elements in a sequence satisfy a condition.
  */
-- (BOOL)linq_any:(LINQConditionBlock)block;
+- (BOOL)linq_any:(BOOL (^)(id item))block;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (LINQ_Aggregation)
 
-- (id)linq_aggregate:(LINQAccumulatorBlock)block {
+- (id)linq_aggregate:(id (^)(id item, id aggregate))block {
     if (!block) return self;
     
     __block id accumulator = nil;
@@ -37,7 +37,7 @@
     return [self _aux_applyOperator:@"@avg" toKey:key];
 }
 
-- (NSUInteger)linq_count:(LINQConditionBlock)block {
+- (NSUInteger)linq_count:(BOOL (^)(id item))block {
     return [[self linq_whereValue:block] count];
 }
 

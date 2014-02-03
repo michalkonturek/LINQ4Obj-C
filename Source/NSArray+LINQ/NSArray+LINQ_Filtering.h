@@ -18,6 +18,6 @@
 /**
  Selects values that are based on a predicate function.
  */
-- (instancetype)linq_where:(LINQConditionBlock)block;
+- (instancetype)linq_where:(BOOL (^)(id item))block;
 
 @end
