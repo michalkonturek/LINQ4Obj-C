@@ -10,13 +10,13 @@
 
 @implementation NSArray (LINQ_Aggregation)
 
-- (id)linq_aggregate:(LINQAccumulatorBlock)accumulatorBlock {
-    if (!accumulatorBlock) return self;
+- (id)linq_aggregate:(LINQAccumulatorBlock)block {
+    if (!block) return self;
     
     id accumulator = nil;
     for (id item in self) {
         if (!accumulator) accumulator = item;
-        else accumulator = accumulatorBlock(item, accumulator);
+        else accumulator = block(item, accumulator);
     }
     return accumulator;
 }
@@ -36,8 +36,8 @@
     return [self _aux_applyOperator:@"@avg" toKey:key];
 }
 
-- (NSUInteger)linq_count:(LINQConditionBlock)conditionBlock {
-    return [[self linq_where:conditionBlock] count];
+- (NSUInteger)linq_count:(LINQConditionBlock)block {
+    return [[self linq_where:block] count];
 }
 
 - (id)linq_max {

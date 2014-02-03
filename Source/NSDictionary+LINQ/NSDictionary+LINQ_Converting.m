@@ -14,34 +14,34 @@
     return [self linq_toArrayWhereKey:nil];
 }
 
-- (NSArray *)linq_toArrayWhereKey:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) conditionBlock = ^BOOL(id item) { return YES; };
+- (NSArray *)linq_toArrayWhereKey:(LINQConditionBlock)block {
+    if (!block) block = ^BOOL(id item) { return YES; };
     
     NSMutableArray *result = [NSMutableArray array];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(key)) [result addObject:obj];
+        if (block(key)) [result addObject:obj];
     }];
     
     return result;
 }
 
-- (NSArray *)linq_toArrayWhereValue:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) conditionBlock = ^BOOL(id item) { return YES; };
+- (NSArray *)linq_toArrayWhereValue:(LINQConditionBlock)block {
+    if (!block) block = ^BOOL(id item) { return YES; };
     
     NSMutableArray *result = [NSMutableArray array];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(obj)) [result addObject:obj];
+        if (block(obj)) [result addObject:obj];
     }];
     
     return result;
 }
 
-- (NSArray *)linq_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)conditionBlock {
-    if (!conditionBlock) conditionBlock = ^BOOL(id key, id value) { return YES; };
+- (NSArray *)linq_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)block {
+    if (!block) block = ^BOOL(id key, id value) { return YES; };
     
     NSMutableArray *result = [NSMutableArray array];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(key, obj)) [result addObject:obj];
+        if (block(key, obj)) [result addObject:obj];
     }];
     
     return result;

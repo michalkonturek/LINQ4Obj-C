@@ -10,10 +10,10 @@
 
 @implementation NSArray (LINQ_Grouping)
 
-- (NSDictionary *)linq_groupBy:(LINQSelectorBlock)selector {
+- (NSDictionary *)linq_groupBy:(LINQSelectorBlock)block {
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     for (id item in self) {
-        id key = selector(item);
+        id key = block(item);
         NSMutableArray *group = [result objectForKey:key];
         if (!group) {
             group = [NSMutableArray array];
@@ -24,10 +24,10 @@
     return result;
 }
 
-- (instancetype)linq_toLookup:(LINQSelectorBlock)selector {
+- (instancetype)linq_toLookup:(LINQSelectorBlock)block {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
     for (id item in self) {
-        id key = selector(item);
+        id key = block(item);
         [result addObject:[NSDictionary dictionaryWithObject:item forKey:key]];
     }
     return result;

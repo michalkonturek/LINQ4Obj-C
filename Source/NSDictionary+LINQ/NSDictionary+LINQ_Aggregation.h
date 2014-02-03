@@ -13,7 +13,7 @@
 /**
  Performs a custom aggregation operation on the values of a collection.
  */
-- (id)linq_aggregate:(LINQAccumulatorBlock)accumulatorBlock;
+- (id)linq_aggregate:(LINQAccumulatorBlock)block;
 
 /**
  Calculates the average value of a collection of values.
@@ -30,7 +30,7 @@
  Counts the elements in a collection, optionally only
  those elements that satisfy a predicate function.
  */
-- (NSUInteger)linq_count:(LINQConditionBlock)conditionBlock;
+- (NSUInteger)linq_count:(LINQConditionBlock)block;
 
 /**
  Determines the maximum value in a collection.
