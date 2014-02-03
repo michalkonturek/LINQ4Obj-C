@@ -39,7 +39,7 @@
     return result;
 }
 
-//+ (instancetype)linq_with:(LINQKeyValueSelectorBlock)block count:(NSInteger)count {
+//+ (instancetype)linq_with:(id (^)(id key, id value))block count:(NSInteger)count {
 //    METHOD_NOT_IMPLEMENTED
 //}
 

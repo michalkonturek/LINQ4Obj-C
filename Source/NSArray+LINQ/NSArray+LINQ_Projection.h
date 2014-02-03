@@ -13,13 +13,13 @@
 /**
  Projects values that are based on a transform function.
  */
-- (instancetype)linq_select:(LINQSelectorBlock)selectorBlock;
+- (instancetype)linq_select:(id (^)(id item))block;
 
 
 /**
  Projects sequences of values that are based on a transform
  function and then flattens them into one sequence.
  */
-- (instancetype)linq_selectMany:(LINQSelectorBlock)selectorBlock;
+- (instancetype)linq_selectMany:(id (^)(id item))block;
 
 @end

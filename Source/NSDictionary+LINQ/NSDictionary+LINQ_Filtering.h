@@ -23,16 +23,16 @@
 /**
  Selects values which satisify key-value condition.
  */
-- (instancetype)linq_where:(LINQKeyValueConditionBlock)conditionBlock;
+- (instancetype)linq_where:(BOOL (^)(id key, id value))block;
 
 /**
  Selects values which keys satisify condition.
  */
-- (instancetype)linq_whereKey:(LINQConditionBlock)conditionBlock;
+- (instancetype)linq_whereKey:(BOOL (^)(id item))block;
 
 /**
  Selects values which satisify condition.
  */
-- (instancetype)linq_whereValue:(LINQConditionBlock)conditionBlock;
+- (instancetype)linq_whereValue:(BOOL (^)(id item))block;
 
 @end

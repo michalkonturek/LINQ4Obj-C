@@ -40,7 +40,7 @@
 }
 
 - (void)test_toDictionary_with_key_selector {
-    NSDictionary *result = [self.input_numbers linq_toDictionaryWithKeySelector:^id(id item) {
+    NSDictionary *result = [self.input_numbers linq_toDictionaryWithKeyBlock:^id(id item) {
         return [NSNumber numberWithInteger:(10 + [item integerValue])];
     }];
     
@@ -55,9 +55,9 @@
 
 - (void)test_toDictionary_with_key_and_value_selectors {
     
-    NSDictionary *result = [self.input_numbers linq_toDictionaryWithKeySelector:^id(id item) {
+    NSDictionary *result = [self.input_numbers linq_toDictionaryWithKeyBlock:^id(id item) {
         return [NSNumber numberWithInteger:(10 + [item integerValue])];
-    } valueSelector:^id(id item) {
+    } valueBlock:^id(id item) {
         return @"A";
     }];
     

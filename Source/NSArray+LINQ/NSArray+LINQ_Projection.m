@@ -10,23 +10,25 @@
 
 @implementation NSArray (LINQ_Projection)
 
-- (instancetype)linq_select:(LINQSelectorBlock)selectorBlock {
-    if (!selectorBlock) return [[self class] array];
+- (instancetype)linq_select:(id (^)(id item))block {
+    if (!block) return [[self class] array];
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [result addObject:selectorBlock(obj)];
+        id value = block(obj) ?: [NSNull null];
+        [result addObject:value];
     }];
     return result;
 }
 
-- (instancetype)linq_selectMany:(LINQSelectorBlock)selectorBlock {
-    if (!selectorBlock) return [[self class] array];
+- (instancetype)linq_selectMany:(id (^)(id item))block {
+    if (!block) return [[self class] array];
     
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
     [self enumerateObjectsUsingBlock:^(id parent, NSUInteger idx, BOOL *stop) {
-        [selectorBlock(parent) enumerateObjectsUsingBlock:^(id child, NSUInteger idx, BOOL *stop) {
-            [result addObject:child];
+        [block(parent) enumerateObjectsUsingBlock:^(id child, NSUInteger idx, BOOL *stop) {
+            id value = child ?: [NSNull null];
+            [result addObject:value];
         }];
     }];
     

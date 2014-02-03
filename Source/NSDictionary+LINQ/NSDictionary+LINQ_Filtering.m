@@ -24,32 +24,32 @@
     }];
 }
 
-- (instancetype)linq_where:(LINQKeyValueConditionBlock)conditionBlock {
-    if (!conditionBlock) return self;
+- (instancetype)linq_where:(BOOL (^)(id key, id value))block {
+    if (!block) return self;
     
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(key, obj)) [result setObject:obj forKey:key];
+        if (block(key, obj)) [result setObject:obj forKey:key];
     }];
     return result;
 }
 
-- (instancetype)linq_whereKey:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) return self;
+- (instancetype)linq_whereKey:(BOOL (^)(id item))block {
+    if (!block) return self;
     
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(key)) [result setObject:obj forKey:key];
+        if (block(key)) [result setObject:obj forKey:key];
     }];
     return result;
 }
 
-- (instancetype)linq_whereValue:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) return self;
+- (instancetype)linq_whereValue:(BOOL (^)(id item))block {
+    if (!block) return self;
     
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(obj)) [result setObject:obj forKey:key];
+        if (block(obj)) [result setObject:obj forKey:key];
     }];
     return result;
 }

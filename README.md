@@ -82,7 +82,7 @@ for (id key in [result allKeys]) {
  Performs a custom aggregation operation on the values of a collection.
 
 ```objc
-- (id)linq_aggregate:(LINQAccumulatorBlock)accumulatorBlock;
+- (id)linq_aggregate:(id (^)(id item, id aggregate))block;
 ```
 
 The following example creates a coma-separated string from an array of strings.
@@ -125,7 +125,7 @@ Counts the elements in a collection, optionally only
 those elements that satisfy a predicate function.
 
 ```objc
-- (NSUInteger)linq_count:(LINQConditionBlock)conditionBlock;
+- (NSUInteger)linq_count:(BOOL (^)(id item))block;
 ```
 
 Example: Return the number of elements 
@@ -152,7 +152,7 @@ Calculates the max value of the attribute specified
 by the key parameter for all objects in a collection.
 
 ```objc
-- (id)linq_maxForKey:(NSString *)key;- 
+- (id)linq_maxForKey:(NSString *)key;
 ```
 
 
@@ -204,19 +204,19 @@ Puts value elements into an NSArray.
 Puts value elements into a NSArray which satisfy key condtion.
  
 ```objc
-- (NSArray *)linq_toArrayWhereKey:(LINQConditionBlock)conditionBlock;
+- (NSArray *)linq_toArrayWhereKey:(BOOL (^)(id item))block;
 ```
 
 Puts value elements into a NSArray which satisfy value condtion.
 
 ```objc
-- (NSArray *)linq_toArrayWhereValue:(LINQConditionBlock)conditionBlock;
+- (NSArray *)linq_toArrayWhereValue:(BOOL (^)(id item))block;
 ```
 
 Puts value elements into a NSArray which satisfy both key and value condtion.
 
 ```objc
-- (NSArray *)linq_toArrayWhereKeyValue:(LINQKeyValueConditionBlock)conditionBlock;
+- (NSArray *)linq_toArrayWhereKeyValue:(BOOL (^)(id key, id value))block;
 ```
 
 #### ToDictionary
@@ -226,35 +226,18 @@ Puts value elements into a NSArray which satisfy both key and value condtion.
 ```objc
 - (NSDictionary *)linq_toDictionary;
 ```
-<!--
- Example: 
-
-```objc
-[@[@"A", @"B", @"C", @"D", @"E"] linq_toDictionary];
-
-// Result is: 
-// {
-// 		{0 : @"A"},
-// 		{1 : @"B"},
-// 		{2 : @"C"},
-// 		{3 : @"D"},
-// 		{4 : @"E"},
-// }
-
-```
--->
 
 Puts elements into a NSDictionary based on a key selector function.
 
 ```objc
-- (NSDictionary *)linq_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector;
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))block;
 ```
 
 Puts elements into a NSDictionary based on a key and value selector functions.
 
 ```objc
-- (NSDictionary *)linq_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector
-                                     valueSelector:(LINQSelectorBlock)valueSelector;
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))keyBlock
+                                     valueBlock:(id (^)(id item))valueBlock;
 ```
 
 
@@ -291,31 +274,25 @@ Selects elements which values can be cast to a specified type.
  Selects values that are based on a predicate function.
 
 ```objc
-- (instancetype)linq_where:(LINQConditionBlock)conditionBlock;
+- (instancetype)linq_where:(BOOL (^)(id item))block;
 ```
-<!--
- Example: 
-
-```objc
-```
--->
 
 Selects values which satisify key-value condition.
 
 ```objc
-- (instancetype)linq_where:(LINQKeyValueConditionBlock)conditionBlock;
+- (instancetype)linq_where:(BOOL (^)(id key, id value))block;
 ```
 
 Selects values which keys satisify condition.
 
 ```objc
-- (instancetype)linq_whereKey:(LINQConditionBlock)conditionBlock;
+- (instancetype)linq_whereKey:(BOOL (^)(id item))block;
 ```
 
 Selects values which satisify condition.
 
 ```objc
-- (instancetype)linq_whereValue:(LINQConditionBlock)conditionBlock;
+- (instancetype)linq_whereValue:(BOOL (^)(id item))block;
 ```
 
 ## Generation Operations
@@ -361,7 +338,7 @@ Generates a collection that contains one repeated value.
 
 
 ```objc
-- (NSDictionary *)linq_groupBy:(LINQSelectorBlock)selector;
+- (NSDictionary *)linq_groupBy:(id (^)(id item))block;
 ```
 
 Example: 
@@ -390,7 +367,7 @@ into a NSDictionary whose key is a result of a selector
 and its value is an element: ` { key <- selector(element), value <- element}`
  
 ```objc
-- (instancetype)linq_toLookup:(LINQSelectorBlock)selector;
+- (instancetype)linq_toLookup:(id (^)(id item))block;
 ```
 
 <!--
@@ -409,12 +386,6 @@ Returns array of NSDictionaries with the same key.
 - (instancetype)linq_lookup:(id)key;
 ```
 
-<!--
-Example: 
-
-```objc
-```
--->
 
 <!--## Join Operations-->
 
@@ -467,7 +438,7 @@ NSArray *result = [[NSArray linq_from:1 to:10] linq_take:5];
  Projects values that are based on a transform function.
 
 ```objc
-- (instancetype)linq_select:(LINQSelectorBlock)selectorBlock;
+- (instancetype)linq_select:(id (^)(id item))block;
 ```
 
 The example below adds 10 to each element in the collection.
@@ -485,7 +456,7 @@ NSArray *result = [[NSArray linq_from:1 to:5] linq_select:^id(id item) {
  function and then flattens them into one sequence.
 
 ```objc
-- (instancetype)linq_selectMany:(LINQSelectorBlock)selectorBlock;
+- (instancetype)linq_selectMany:(id (^)(id item))block;
 ```
 
 This example returns words of each string of the collection.
@@ -508,8 +479,8 @@ NSArray *result = [input linq_selectMany:^id(id item) {
 Determines whether all the elements in a sequence satisfy a condition.
 
 ```objc
-- (BOOL)linq_all:(LINQConditionBlock)conditionBlock;
-- (BOOL)linq_all:(LINQKeyValueConditionBlock)conditionBlock;
+- (BOOL)linq_all:(BOOL (^)(id item))block;
+- (BOOL)linq_all:(BOOL (^)(id key, id value))block;
 ```
 
 #### Any
@@ -517,8 +488,8 @@ Determines whether all the elements in a sequence satisfy a condition.
 Determines whether any elements in a sequence satisfy a condition.
  
 ```objc
-- (BOOL)linq_any:(LINQConditionBlock)conditionBlock;
-- (BOOL)linq_any:(LINQKeyValueConditionBlock)conditionBlock;
+- (BOOL)linq_any:(BOOL (^)(id item))block;
+- (BOOL)linq_any:(BOOL (^)(id key, id value))block;
 ```
 
 ## Set Operations

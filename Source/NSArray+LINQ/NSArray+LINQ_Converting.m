@@ -11,20 +11,20 @@
 @implementation NSArray (LINQ_Converting)
 
 - (NSDictionary *)linq_toDictionary {
-    return [self linq_toDictionaryWithKeySelector:nil valueSelector:nil];
+    return [self linq_toDictionaryWithKeyBlock:nil valueBlock:nil];
 }
 
-- (NSDictionary *)linq_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector {
-    return [self linq_toDictionaryWithKeySelector:keySelector valueSelector:nil];
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))block {
+    return [self linq_toDictionaryWithKeyBlock:block valueBlock:nil];
 }
 
-- (NSDictionary *)linq_toDictionaryWithKeySelector:(LINQSelectorBlock)keySelector
-                                     valueSelector:(LINQSelectorBlock)valueSelector {
+- (NSDictionary *)linq_toDictionaryWithKeyBlock:(id (^)(id item))keyBlock
+                                     valueBlock:(id (^)(id item))valueBlock {
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        id key = (keySelector) ? keySelector(obj) : [NSNumber numberWithInteger:idx];
-        id value = (valueSelector) ? valueSelector(obj) : obj;
+        id key = (keyBlock) ? keyBlock(obj) : [NSNumber numberWithInteger:idx];
+        id value = (valueBlock) ? valueBlock(obj) : obj;
         [result setObject:value forKey:key];
     }];
     

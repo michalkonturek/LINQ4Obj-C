@@ -10,18 +10,18 @@
 
 @implementation NSArray (LINQ_Quantifier)
 
-- (BOOL)linq_all:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) return YES;
+- (BOOL)linq_all:(BOOL (^)(id item))block {
+    if (!block) return YES;
     for (id item in self) {
-        if (!conditionBlock(item)) return NO;
+        if (!block(item)) return NO;
     }
     return YES;
 }
 
-- (BOOL)linq_any:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) return NO;
+- (BOOL)linq_any:(BOOL (^)(id item))block {
+    if (!block) return NO;
     for (id item in self) {
-        if (conditionBlock(item)) return YES;
+        if (block(item)) return YES;
     }
     return NO;
 }

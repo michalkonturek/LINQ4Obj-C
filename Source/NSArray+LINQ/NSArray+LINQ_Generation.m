@@ -40,7 +40,7 @@
     return result;
 }
 
-+ (instancetype)linq_with:(LINQSelectorBlock)block count:(NSInteger)count {
++ (instancetype)linq_with:(id (^)(id item))block count:(NSInteger)count {
     if (count < 1) return [self linq_empty];
     if (!block) return [self linq_empty];
     

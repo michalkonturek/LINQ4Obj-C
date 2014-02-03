@@ -17,12 +17,12 @@
     }];
 }
 
-- (instancetype)linq_where:(LINQConditionBlock)conditionBlock {
-    if (!conditionBlock) return self;
+- (instancetype)linq_where:(BOOL (^)(id item))block {
+    if (!block) return self;
     
     NSMutableArray *result = [NSMutableArray array];
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if (conditionBlock(obj)) [result addObject:obj];
+        if (block(obj)) [result addObject:obj];
     }];
     return result;
 }

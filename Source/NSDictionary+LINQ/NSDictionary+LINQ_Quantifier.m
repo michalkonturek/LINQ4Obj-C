@@ -10,23 +10,23 @@
 
 @implementation NSDictionary (LINQ_Quantifier)
 
-- (BOOL)linq_all:(LINQKeyValueConditionBlock)conditionBlock {
-    if (!conditionBlock) return YES;
+- (BOOL)linq_all:(BOOL (^)(id key, id value))block {
+    if (!block) return YES;
     
     __block NSInteger failedCount = 0;
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (!conditionBlock(key, obj)) failedCount++;
+        if (!block(key, obj)) failedCount++;
     }];
     
     return (failedCount == 0);
 }
 
-- (BOOL)linq_any:(LINQKeyValueConditionBlock)conditionBlock {
-    if (!conditionBlock) return NO;
+- (BOOL)linq_any:(BOOL (^)(id key, id value))block {
+    if (!block) return NO;
     
     __block BOOL result = NO;
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if (conditionBlock(key, obj)) result = YES;
+        if (block(key, obj)) result = YES;
     }];
     
     return result;
