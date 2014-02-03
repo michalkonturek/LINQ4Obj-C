@@ -152,7 +152,7 @@ Calculates the max value of the attribute specified
 by the key parameter for all objects in a collection.
 
 ```objc
-- (id)linq_maxForKey:(NSString *)key;- 
+- (id)linq_maxForKey:(NSString *)key;
 ```
 
 
