@@ -26,6 +26,24 @@
 
 #import <Foundation/Foundation.h>
 
+// Block convenience macros
+
+// Selector macros
+// Use the cast variants to explicitly box a non object value.
+#define MKLinqSel(__key) (^id(id item){return [item __key];})
+#define MKLinqSelCast(__cast, __key) (^id(id item){return @( (__cast) [item __key]);})
+#define MKLinqSelInt(__key) MKLinqSelCast(NSInteger, __key)
+#define MKLinqSelUInt(__key) MKLinqSelCast(NSUInteger, __key)
+
+// Key path selection macros.
+// Values obtained via KVC methods are automatically boxed.
+#define MKLinqKeyPath(__keyp) (^id(id item){return [item valueForKeyPath:@#__keyp];})
+#define MKLinqKey(__key) (^id(id item){return [item valueForKey:@#__key];})
+
+// Block convenience typedefs
+typedef BOOL (^MKLinqCondition)(id item);
+typedef id (^MKLinqSelector)(id item);
+
 #import "MKMacros.h"
 #import "NSArray+LINQ.h"
 #import "NSDictionary+LINQ.h"
