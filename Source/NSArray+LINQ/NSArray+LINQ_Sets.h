@@ -34,6 +34,12 @@
 - (instancetype)linq_distinct;
 
 /**
+ Removes duplicate values from a collection using
+ a key to determine duplicate status.
+ */
+- (NSArray *)linq_distinctByKey:(NSString *)keyPath;
+
+/**
  Returns the collection without the elements
  that appear in a second collection.
  */

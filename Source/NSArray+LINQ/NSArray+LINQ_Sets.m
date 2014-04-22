@@ -36,6 +36,23 @@
      */
 }
 
+- (NSArray *)linq_distinctByKey:(NSString *)keyPath
+{
+    NSMutableSet* keyValues = [[NSMutableSet alloc] init];
+    NSMutableArray* distinctSet = [[NSMutableArray alloc] init];
+    for (id item in self) {
+        id keyForItem = [item valueForKeyPath:keyPath];
+        if (!keyForItem) {
+            keyForItem = [NSNull null];
+        }
+        if (![keyValues containsObject:keyForItem]) {
+            [distinctSet addObject:item];
+            [keyValues addObject:keyForItem];
+        }
+    }
+    return distinctSet;
+}
+
 - (instancetype)linq_except:(NSArray *)other {
     if ([self _isEmpty]) return self;
     if (!other) return self;
