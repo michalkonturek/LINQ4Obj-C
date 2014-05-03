@@ -1,9 +1,14 @@
 # LINQ for Objective-C
 
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/michalkonturek/LINQ4Obj-C/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/badge/contact-@MichalKonturek-blue.svg?style=flat)](http://twitter.com/michalkonturek)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/michalkonturek/LINQ4Obj-C/blob/master/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/v/LINQ4Obj-C.svg?style=flat)](https://github.com/michalkonturek/LINQ4Obj-C)
+[![Build Status](http://img.shields.io/travis/michalkonturek/LINQ4Obj-C.svg?style=flat)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
+
+<!--[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/michalkonturek/LINQ4Obj-C/blob/master/LICENSE)
 [![Build Platform](https://cocoapod-badges.herokuapp.com/p/LINQ4Obj-C/badge.png)](https://github.com/michalkonturek/LINQ4Obj-C)
 [![Build Version](https://cocoapod-badges.herokuapp.com/v/LINQ4Obj-C/badge.png)](https://github.com/michalkonturek/LINQ4Obj-C)
-[![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=master)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)
+[![Build Status](https://travis-ci.org/michalkonturek/LINQ4Obj-C.png?branch=master)](https://travis-ci.org/michalkonturek/LINQ4Obj-C)-->
 
 Provides fluent interface of LINQ-style query to Objective-C.
 
