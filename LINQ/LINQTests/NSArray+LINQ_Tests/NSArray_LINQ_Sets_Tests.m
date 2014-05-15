@@ -38,17 +38,23 @@
     assertThat(result, contains(@1, @2, @3, @4, @5, nil));
 }
 
-- (void)test_distinctWithKey {
-    NSString *key1 = @"key1";
-    NSString *key2 = @"key2";
-    NSArray *input = @[@{key1:@1}, @{key1:@1}, @{key1:@2}, @{key1:@2}, @{key1:@3}, @{key2:@1}, @{key2:@2}, @{key2:@2} ];
-    NSArray *result = [input linq_distinctWithKey:key1];
-    assertThat(result, contains(@{key1:@1}, @{key1:@2}, @{key1:@3}, nil));
-}
-
 - (void)test_distinct_returns_self_when_empty {
     NSArray *input = [NSArray array];
     NSArray *result = [input linq_distinct];
+    assertThat(result, equalTo(input));
+}
+
+- (void)test_distinctWithBlock {
+    NSString *key1 = @"key1";
+    NSString *key2 = @"key2";
+    NSArray *input = @[@{key1:@1}, @{key1:@1}, @{key1:@2}, @{key1:@2}, @{key1:@3}, @{key2:@1}, @{key2:@2}, @{key2:@2} ];
+    NSArray *result = [input linq_distinctWithBlock:^id(id item) { return [item valueForKey:key1]; }];
+    assertThat(result, contains(@{key1:@1}, @{key1:@2}, @{key1:@3}, nil));
+}
+
+- (void)test_distinctWithBlock_returns_self_when_empty {
+    NSArray *input = [NSArray array];
+    NSArray *result = [input linq_distinctWithBlock:^id(id item) { return [item valueForKey:@"key"]; }];
     assertThat(result, equalTo(input));
 }
 

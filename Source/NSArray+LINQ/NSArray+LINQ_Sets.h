@@ -35,9 +35,9 @@
 
 /**
  Removes duplicate values from a collection using
- a key to determine duplicate status.
+ block to determine duplicate status.
  */
-- (NSArray *)linq_distinctWithKey:(NSString *)keyPath;
+- (NSArray *)linq_distinctWithBlock:(id (^)(id item))block;
 
 /**
  Returns the collection without the elements
