@@ -44,8 +44,9 @@
     
     __block BOOL result = NO;
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-#warning why not set *stop = YES here too?
-        if (block(key, obj)) result = YES;
+        if (block(key, obj)) {
+            *stop = result = YES;
+        }
     }];
     
     return result;
