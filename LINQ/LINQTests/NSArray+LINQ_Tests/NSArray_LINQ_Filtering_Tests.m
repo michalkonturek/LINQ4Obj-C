@@ -53,5 +53,20 @@
     assertThatInteger([result count], equalToInteger(5));
 }
 
+- (void)test_linqFirstOrNil_returns_first {
+     NSArray *input = @[@"A", @1, @"B", @2];
+    id result = [input linq_firstOrNil:^BOOL(id item) {
+        return [item isKindOfClass:[NSNumber class]];
+    }];
+     assertThatInteger([result integerValue], equalToInteger(1));
+}
+
+- (void)test_linqFirstOrNil_returns_nil {
+    NSArray *input = @[@"A", @1, @"B", @2];
+    id result = [input linq_firstOrNil:^BOOL(id item) {
+        return [item isKindOfClass:[NSDate class]];
+    }];
+    assertThatBool((BOOL)result, equalToBool(NO));
+}
 
 @end
