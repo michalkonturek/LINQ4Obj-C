@@ -36,12 +36,11 @@
      */
 }
 
-- (NSArray *)linq_distinctWithBlock:(id (^)(id item))block
-{
+- (NSArray *)linq_distinctWithBlock:(id (^)(id item))block {
     if ([self _isEmpty]) return self;
     
-    NSMutableSet* values = [[NSMutableSet alloc] init];
-    NSMutableArray* items = [[NSMutableArray alloc] init];
+    NSMutableSet *values = [[NSMutableSet alloc] init];
+    NSMutableArray *items = [[NSMutableArray alloc] init];
     for (id item in self) {
         id value = block(item);
         if (!value) {
