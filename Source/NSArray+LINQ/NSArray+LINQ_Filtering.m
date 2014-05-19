@@ -45,4 +45,19 @@
     return result;
 }
 
+
+- (id)linq_firstOrNil:(BOOL (^)(id item))block {
+    __block id first = nil;
+    if (!block) return first;
+    
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if (block(obj)) {
+            first = obj;
+            *stop = YES;
+        };
+    }];
+    
+    return first;
+}
+
 @end

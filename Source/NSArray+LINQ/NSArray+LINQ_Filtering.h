@@ -38,4 +38,9 @@
  */
 - (instancetype)linq_where:(BOOL (^)(id item))block;
 
+/**
+ Selects first value based on a predicate function.
+ */
+- (id)linq_firstOrNil:(BOOL (^)(id item))block;
+
 @end

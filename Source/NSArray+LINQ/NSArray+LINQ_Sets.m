@@ -36,6 +36,25 @@
      */
 }
 
+- (NSArray *)linq_distinctWithBlock:(id (^)(id item))block
+{
+    if ([self _isEmpty]) return self;
+    
+    NSMutableSet* values = [[NSMutableSet alloc] init];
+    NSMutableArray* items = [[NSMutableArray alloc] init];
+    for (id item in self) {
+        id value = block(item);
+        if (!value) {
+            continue;
+        }
+        if (![values containsObject:value]) {
+            [values addObject:value];
+            [items addObject:item];
+        }
+    }
+    return items;
+}
+
 - (instancetype)linq_except:(NSArray *)other {
     if ([self _isEmpty]) return self;
     if (!other) return self;
