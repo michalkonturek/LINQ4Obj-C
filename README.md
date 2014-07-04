@@ -576,6 +576,15 @@ two dictionaries.
 - (instancetype)linq_reverse;
 ```
 
+## Contributing
+
+1. Fork it.
+2. Create your feature branch (`git checkout -b new-feature`).
+3. Commit your changes (`git commit -am 'Added new-feature'`).
+4. Push to the branch (`git push origin new-feature`).
+5. Create new Pull Request.
+
+
 <!--- - - 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michalkonturek/linq4obj-c/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
