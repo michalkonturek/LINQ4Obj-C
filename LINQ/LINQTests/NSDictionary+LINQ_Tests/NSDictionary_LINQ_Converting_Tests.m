@@ -55,8 +55,9 @@
     }];
     
     assertThat(result, hasCountOf(2));
-    assertThat(result[0], equalTo(@"D"));
-    assertThat(result[1], equalTo(@"E"));
+    assertThat(result, containsInAnyOrder(@"D", @"E", nil));
+//    assertThat(result[0], equalTo(@"D"));
+//    assertThat(result[1], equalTo(@"E"));
 }
 
 - (void)test_toArrayWhereValue {
