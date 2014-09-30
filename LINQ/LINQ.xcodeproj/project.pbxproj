@@ -1,740 +1,2265 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */; };
-		901F6134180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */; };
-		901F613F180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */; };
-		901F6143180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 901F6142180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m */; };
-		9028A80B1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */; };
-		9028A8161776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */; };
-		9028A8181776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */; };
-		9028A81A1776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */; };
-		90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */; };
-		90373B4D17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */; };
-		90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */; };
-		90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */; };
-		90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */; };
-		906FACB1180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB0180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m */; };
-		906FACB3180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB2180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m */; };
-		906FACB5180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB4180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m */; };
-		906FACB7180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 906FACB6180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m */; };
-		908990011775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
-		908990031775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
-		908990051775E1C100AA935C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990041775E1C100AA935C /* CoreGraphics.framework */; };
-		9089900B1775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990091775E1C100AA935C /* InfoPlist.strings */; };
-		9089900D1775E1C100AA935C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089900C1775E1C100AA935C /* main.m */; };
-		908990111775E1C100AA935C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908990101775E1C100AA935C /* AppDelegate.m */; };
-		908990131775E1C100AA935C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990121775E1C100AA935C /* Default.png */; };
-		908990151775E1C100AA935C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990141775E1C100AA935C /* Default@2x.png */; };
-		908990171775E1C100AA935C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990161775E1C100AA935C /* Default-568h@2x.png */; };
-		9089901F1775E1C100AA935C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9089901E1775E1C100AA935C /* SenTestingKit.framework */; };
-		908990201775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
-		908990211775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
-		908990291775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990271775E1C100AA935C /* InfoPlist.strings */; };
-		90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m */; };
-		90F112BC189AD48100380A0D /* NSArray+LINQ_Aggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F11299189AD48100380A0D /* NSArray+LINQ_Aggregation.m */; };
-		90F112BD189AD48100380A0D /* NSArray+LINQ_Converting.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1129B189AD48100380A0D /* NSArray+LINQ_Converting.m */; };
-		90F112BE189AD48100380A0D /* NSArray+LINQ_Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1129D189AD48100380A0D /* NSArray+LINQ_Filtering.m */; };
-		90F112BF189AD48100380A0D /* NSArray+LINQ_Generation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1129F189AD48100380A0D /* NSArray+LINQ_Generation.m */; };
-		90F112C0189AD48100380A0D /* NSArray+LINQ_Grouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112A1189AD48100380A0D /* NSArray+LINQ_Grouping.m */; };
-		90F112C1189AD48100380A0D /* NSArray+LINQ_Partitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112A3189AD48100380A0D /* NSArray+LINQ_Partitioning.m */; };
-		90F112C2189AD48100380A0D /* NSArray+LINQ_Projection.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112A5189AD48100380A0D /* NSArray+LINQ_Projection.m */; };
-		90F112C3189AD48100380A0D /* NSArray+LINQ_Quantifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112A7189AD48100380A0D /* NSArray+LINQ_Quantifier.m */; };
-		90F112C4189AD48100380A0D /* NSArray+LINQ_Sets.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112A9189AD48100380A0D /* NSArray+LINQ_Sets.m */; };
-		90F112C5189AD48100380A0D /* NSArray+LINQ_Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112AB189AD48100380A0D /* NSArray+LINQ_Sorting.m */; };
-		90F112C6189AD48100380A0D /* NSDictionary+LINQ_Aggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112AF189AD48100380A0D /* NSDictionary+LINQ_Aggregation.m */; };
-		90F112C7189AD48100380A0D /* NSDictionary+LINQ_Converting.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112B1189AD48100380A0D /* NSDictionary+LINQ_Converting.m */; };
-		90F112C8189AD48100380A0D /* NSDictionary+LINQ_Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112B3189AD48100380A0D /* NSDictionary+LINQ_Filtering.m */; };
-		90F112C9189AD48100380A0D /* NSDictionary+LINQ_Generation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112B5189AD48100380A0D /* NSDictionary+LINQ_Generation.m */; };
-		90F112CA189AD48100380A0D /* NSDictionary+LINQ_Partitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112B7189AD48100380A0D /* NSDictionary+LINQ_Partitioning.m */; };
-		90F112CB189AD48100380A0D /* NSDictionary+LINQ_Quantifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112B9189AD48100380A0D /* NSDictionary+LINQ_Quantifier.m */; };
-		90F112CC189AD48100380A0D /* NSDictionary+LINQ_Sets.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112BB189AD48100380A0D /* NSDictionary+LINQ_Sets.m */; };
-		90F112D0189AD57600380A0D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112CF189AD57600380A0D /* Person.m */; };
-		90F112D3189AD5A200380A0D /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F112D2189AD5A200380A0D /* Example.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		908990221775E1C100AA935C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90898FF51775E1C100AA935C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90898FFC1775E1C100AA935C;
-			remoteInfo = LINQ;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.xcconfig"; path = "Pods/Pods-LINQTests.xcconfig"; sourceTree = SOURCE_ROOT; };
-		8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LINQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Partitioning_Tests.m; sourceTree = "<group>"; };
-		901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Sets_Tests.m; sourceTree = "<group>"; };
-		901F6142180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Quantifier_Tests.m; sourceTree = "<group>"; };
-		9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Sets_Tests.m; sourceTree = "<group>"; };
-		9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Quantifier_Tests.m; sourceTree = "<group>"; };
-		9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Sorting_Tests.m; sourceTree = "<group>"; };
-		9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Converting_Tests.m; sourceTree = "<group>"; };
-		90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Aggregation_Tests.m; sourceTree = "<group>"; };
-		90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Filtering_Tests.m; sourceTree = "<group>"; };
-		90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Grouping_Tests.m; sourceTree = "<group>"; };
-		90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Partitioning_Tests.m; sourceTree = "<group>"; };
-		90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Projection_Tests.m; sourceTree = "<group>"; };
-		906FACB0180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Generation_Tests.m; sourceTree = "<group>"; };
-		906FACB2180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Aggregation_Tests.m; sourceTree = "<group>"; };
-		906FACB4180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Converting_Tests.m; sourceTree = "<group>"; };
-		906FACB6180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Filtering_Tests.m; sourceTree = "<group>"; };
-		90898FFD1775E1C100AA935C /* LINQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LINQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		908990001775E1C100AA935C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		908990021775E1C100AA935C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		908990041775E1C100AA935C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		908990081775E1C100AA935C /* LINQ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQ-Info.plist"; sourceTree = "<group>"; };
-		9089900A1775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9089900C1775E1C100AA935C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9089900E1775E1C100AA935C /* LINQ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LINQ-Prefix.pch"; sourceTree = "<group>"; };
-		9089900F1775E1C100AA935C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		908990101775E1C100AA935C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		908990121775E1C100AA935C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		908990141775E1C100AA935C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		908990161775E1C100AA935C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9089901D1775E1C100AA935C /* LINQTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LINQTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9089901E1775E1C100AA935C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		908990261775E1C100AA935C /* LINQTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQTests-Info.plist"; sourceTree = "<group>"; };
-		908990281775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		90B4221A1775EAFE007DAF99 /* LINQ_Base_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ_Base_Tests.h; sourceTree = "<group>"; };
-		90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_LINQ_Generation_Tests.m; sourceTree = "<group>"; };
-		90F11294189AD48100380A0D /* MKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMacros.h; sourceTree = "<group>"; };
-		90F11295189AD48100380A0D /* LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ.h; sourceTree = "<group>"; };
-		90F11297189AD48100380A0D /* NSArray+LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ.h"; sourceTree = "<group>"; };
-		90F11298189AD48100380A0D /* NSArray+LINQ_Aggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Aggregation.h"; sourceTree = "<group>"; };
-		90F11299189AD48100380A0D /* NSArray+LINQ_Aggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Aggregation.m"; sourceTree = "<group>"; };
-		90F1129A189AD48100380A0D /* NSArray+LINQ_Converting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Converting.h"; sourceTree = "<group>"; };
-		90F1129B189AD48100380A0D /* NSArray+LINQ_Converting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Converting.m"; sourceTree = "<group>"; };
-		90F1129C189AD48100380A0D /* NSArray+LINQ_Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Filtering.h"; sourceTree = "<group>"; };
-		90F1129D189AD48100380A0D /* NSArray+LINQ_Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Filtering.m"; sourceTree = "<group>"; };
-		90F1129E189AD48100380A0D /* NSArray+LINQ_Generation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Generation.h"; sourceTree = "<group>"; };
-		90F1129F189AD48100380A0D /* NSArray+LINQ_Generation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Generation.m"; sourceTree = "<group>"; };
-		90F112A0189AD48100380A0D /* NSArray+LINQ_Grouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Grouping.h"; sourceTree = "<group>"; };
-		90F112A1189AD48100380A0D /* NSArray+LINQ_Grouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Grouping.m"; sourceTree = "<group>"; };
-		90F112A2189AD48100380A0D /* NSArray+LINQ_Partitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Partitioning.h"; sourceTree = "<group>"; };
-		90F112A3189AD48100380A0D /* NSArray+LINQ_Partitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Partitioning.m"; sourceTree = "<group>"; };
-		90F112A4189AD48100380A0D /* NSArray+LINQ_Projection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Projection.h"; sourceTree = "<group>"; };
-		90F112A5189AD48100380A0D /* NSArray+LINQ_Projection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Projection.m"; sourceTree = "<group>"; };
-		90F112A6189AD48100380A0D /* NSArray+LINQ_Quantifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Quantifier.h"; sourceTree = "<group>"; };
-		90F112A7189AD48100380A0D /* NSArray+LINQ_Quantifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Quantifier.m"; sourceTree = "<group>"; };
-		90F112A8189AD48100380A0D /* NSArray+LINQ_Sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Sets.h"; sourceTree = "<group>"; };
-		90F112A9189AD48100380A0D /* NSArray+LINQ_Sets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Sets.m"; sourceTree = "<group>"; };
-		90F112AA189AD48100380A0D /* NSArray+LINQ_Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LINQ_Sorting.h"; sourceTree = "<group>"; };
-		90F112AB189AD48100380A0D /* NSArray+LINQ_Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LINQ_Sorting.m"; sourceTree = "<group>"; };
-		90F112AD189AD48100380A0D /* NSDictionary+LINQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ.h"; sourceTree = "<group>"; };
-		90F112AE189AD48100380A0D /* NSDictionary+LINQ_Aggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Aggregation.h"; sourceTree = "<group>"; };
-		90F112AF189AD48100380A0D /* NSDictionary+LINQ_Aggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Aggregation.m"; sourceTree = "<group>"; };
-		90F112B0189AD48100380A0D /* NSDictionary+LINQ_Converting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Converting.h"; sourceTree = "<group>"; };
-		90F112B1189AD48100380A0D /* NSDictionary+LINQ_Converting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Converting.m"; sourceTree = "<group>"; };
-		90F112B2189AD48100380A0D /* NSDictionary+LINQ_Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Filtering.h"; sourceTree = "<group>"; };
-		90F112B3189AD48100380A0D /* NSDictionary+LINQ_Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Filtering.m"; sourceTree = "<group>"; };
-		90F112B4189AD48100380A0D /* NSDictionary+LINQ_Generation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Generation.h"; sourceTree = "<group>"; };
-		90F112B5189AD48100380A0D /* NSDictionary+LINQ_Generation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Generation.m"; sourceTree = "<group>"; };
-		90F112B6189AD48100380A0D /* NSDictionary+LINQ_Partitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Partitioning.h"; sourceTree = "<group>"; };
-		90F112B7189AD48100380A0D /* NSDictionary+LINQ_Partitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Partitioning.m"; sourceTree = "<group>"; };
-		90F112B8189AD48100380A0D /* NSDictionary+LINQ_Quantifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Quantifier.h"; sourceTree = "<group>"; };
-		90F112B9189AD48100380A0D /* NSDictionary+LINQ_Quantifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Quantifier.m"; sourceTree = "<group>"; };
-		90F112BA189AD48100380A0D /* NSDictionary+LINQ_Sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LINQ_Sets.h"; sourceTree = "<group>"; };
-		90F112BB189AD48100380A0D /* NSDictionary+LINQ_Sets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LINQ_Sets.m"; sourceTree = "<group>"; };
-		90F112CE189AD57600380A0D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		90F112CF189AD57600380A0D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		90F112D1189AD5A200380A0D /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
-		90F112D2189AD5A200380A0D /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		90898FFA1775E1C100AA935C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				908990011775E1C100AA935C /* UIKit.framework in Frameworks */,
-				908990031775E1C100AA935C /* Foundation.framework in Frameworks */,
-				908990051775E1C100AA935C /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		908990191775E1C100AA935C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9089901F1775E1C100AA935C /* SenTestingKit.framework in Frameworks */,
-				908990201775E1C100AA935C /* UIKit.framework in Frameworks */,
-				908990211775E1C100AA935C /* Foundation.framework in Frameworks */,
-				006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		90898FF41775E1C100AA935C = {
-			isa = PBXGroup;
-			children = (
-				908990061775E1C100AA935C /* LINQ */,
-				908990241775E1C100AA935C /* LINQTests */,
-				90898FFF1775E1C100AA935C /* Frameworks */,
-				90898FFE1775E1C100AA935C /* Products */,
-				6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */,
-			);
-			sourceTree = "<group>";
-		};
-		90898FFE1775E1C100AA935C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				90898FFD1775E1C100AA935C /* LINQ.app */,
-				9089901D1775E1C100AA935C /* LINQTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		90898FFF1775E1C100AA935C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				908990001775E1C100AA935C /* UIKit.framework */,
-				908990021775E1C100AA935C /* Foundation.framework */,
-				908990041775E1C100AA935C /* CoreGraphics.framework */,
-				9089901E1775E1C100AA935C /* SenTestingKit.framework */,
-				8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		908990061775E1C100AA935C /* LINQ */ = {
-			isa = PBXGroup;
-			children = (
-				90F112CD189AD4BA00380A0D /* Example */,
-				90F11292189AD48100380A0D /* Source */,
-				9089900F1775E1C100AA935C /* AppDelegate.h */,
-				908990101775E1C100AA935C /* AppDelegate.m */,
-				908990071775E1C100AA935C /* Supporting Files */,
-			);
-			path = LINQ;
-			sourceTree = "<group>";
-		};
-		908990071775E1C100AA935C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				908990081775E1C100AA935C /* LINQ-Info.plist */,
-				908990091775E1C100AA935C /* InfoPlist.strings */,
-				9089900C1775E1C100AA935C /* main.m */,
-				9089900E1775E1C100AA935C /* LINQ-Prefix.pch */,
-				908990121775E1C100AA935C /* Default.png */,
-				908990141775E1C100AA935C /* Default@2x.png */,
-				908990161775E1C100AA935C /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		908990241775E1C100AA935C /* LINQTests */ = {
-			isa = PBXGroup;
-			children = (
-				90B422091775E817007DAF99 /* NSArray+LINQ_Tests */,
-				90B4220B1775E817007DAF99 /* NSDictionary+LINQ_Tests */,
-				90B4221A1775EAFE007DAF99 /* LINQ_Base_Tests.h */,
-				908990251775E1C100AA935C /* Supporting Files */,
-			);
-			path = LINQTests;
-			sourceTree = "<group>";
-		};
-		908990251775E1C100AA935C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				908990261775E1C100AA935C /* LINQTests-Info.plist */,
-				908990271775E1C100AA935C /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		90B422091775E817007DAF99 /* NSArray+LINQ_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				90373B4717764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m */,
-				9028A8191776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m */,
-				90373B4C17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m */,
-				90B4221D1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m */,
-				90373B5717764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m */,
-				90373B5917764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m */,
-				90373B5B17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m */,
-				9028A8151776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m */,
-				9028A80A1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m */,
-				9028A8171776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m */,
-			);
-			path = "NSArray+LINQ_Tests";
-			sourceTree = "<group>";
-		};
-		90B4220B1775E817007DAF99 /* NSDictionary+LINQ_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				906FACB2180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m */,
-				906FACB4180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m */,
-				906FACB6180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m */,
-				906FACB0180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m */,
-				901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */,
-				901F6142180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m */,
-				901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */,
-			);
-			path = "NSDictionary+LINQ_Tests";
-			sourceTree = "<group>";
-		};
-		90F11292189AD48100380A0D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				90F11295189AD48100380A0D /* LINQ.h */,
-				90F11293189AD48100380A0D /* Externals */,
-				90F11296189AD48100380A0D /* NSArray+LINQ */,
-				90F112AC189AD48100380A0D /* NSDictionary+LINQ */,
-			);
-			name = Source;
-			path = ../../Source;
-			sourceTree = "<group>";
-		};
-		90F11293189AD48100380A0D /* Externals */ = {
-			isa = PBXGroup;
-			children = (
-				90F11294189AD48100380A0D /* MKMacros.h */,
-			);
-			path = Externals;
-			sourceTree = "<group>";
-		};
-		90F11296189AD48100380A0D /* NSArray+LINQ */ = {
-			isa = PBXGroup;
-			children = (
-				90F11297189AD48100380A0D /* NSArray+LINQ.h */,
-				90F11298189AD48100380A0D /* NSArray+LINQ_Aggregation.h */,
-				90F11299189AD48100380A0D /* NSArray+LINQ_Aggregation.m */,
-				90F1129A189AD48100380A0D /* NSArray+LINQ_Converting.h */,
-				90F1129B189AD48100380A0D /* NSArray+LINQ_Converting.m */,
-				90F1129C189AD48100380A0D /* NSArray+LINQ_Filtering.h */,
-				90F1129D189AD48100380A0D /* NSArray+LINQ_Filtering.m */,
-				90F1129E189AD48100380A0D /* NSArray+LINQ_Generation.h */,
-				90F1129F189AD48100380A0D /* NSArray+LINQ_Generation.m */,
-				90F112A0189AD48100380A0D /* NSArray+LINQ_Grouping.h */,
-				90F112A1189AD48100380A0D /* NSArray+LINQ_Grouping.m */,
-				90F112A2189AD48100380A0D /* NSArray+LINQ_Partitioning.h */,
-				90F112A3189AD48100380A0D /* NSArray+LINQ_Partitioning.m */,
-				90F112A4189AD48100380A0D /* NSArray+LINQ_Projection.h */,
-				90F112A5189AD48100380A0D /* NSArray+LINQ_Projection.m */,
-				90F112A6189AD48100380A0D /* NSArray+LINQ_Quantifier.h */,
-				90F112A7189AD48100380A0D /* NSArray+LINQ_Quantifier.m */,
-				90F112A8189AD48100380A0D /* NSArray+LINQ_Sets.h */,
-				90F112A9189AD48100380A0D /* NSArray+LINQ_Sets.m */,
-				90F112AA189AD48100380A0D /* NSArray+LINQ_Sorting.h */,
-				90F112AB189AD48100380A0D /* NSArray+LINQ_Sorting.m */,
-			);
-			path = "NSArray+LINQ";
-			sourceTree = "<group>";
-		};
-		90F112AC189AD48100380A0D /* NSDictionary+LINQ */ = {
-			isa = PBXGroup;
-			children = (
-				90F112AD189AD48100380A0D /* NSDictionary+LINQ.h */,
-				90F112AE189AD48100380A0D /* NSDictionary+LINQ_Aggregation.h */,
-				90F112AF189AD48100380A0D /* NSDictionary+LINQ_Aggregation.m */,
-				90F112B0189AD48100380A0D /* NSDictionary+LINQ_Converting.h */,
-				90F112B1189AD48100380A0D /* NSDictionary+LINQ_Converting.m */,
-				90F112B2189AD48100380A0D /* NSDictionary+LINQ_Filtering.h */,
-				90F112B3189AD48100380A0D /* NSDictionary+LINQ_Filtering.m */,
-				90F112B4189AD48100380A0D /* NSDictionary+LINQ_Generation.h */,
-				90F112B5189AD48100380A0D /* NSDictionary+LINQ_Generation.m */,
-				90F112B6189AD48100380A0D /* NSDictionary+LINQ_Partitioning.h */,
-				90F112B7189AD48100380A0D /* NSDictionary+LINQ_Partitioning.m */,
-				90F112B8189AD48100380A0D /* NSDictionary+LINQ_Quantifier.h */,
-				90F112B9189AD48100380A0D /* NSDictionary+LINQ_Quantifier.m */,
-				90F112BA189AD48100380A0D /* NSDictionary+LINQ_Sets.h */,
-				90F112BB189AD48100380A0D /* NSDictionary+LINQ_Sets.m */,
-			);
-			path = "NSDictionary+LINQ";
-			sourceTree = "<group>";
-		};
-		90F112CD189AD4BA00380A0D /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				90F112D1189AD5A200380A0D /* Example.h */,
-				90F112D2189AD5A200380A0D /* Example.m */,
-				90F112CE189AD57600380A0D /* Person.h */,
-				90F112CF189AD57600380A0D /* Person.m */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		90898FFC1775E1C100AA935C /* LINQ */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9089902F1775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQ" */;
-			buildPhases = (
-				90898FF91775E1C100AA935C /* Sources */,
-				90898FFA1775E1C100AA935C /* Frameworks */,
-				90898FFB1775E1C100AA935C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LINQ;
-			productName = LINQ;
-			productReference = 90898FFD1775E1C100AA935C /* LINQ.app */;
-			productType = "com.apple.product-type.application";
-		};
-		9089901C1775E1C100AA935C /* LINQTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 908990321775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQTests" */;
-			buildPhases = (
-				502139E3FDC7430BBC3A7857 /* Check Pods Manifest.lock */,
-				908990181775E1C100AA935C /* Sources */,
-				908990191775E1C100AA935C /* Frameworks */,
-				9089901A1775E1C100AA935C /* Resources */,
-				9089901B1775E1C100AA935C /* ShellScript */,
-				684949FAD0434EC5932260C3 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				908990231775E1C100AA935C /* PBXTargetDependency */,
-			);
-			name = LINQTests;
-			productName = LINQTests;
-			productReference = 9089901D1775E1C100AA935C /* LINQTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		90898FF51775E1C100AA935C /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Michal Konturek";
-			};
-			buildConfigurationList = 90898FF81775E1C100AA935C /* Build configuration list for PBXProject "LINQ" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 90898FF41775E1C100AA935C;
-			productRefGroup = 90898FFE1775E1C100AA935C /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				90898FFC1775E1C100AA935C /* LINQ */,
-				9089901C1775E1C100AA935C /* LINQTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		90898FFB1775E1C100AA935C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9089900B1775E1C100AA935C /* InfoPlist.strings in Resources */,
-				908990131775E1C100AA935C /* Default.png in Resources */,
-				908990151775E1C100AA935C /* Default@2x.png in Resources */,
-				908990171775E1C100AA935C /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9089901A1775E1C100AA935C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				908990291775E1C100AA935C /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		502139E3FDC7430BBC3A7857 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-		};
-		684949FAD0434EC5932260C3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-LINQTests-resources.sh\"\n";
-		};
-		9089901B1775E1C100AA935C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		90898FF91775E1C100AA935C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90F112CB189AD48100380A0D /* NSDictionary+LINQ_Quantifier.m in Sources */,
-				90F112C2189AD48100380A0D /* NSArray+LINQ_Projection.m in Sources */,
-				90F112D0189AD57600380A0D /* Person.m in Sources */,
-				90F112C7189AD48100380A0D /* NSDictionary+LINQ_Converting.m in Sources */,
-				90F112C8189AD48100380A0D /* NSDictionary+LINQ_Filtering.m in Sources */,
-				90F112C5189AD48100380A0D /* NSArray+LINQ_Sorting.m in Sources */,
-				90F112C4189AD48100380A0D /* NSArray+LINQ_Sets.m in Sources */,
-				90F112BF189AD48100380A0D /* NSArray+LINQ_Generation.m in Sources */,
-				90F112D3189AD5A200380A0D /* Example.m in Sources */,
-				9089900D1775E1C100AA935C /* main.m in Sources */,
-				90F112CC189AD48100380A0D /* NSDictionary+LINQ_Sets.m in Sources */,
-				90F112BD189AD48100380A0D /* NSArray+LINQ_Converting.m in Sources */,
-				90F112CA189AD48100380A0D /* NSDictionary+LINQ_Partitioning.m in Sources */,
-				90F112C6189AD48100380A0D /* NSDictionary+LINQ_Aggregation.m in Sources */,
-				908990111775E1C100AA935C /* AppDelegate.m in Sources */,
-				90F112C9189AD48100380A0D /* NSDictionary+LINQ_Generation.m in Sources */,
-				90F112C1189AD48100380A0D /* NSArray+LINQ_Partitioning.m in Sources */,
-				90F112C3189AD48100380A0D /* NSArray+LINQ_Quantifier.m in Sources */,
-				90F112BE189AD48100380A0D /* NSArray+LINQ_Filtering.m in Sources */,
-				90F112BC189AD48100380A0D /* NSArray+LINQ_Aggregation.m in Sources */,
-				90F112C0189AD48100380A0D /* NSArray+LINQ_Grouping.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		908990181775E1C100AA935C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9028A8181776FB84004B3C97 /* NSArray_LINQ_Sorting_Tests.m in Sources */,
-				9028A80B1776F8E1004B3C97 /* NSArray_LINQ_Sets_Tests.m in Sources */,
-				901F6134180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m in Sources */,
-				901F613F180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m in Sources */,
-				90373B4D17764E6A009511C4 /* NSArray_LINQ_Filtering_Tests.m in Sources */,
-				901F6143180B311C00A4D26B /* NSDictionary_LINQ_Quantifier_Tests.m in Sources */,
-				90373B4817764CFD009511C4 /* NSArray_LINQ_Aggregation_Tests.m in Sources */,
-				90B4221E1775EBD5007DAF99 /* NSArray_LINQ_Generation_Tests.m in Sources */,
-				906FACB1180A093500F26554 /* NSDictionary_LINQ_Generation_Tests.m in Sources */,
-				90373B5A17764F90009511C4 /* NSArray_LINQ_Partitioning_Tests.m in Sources */,
-				90373B5817764F7F009511C4 /* NSArray_LINQ_Grouping_Tests.m in Sources */,
-				9028A8161776FB2A004B3C97 /* NSArray_LINQ_Quantifier_Tests.m in Sources */,
-				906FACB7180A096C00F26554 /* NSDictionary_LINQ_Filtering_Tests.m in Sources */,
-				90373B5C17764F9E009511C4 /* NSArray_LINQ_Projection_Tests.m in Sources */,
-				9028A81A1776FB98004B3C97 /* NSArray_LINQ_Converting_Tests.m in Sources */,
-				906FACB3180A094400F26554 /* NSDictionary_LINQ_Aggregation_Tests.m in Sources */,
-				906FACB5180A095900F26554 /* NSDictionary_LINQ_Converting_Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		908990231775E1C100AA935C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90898FFC1775E1C100AA935C /* LINQ */;
-			targetProxy = 908990221775E1C100AA935C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		908990091775E1C100AA935C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9089900A1775E1C100AA935C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		908990271775E1C100AA935C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				908990281775E1C100AA935C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		9089902D1775E1C100AA935C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
-			};
-			name = Debug;
-		};
-		9089902E1775E1C100AA935C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		908990301775E1C100AA935C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
-				INFOPLIST_FILE = "LINQ/LINQ-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		908990311775E1C100AA935C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
-				INFOPLIST_FILE = "LINQ/LINQ-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		908990331775E1C100AA935C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
-				INFOPLIST_FILE = "LINQTests/LINQTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		908990341775E1C100AA935C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
-				INFOPLIST_FILE = "LINQTests/LINQTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		90898FF81775E1C100AA935C /* Build configuration list for PBXProject "LINQ" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9089902D1775E1C100AA935C /* Debug */,
-				9089902E1775E1C100AA935C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9089902F1775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQ" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				908990301775E1C100AA935C /* Debug */,
-				908990311775E1C100AA935C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		908990321775E1C100AA935C /* Build configuration list for PBXNativeTarget "LINQTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				908990331775E1C100AA935C /* Debug */,
-				908990341775E1C100AA935C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 90898FF51775E1C100AA935C /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>006E12F887514157AE57B0B7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8716CDB13CE249B1BD7F7BDC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>15F083F72632BC8A2160E252</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LINQTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LINQTests/Pods-LINQTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>256428A2A7AB6AA04D2C6BCF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>15F083F72632BC8A2160E252</string>
+				<string>47DCC961D9A805AFA2955EAE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47DCC961D9A805AFA2955EAE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LINQTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LINQTests/Pods-LINQTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>502139E3FDC7430BBC3A7857</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+		</dict>
+		<key>684949FAD0434EC5932260C3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LINQTests/Pods-LINQTests-resources.sh"
+</string>
+		</dict>
+		<key>8716CDB13CE249B1BD7F7BDC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-LINQTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>901F6133180B23DA00A4D26B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Partitioning_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>901F6134180B23DA00A4D26B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>901F6133180B23DA00A4D26B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>901F613E180B30F900A4D26B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Sets_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>901F613F180B30F900A4D26B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>901F613E180B30F900A4D26B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>901F6142180B311C00A4D26B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Quantifier_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>901F6143180B311C00A4D26B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>901F6142180B311C00A4D26B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9028A80A1776F8E1004B3C97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Sets_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9028A80B1776F8E1004B3C97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9028A80A1776F8E1004B3C97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9028A8151776FB2A004B3C97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Quantifier_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9028A8161776FB2A004B3C97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9028A8151776FB2A004B3C97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9028A8171776FB84004B3C97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Sorting_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9028A8181776FB84004B3C97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9028A8171776FB84004B3C97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9028A8191776FB98004B3C97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Converting_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9028A81A1776FB98004B3C97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9028A8191776FB98004B3C97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90373B4717764CFD009511C4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Aggregation_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90373B4817764CFD009511C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90373B4717764CFD009511C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90373B4C17764E6A009511C4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Filtering_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90373B4D17764E6A009511C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90373B4C17764E6A009511C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90373B5717764F7F009511C4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Grouping_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90373B5817764F7F009511C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90373B5717764F7F009511C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90373B5917764F90009511C4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Partitioning_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90373B5A17764F90009511C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90373B5917764F90009511C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90373B5B17764F9E009511C4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Projection_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90373B5C17764F9E009511C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90373B5B17764F9E009511C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>906FACB0180A093500F26554</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Generation_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>906FACB1180A093500F26554</key>
+		<dict>
+			<key>fileRef</key>
+			<string>906FACB0180A093500F26554</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>906FACB2180A094400F26554</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Aggregation_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>906FACB3180A094400F26554</key>
+		<dict>
+			<key>fileRef</key>
+			<string>906FACB2180A094400F26554</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>906FACB4180A095900F26554</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Converting_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>906FACB5180A095900F26554</key>
+		<dict>
+			<key>fileRef</key>
+			<string>906FACB4180A095900F26554</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>906FACB6180A096C00F26554</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary_LINQ_Filtering_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>906FACB7180A096C00F26554</key>
+		<dict>
+			<key>fileRef</key>
+			<string>906FACB6180A096C00F26554</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90898FF41775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>908990061775E1C100AA935C</string>
+				<string>908990241775E1C100AA935C</string>
+				<string>90898FFF1775E1C100AA935C</string>
+				<string>90898FFE1775E1C100AA935C</string>
+				<string>256428A2A7AB6AA04D2C6BCF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90898FF51775E1C100AA935C</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Michal Konturek</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>90898FF81775E1C100AA935C</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>90898FF41775E1C100AA935C</string>
+			<key>productRefGroup</key>
+			<string>90898FFE1775E1C100AA935C</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>90898FFC1775E1C100AA935C</string>
+				<string>9089901C1775E1C100AA935C</string>
+			</array>
+		</dict>
+		<key>90898FF81775E1C100AA935C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9089902D1775E1C100AA935C</string>
+				<string>9089902E1775E1C100AA935C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>90898FF91775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>90F112CB189AD48100380A0D</string>
+				<string>90F112C2189AD48100380A0D</string>
+				<string>90F112D0189AD57600380A0D</string>
+				<string>90F112C7189AD48100380A0D</string>
+				<string>90F112C8189AD48100380A0D</string>
+				<string>90F112C5189AD48100380A0D</string>
+				<string>90F112C4189AD48100380A0D</string>
+				<string>90F112BF189AD48100380A0D</string>
+				<string>90F112D3189AD5A200380A0D</string>
+				<string>9089900D1775E1C100AA935C</string>
+				<string>90F112CC189AD48100380A0D</string>
+				<string>90F112BD189AD48100380A0D</string>
+				<string>90F112CA189AD48100380A0D</string>
+				<string>90F112C6189AD48100380A0D</string>
+				<string>908990111775E1C100AA935C</string>
+				<string>90F112C9189AD48100380A0D</string>
+				<string>90F112C1189AD48100380A0D</string>
+				<string>90F112C3189AD48100380A0D</string>
+				<string>90F112BE189AD48100380A0D</string>
+				<string>90F112BC189AD48100380A0D</string>
+				<string>90F112C0189AD48100380A0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>90898FFA1775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>908990011775E1C100AA935C</string>
+				<string>908990031775E1C100AA935C</string>
+				<string>908990051775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>90898FFB1775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9089900B1775E1C100AA935C</string>
+				<string>908990131775E1C100AA935C</string>
+				<string>908990151775E1C100AA935C</string>
+				<string>908990171775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>90898FFC1775E1C100AA935C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9089902F1775E1C100AA935C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>90898FF91775E1C100AA935C</string>
+				<string>90898FFA1775E1C100AA935C</string>
+				<string>90898FFB1775E1C100AA935C</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LINQ</string>
+			<key>productName</key>
+			<string>LINQ</string>
+			<key>productReference</key>
+			<string>90898FFD1775E1C100AA935C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>90898FFD1775E1C100AA935C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LINQ.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>90898FFE1775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90898FFD1775E1C100AA935C</string>
+				<string>9089901D1775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90898FFF1775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>908990001775E1C100AA935C</string>
+				<string>908990021775E1C100AA935C</string>
+				<string>908990041775E1C100AA935C</string>
+				<string>9089901E1775E1C100AA935C</string>
+				<string>8716CDB13CE249B1BD7F7BDC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990001775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>908990011775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990001775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990021775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>908990031775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990021775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990041775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>908990051775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990041775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990061775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90F112CD189AD4BA00380A0D</string>
+				<string>90F11292189AD48100380A0D</string>
+				<string>9089900F1775E1C100AA935C</string>
+				<string>908990101775E1C100AA935C</string>
+				<string>908990071775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LINQ</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990071775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>908990081775E1C100AA935C</string>
+				<string>908990091775E1C100AA935C</string>
+				<string>9089900C1775E1C100AA935C</string>
+				<string>9089900E1775E1C100AA935C</string>
+				<string>908990121775E1C100AA935C</string>
+				<string>908990141775E1C100AA935C</string>
+				<string>908990161775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990081775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>LINQ-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990091775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9089900A1775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9089900A1775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9089900B1775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990091775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9089900C1775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9089900D1775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9089900C1775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9089900E1775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LINQ-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9089900F1775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990101775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990111775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990101775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990121775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990131775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990121775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990141775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990151775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990141775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990161775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990171775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990161775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990181775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9028A8181776FB84004B3C97</string>
+				<string>9028A80B1776F8E1004B3C97</string>
+				<string>901F6134180B23DA00A4D26B</string>
+				<string>901F613F180B30F900A4D26B</string>
+				<string>90373B4D17764E6A009511C4</string>
+				<string>901F6143180B311C00A4D26B</string>
+				<string>90373B4817764CFD009511C4</string>
+				<string>90B4221E1775EBD5007DAF99</string>
+				<string>906FACB1180A093500F26554</string>
+				<string>90373B5A17764F90009511C4</string>
+				<string>90373B5817764F7F009511C4</string>
+				<string>9028A8161776FB2A004B3C97</string>
+				<string>906FACB7180A096C00F26554</string>
+				<string>90373B5C17764F9E009511C4</string>
+				<string>9028A81A1776FB98004B3C97</string>
+				<string>906FACB3180A094400F26554</string>
+				<string>906FACB5180A095900F26554</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>908990191775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9089901F1775E1C100AA935C</string>
+				<string>908990201775E1C100AA935C</string>
+				<string>908990211775E1C100AA935C</string>
+				<string>006E12F887514157AE57B0B7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9089901A1775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>908990291775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9089901B1775E1C100AA935C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># Run the unit tests in this test bundle.
+"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
+</string>
+		</dict>
+		<key>9089901C1775E1C100AA935C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>908990321775E1C100AA935C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>502139E3FDC7430BBC3A7857</string>
+				<string>908990181775E1C100AA935C</string>
+				<string>908990191775E1C100AA935C</string>
+				<string>9089901A1775E1C100AA935C</string>
+				<string>9089901B1775E1C100AA935C</string>
+				<string>684949FAD0434EC5932260C3</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>908990231775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LINQTests</string>
+			<key>productName</key>
+			<string>LINQTests</string>
+			<key>productReference</key>
+			<string>9089901D1775E1C100AA935C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>9089901D1775E1C100AA935C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LINQTests.octest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9089901E1775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SenTestingKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/SenTestingKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>9089901F1775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9089901E1775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990201775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990001775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990211775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990021775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>908990221775E1C100AA935C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>90898FF51775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>90898FFC1775E1C100AA935C</string>
+			<key>remoteInfo</key>
+			<string>LINQ</string>
+		</dict>
+		<key>908990231775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>90898FFC1775E1C100AA935C</string>
+			<key>targetProxy</key>
+			<string>908990221775E1C100AA935C</string>
+		</dict>
+		<key>908990241775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90B422091775E817007DAF99</string>
+				<string>90B4220B1775E817007DAF99</string>
+				<string>90B4221A1775EAFE007DAF99</string>
+				<string>908990251775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LINQTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990251775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>908990261775E1C100AA935C</string>
+				<string>908990271775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990261775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>LINQTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990271775E1C100AA935C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>908990281775E1C100AA935C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990281775E1C100AA935C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908990291775E1C100AA935C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>908990271775E1C100AA935C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9089902D1775E1C100AA935C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>USER_HEADER_SEARCH_PATHS</key>
+				<string>$(SRCROOT)/**</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9089902E1775E1C100AA935C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>USER_HEADER_SEARCH_PATHS</key>
+				<string>$(SRCROOT)/**</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9089902F1775E1C100AA935C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>908990301775E1C100AA935C</string>
+				<string>908990311775E1C100AA935C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>908990301775E1C100AA935C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>LINQ/LINQ-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LINQ/LINQ-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>908990311775E1C100AA935C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>LINQ/LINQ-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LINQ/LINQ-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>908990321775E1C100AA935C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>908990331775E1C100AA935C</string>
+				<string>908990341775E1C100AA935C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>908990331775E1C100AA935C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>15F083F72632BC8A2160E252</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>LINQ/LINQ-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LINQTests/LINQTests-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>908990341775E1C100AA935C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>47DCC961D9A805AFA2955EAE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>LINQ/LINQ-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LINQTests/LINQTests-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>90B422091775E817007DAF99</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90373B4717764CFD009511C4</string>
+				<string>9028A8191776FB98004B3C97</string>
+				<string>90373B4C17764E6A009511C4</string>
+				<string>90B4221D1775EBD5007DAF99</string>
+				<string>90373B5717764F7F009511C4</string>
+				<string>90373B5917764F90009511C4</string>
+				<string>90373B5B17764F9E009511C4</string>
+				<string>9028A8151776FB2A004B3C97</string>
+				<string>9028A80A1776F8E1004B3C97</string>
+				<string>9028A8171776FB84004B3C97</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90B4220B1775E817007DAF99</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>906FACB2180A094400F26554</string>
+				<string>906FACB4180A095900F26554</string>
+				<string>906FACB6180A096C00F26554</string>
+				<string>906FACB0180A093500F26554</string>
+				<string>901F6133180B23DA00A4D26B</string>
+				<string>901F6142180B311C00A4D26B</string>
+				<string>901F613E180B30F900A4D26B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90B4221A1775EAFE007DAF99</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LINQ_Base_Tests.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90B4221D1775EBD5007DAF99</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray_LINQ_Generation_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90B4221E1775EBD5007DAF99</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90B4221D1775EBD5007DAF99</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F11292189AD48100380A0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90F11295189AD48100380A0D</string>
+				<string>90F11293189AD48100380A0D</string>
+				<string>90F11296189AD48100380A0D</string>
+				<string>90F112AC189AD48100380A0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Source</string>
+			<key>path</key>
+			<string>../../Source</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11293189AD48100380A0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90F11294189AD48100380A0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Externals</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11294189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MKMacros.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11295189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LINQ.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11296189AD48100380A0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90F11297189AD48100380A0D</string>
+				<string>90F11298189AD48100380A0D</string>
+				<string>90F11299189AD48100380A0D</string>
+				<string>90F1129A189AD48100380A0D</string>
+				<string>90F1129B189AD48100380A0D</string>
+				<string>90F1129C189AD48100380A0D</string>
+				<string>90F1129D189AD48100380A0D</string>
+				<string>90F1129E189AD48100380A0D</string>
+				<string>90F1129F189AD48100380A0D</string>
+				<string>90F112A0189AD48100380A0D</string>
+				<string>90F112A1189AD48100380A0D</string>
+				<string>90F112A2189AD48100380A0D</string>
+				<string>90F112A3189AD48100380A0D</string>
+				<string>90F112A4189AD48100380A0D</string>
+				<string>90F112A5189AD48100380A0D</string>
+				<string>90F112A6189AD48100380A0D</string>
+				<string>90F112A7189AD48100380A0D</string>
+				<string>90F112A8189AD48100380A0D</string>
+				<string>90F112A9189AD48100380A0D</string>
+				<string>90F112AA189AD48100380A0D</string>
+				<string>90F112AB189AD48100380A0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NSArray+LINQ</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11297189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11298189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Aggregation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F11299189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Aggregation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F1129A189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Converting.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F1129B189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Converting.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F1129C189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Filtering.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F1129D189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Filtering.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F1129E189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Generation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F1129F189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Generation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A0189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Grouping.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A1189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Grouping.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A2189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Partitioning.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A3189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Partitioning.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A4189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Projection.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A5189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Projection.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A6189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Quantifier.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A7189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Quantifier.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A8189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Sets.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112A9189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Sets.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112AA189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Sorting.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112AB189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSArray+LINQ_Sorting.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112AC189AD48100380A0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90F112AD189AD48100380A0D</string>
+				<string>90F112AE189AD48100380A0D</string>
+				<string>90F112AF189AD48100380A0D</string>
+				<string>90F112B0189AD48100380A0D</string>
+				<string>90F112B1189AD48100380A0D</string>
+				<string>90F112B2189AD48100380A0D</string>
+				<string>90F112B3189AD48100380A0D</string>
+				<string>90F112B4189AD48100380A0D</string>
+				<string>90F112B5189AD48100380A0D</string>
+				<string>90F112B6189AD48100380A0D</string>
+				<string>90F112B7189AD48100380A0D</string>
+				<string>90F112B8189AD48100380A0D</string>
+				<string>90F112B9189AD48100380A0D</string>
+				<string>90F112BA189AD48100380A0D</string>
+				<string>90F112BB189AD48100380A0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112AD189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112AE189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Aggregation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112AF189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Aggregation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B0189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Converting.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B1189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Converting.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B2189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Filtering.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B3189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Filtering.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B4189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Generation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B5189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Generation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B6189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Partitioning.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B7189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Partitioning.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B8189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Quantifier.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112B9189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Quantifier.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112BA189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Sets.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112BB189AD48100380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSDictionary+LINQ_Sets.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112BC189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F11299189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112BD189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F1129B189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112BE189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F1129D189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112BF189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F1129F189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C0189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112A1189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C1189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112A3189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C2189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112A5189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C3189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112A7189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C4189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112A9189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C5189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112AB189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C6189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112AF189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C7189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112B1189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C8189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112B3189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112C9189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112B5189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112CA189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112B7189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112CB189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112B9189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112CC189AD48100380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112BB189AD48100380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112CD189AD4BA00380A0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90F112D1189AD5A200380A0D</string>
+				<string>90F112D2189AD5A200380A0D</string>
+				<string>90F112CE189AD57600380A0D</string>
+				<string>90F112CF189AD57600380A0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112CE189AD57600380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Person.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112CF189AD57600380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Person.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112D0189AD57600380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112CF189AD57600380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90F112D1189AD5A200380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Example.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112D2189AD5A200380A0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Example.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90F112D3189AD5A200380A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90F112D2189AD5A200380A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>90898FF51775E1C100AA935C</string>
+</dict>
+</plist>

@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsNil.m
-//  Copyright 2013 hamcrest.org. See LICENSE.txt
+//  Copyright 2014 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -9,7 +9,6 @@
 
 #import "HCIsNil.h"
 
-#import "HCDescription.h"
 #import "HCIsNot.h"
 
 
@@ -33,14 +32,12 @@
 @end
 
 
-#pragma mark -
-
-id<HCMatcher> HC_nilValue()
+id HC_nilValue()
 {
     return [HCIsNil isNil];
 }
 
-id<HCMatcher> HC_notNilValue()
+id HC_notNilValue()
 {
     return HC_isNot([HCIsNil isNil]);
 }
