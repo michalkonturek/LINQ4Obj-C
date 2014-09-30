@@ -33,7 +33,6 @@
 		908990131775E1C100AA935C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990121775E1C100AA935C /* Default.png */; };
 		908990151775E1C100AA935C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990141775E1C100AA935C /* Default@2x.png */; };
 		908990171775E1C100AA935C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908990161775E1C100AA935C /* Default-568h@2x.png */; };
-		9089901F1775E1C100AA935C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9089901E1775E1C100AA935C /* SenTestingKit.framework */; };
 		908990201775E1C100AA935C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990001775E1C100AA935C /* UIKit.framework */; };
 		908990211775E1C100AA935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908990021775E1C100AA935C /* Foundation.framework */; };
 		908990291775E1C100AA935C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 908990271775E1C100AA935C /* InfoPlist.strings */; };
@@ -70,7 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.xcconfig"; path = "Pods/Pods-LINQTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		15F083F72632BC8A2160E252 /* Pods-LINQTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LINQTests/Pods-LINQTests.debug.xcconfig"; sourceTree = "<group>"; };
+		47DCC961D9A805AFA2955EAE /* Pods-LINQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINQTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LINQTests/Pods-LINQTests.release.xcconfig"; sourceTree = "<group>"; };
 		8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LINQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		901F6133180B23DA00A4D26B /* NSDictionary_LINQ_Partitioning_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Partitioning_Tests.m; sourceTree = "<group>"; };
 		901F613E180B30F900A4D26B /* NSDictionary_LINQ_Sets_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_LINQ_Sets_Tests.m; sourceTree = "<group>"; };
@@ -101,8 +101,7 @@
 		908990121775E1C100AA935C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		908990141775E1C100AA935C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		908990161775E1C100AA935C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9089901D1775E1C100AA935C /* LINQTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LINQTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9089901E1775E1C100AA935C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9089901D1775E1C100AA935C /* LINQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LINQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908990261775E1C100AA935C /* LINQTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LINQTests-Info.plist"; sourceTree = "<group>"; };
 		908990281775E1C100AA935C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90B4221A1775EAFE007DAF99 /* LINQ_Base_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINQ_Base_Tests.h; sourceTree = "<group>"; };
@@ -166,7 +165,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9089901F1775E1C100AA935C /* SenTestingKit.framework in Frameworks */,
 				908990201775E1C100AA935C /* UIKit.framework in Frameworks */,
 				908990211775E1C100AA935C /* Foundation.framework in Frameworks */,
 				006E12F887514157AE57B0B7 /* libPods-LINQTests.a in Frameworks */,
@@ -176,6 +174,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		256428A2A7AB6AA04D2C6BCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15F083F72632BC8A2160E252 /* Pods-LINQTests.debug.xcconfig */,
+				47DCC961D9A805AFA2955EAE /* Pods-LINQTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		90898FF41775E1C100AA935C = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +190,7 @@
 				908990241775E1C100AA935C /* LINQTests */,
 				90898FFF1775E1C100AA935C /* Frameworks */,
 				90898FFE1775E1C100AA935C /* Products */,
-				6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */,
+				256428A2A7AB6AA04D2C6BCF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				90898FFD1775E1C100AA935C /* LINQ.app */,
-				9089901D1775E1C100AA935C /* LINQTests.octest */,
+				9089901D1775E1C100AA935C /* LINQTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,7 +209,6 @@
 				908990001775E1C100AA935C /* UIKit.framework */,
 				908990021775E1C100AA935C /* Foundation.framework */,
 				908990041775E1C100AA935C /* CoreGraphics.framework */,
-				9089901E1775E1C100AA935C /* SenTestingKit.framework */,
 				8716CDB13CE249B1BD7F7BDC /* libPods-LINQTests.a */,
 			);
 			name = Frameworks;
@@ -394,7 +400,6 @@
 				908990181775E1C100AA935C /* Sources */,
 				908990191775E1C100AA935C /* Frameworks */,
 				9089901A1775E1C100AA935C /* Resources */,
-				9089901B1775E1C100AA935C /* ShellScript */,
 				684949FAD0434EC5932260C3 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -404,8 +409,8 @@
 			);
 			name = LINQTests;
 			productName = LINQTests;
-			productReference = 9089901D1775E1C100AA935C /* LINQTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 9089901D1775E1C100AA935C /* LINQTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -413,6 +418,7 @@
 		90898FF51775E1C100AA935C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Michal Konturek";
 			};
@@ -483,20 +489,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-LINQTests-resources.sh\"\n";
-		};
-		9089901B1775E1C100AA935C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LINQTests/Pods-LINQTests-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -668,12 +661,14 @@
 		};
 		908990331775E1C100AA935C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */;
+			baseConfigurationReference = 15F083F72632BC8A2160E252 /* Pods-LINQTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
@@ -681,18 +676,19 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		908990341775E1C100AA935C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A229C693BAA4546A5A6C5F0 /* Pods-LINQTests.xcconfig */;
+			baseConfigurationReference = 47DCC961D9A805AFA2955EAE /* Pods-LINQTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LINQ.app/LINQ";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LINQ/LINQ-Prefix.pch";
@@ -700,7 +696,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

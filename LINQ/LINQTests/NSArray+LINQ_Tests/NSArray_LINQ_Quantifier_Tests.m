@@ -26,7 +26,7 @@
 
 #import "LINQ_Base_Tests.h"
 
-@interface NSArray_LINQ_Quantifier_Tests : SenTestCase
+@interface NSArray_LINQ_Quantifier_Tests : XCTestCase
 
 @property (nonatomic, strong) NSArray *input_numbers;
 @property (nonatomic, strong) NSArray *input_words;

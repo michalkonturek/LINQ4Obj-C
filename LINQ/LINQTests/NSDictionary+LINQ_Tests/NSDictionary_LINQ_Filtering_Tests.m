@@ -26,7 +26,7 @@
 
 #import "LINQ_Base_Tests.h"
 
-@interface NSDictionary_LINQ_Filtering_Tests : SenTestCase
+@interface NSDictionary_LINQ_Filtering_Tests : XCTestCase
 
 @end
 

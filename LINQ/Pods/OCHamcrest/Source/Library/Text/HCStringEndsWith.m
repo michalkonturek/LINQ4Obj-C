@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCStringEndsWith.m
-//  Copyright 2013 hamcrest.org. See LICENSE.txt
+//  Copyright 2014 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -22,7 +22,7 @@
     if (![item respondsToSelector:@selector(hasSuffix:)])
         return NO;
     
-    return [item hasSuffix:substring];
+    return [item hasSuffix:self.substring];
 }
 
 - (NSString *)relationship
@@ -33,9 +33,7 @@
 @end
 
 
-#pragma mark -
-
-id<HCMatcher> HC_endsWith(NSString *aString)
+id HC_endsWith(NSString *aString)
 {
     return [HCStringEndsWith stringEndsWith:aString];
 }

@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCHasDescription.m
-//  Copyright 2013 hamcrest.org. See LICENSE.txt
+//  Copyright 2014 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
@@ -10,30 +10,30 @@
 #import "HCHasDescription.h"
 
 #import "HCWrapInMatcher.h"
+#import "NSInvocation+OCHamcrest.h"
 
 
 @implementation HCHasDescription
 
-+ (instancetype)hasDescription:(id<HCMatcher>)descriptionMatcher
++ (instancetype)hasDescription:(id <HCMatcher>)descriptionMatcher
 {
     return [[self alloc] initWithDescription:descriptionMatcher];
 }
 
-- (instancetype)initWithDescription:(id<HCMatcher>)descriptionMatcher
+- (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher
 {
-    NSInvocation *anInvocation = [HCInvocationMatcher invocationForSelector:@selector(description)
-                                                                    onClass:[NSObject class]];
+    NSInvocation *anInvocation = [NSInvocation och_invocationOnObjectOfType:[NSObject class]
+                                                                   selector:@selector(description)];
     self = [super initWithInvocation:anInvocation matching:descriptionMatcher];
-    self.shortMismatchDescription = YES;
+    if (self)
+        self.shortMismatchDescription = YES;
     return self;
 }
 
 @end
 
 
-#pragma mark -
-
-id<HCMatcher> HC_hasDescription(id match)
+id HC_hasDescription(id match)
 {
     return [HCHasDescription hasDescription:HCWrapInMatcher(match)];
 }
