@@ -26,7 +26,7 @@
 
 #import "LINQ_Base_Tests.h"
 
-@interface NSArray_LINQ_Generation_Tests : SenTestCase
+@interface NSArray_LINQ_Generation_Tests : XCTestCase
 
 @end
 

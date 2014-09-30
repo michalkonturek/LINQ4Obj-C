@@ -26,7 +26,7 @@
 
 #import "LINQ_Base_Tests.h"
 
-@interface NSArray_LINQ_Partitioning_Tests : SenTestCase
+@interface NSArray_LINQ_Partitioning_Tests : XCTestCase
 
 @end
 

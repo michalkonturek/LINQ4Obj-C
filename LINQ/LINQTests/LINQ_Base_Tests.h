@@ -24,7 +24,7 @@
 //
 
 
-#import <SenTestingKit/SenTestingKit.h>
+@import XCTest;
 
 #define HC_SHORTHAND
 #import <OCHamcrest.h>
