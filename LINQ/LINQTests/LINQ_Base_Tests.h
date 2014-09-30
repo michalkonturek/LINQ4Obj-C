@@ -31,6 +31,6 @@
 
 #import "LINQ.h"
 
-#define TEST_PASS assertThatBool(YES, equalToBool(YES));
-#define TEST_FAIL STFail(@"Test not implemented.");
-#define TEST_NOT_IMPLEMENTED STFail(@"Test not implemented.");
+#define TEST_PASS               assertThatBool(YES, equalToBool(YES));
+#define TEST_FAIL               XCTFail(@"Test not implemented.");
+#define TEST_NOT_IMPLEMENTED    XCTFail(@"Test not implemented.");
