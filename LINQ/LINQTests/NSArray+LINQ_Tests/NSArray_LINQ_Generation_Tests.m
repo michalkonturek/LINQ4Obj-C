@@ -81,7 +81,7 @@
 - (void)aux_test_from_to_from:(NSInteger)from to:(NSInteger)to {
     NSArray *result = [NSArray linq_from:from to:to];
     
-    NSInteger range = abs(from - to) + 1;
+    NSInteger range = labs(from - to) + 1;
     assertThat(result, hasCountOf(range));
     assertThat([result objectAtIndex:0], equalToInteger(from));
     assertThat([result objectAtIndex:(range - 1)], equalToInteger(to));
